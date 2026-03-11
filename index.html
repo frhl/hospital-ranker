@@ -1,0 +1,1902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anaesthetics Rank — UK Core/ACCS Training 2026</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Leaflet -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+
+<style>
+  :root {
+    --bg-primary: #f5f6f8;
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #f0f1f4;
+    --bg-elevated: #e8eaef;
+    --border: #dcdfe5;
+    --border-bright: #c5c9d2;
+    --text-primary: #1a1d23;
+    --text-secondary: #555b67;
+    --text-muted: #8b919d;
+    --accent: #2563eb;
+    --accent-dim: rgba(37, 99, 235, 0.08);
+    --success: #16a34a;
+    --warning: #d97706;
+    --danger: #dc2626;
+
+    --region-east-midlands: #e74c3c;
+    --region-east-england: #3498db;
+    --region-kss: #2ecc71;
+    --region-london: #9b59b6;
+    --region-north-east: #f39c12;
+    --region-north-west: #1abc9c;
+    --region-south-west: #e67e22;
+    --region-thames-valley: #5dade2;
+    --region-wales: #c0392b;
+    --region-wessex: #16a085;
+    --region-west-midlands: #8e44ad;
+    --region-yorkshire: #d35400;
+
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-sans: 'Instrument Sans', sans-serif;
+
+    --sidebar-width: 320px;
+    --rank-width: 380px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    overflow: hidden;
+    height: 100vh;
+  }
+
+  /* ── LAYOUT ── */
+  .app-layout {
+    display: flex;
+    height: 100vh;
+    position: relative;
+  }
+
+  /* ── LEFT SIDEBAR ── */
+  .sidebar-left {
+    width: var(--sidebar-width);
+    min-width: var(--sidebar-width);
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    transition: margin-left 0.3s ease, opacity 0.3s ease;
+  }
+
+  .sidebar-left.collapsed {
+    margin-left: calc(-1 * var(--sidebar-width));
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .sidebar-header {
+    padding: 20px 18px 16px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(180deg, rgba(37,99,235,0.04) 0%, transparent 100%);
+  }
+
+  .app-title {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 2px;
+  }
+
+  .app-subtitle {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    letter-spacing: 0.5px;
+  }
+
+  .sidebar-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0;
+  }
+
+  .sidebar-section {
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .section-label::before {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+
+  /* Upload */
+  .upload-zone {
+    border: 1px dashed var(--border-bright);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: var(--bg-tertiary);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .upload-zone:hover {
+    border-color: var(--accent);
+    background: var(--accent-dim);
+  }
+
+  .upload-zone.loaded {
+    border-color: var(--success);
+    border-style: solid;
+  }
+
+  .upload-zone input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .upload-icon {
+    font-size: 24px;
+    margin-bottom: 6px;
+    opacity: 0.6;
+  }
+
+  .upload-text {
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+  }
+
+  .upload-text strong {
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  /* Search */
+  .search-input {
+    width: 100%;
+    padding: 10px 12px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .search-input:focus {
+    border-color: var(--accent);
+  }
+
+  .search-input::placeholder {
+    color: var(--text-muted);
+  }
+
+  /* Region filters */
+  .region-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .region-filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.15s;
+    font-size: 12px;
+  }
+
+  .region-filter:hover {
+    background: var(--bg-tertiary);
+  }
+
+  .region-filter input[type="checkbox"] {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--border-bright);
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+    transition: all 0.15s;
+  }
+
+  .region-filter input[type="checkbox"]:checked {
+    border-color: var(--accent);
+    background: var(--accent);
+  }
+
+  .region-filter input[type="checkbox"]:checked::after {
+    content: '✓';
+    position: absolute;
+    top: -1px;
+    left: 1px;
+    font-size: 10px;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .region-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .region-name {
+    flex: 1;
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+
+  .region-count {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--text-muted);
+    min-width: 20px;
+    text-align: right;
+  }
+
+  /* Stats */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .stat-box {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px;
+    text-align: center;
+  }
+
+  .stat-value {
+    font-family: var(--font-mono);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .stat-value.accent { color: var(--accent); }
+  .stat-value.success { color: var(--success); }
+  .stat-value.warning { color: var(--warning); }
+
+  .stat-label {
+    font-size: 10px;
+    font-family: var(--font-mono);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* Quick actions */
+  .quick-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+  }
+
+  .btn:hover {
+    background: var(--bg-elevated);
+    color: var(--text-primary);
+    border-color: var(--border-bright);
+  }
+
+  .btn-accent {
+    border-color: rgba(37,99,235,0.25);
+    color: var(--accent);
+    background: rgba(37,99,235,0.06);
+  }
+
+  .btn-accent:hover {
+    background: rgba(37,99,235,0.12);
+    border-color: var(--accent);
+  }
+
+  .btn-success {
+    border-color: rgba(22,163,74,0.25);
+    color: var(--success);
+    background: rgba(22,163,74,0.06);
+  }
+
+  .btn-success:hover {
+    background: rgba(22,163,74,0.12);
+    border-color: var(--success);
+  }
+
+  .btn-danger {
+    border-color: rgba(220,38,38,0.25);
+    color: var(--danger);
+    background: rgba(220,38,38,0.06);
+  }
+
+  .btn-danger:hover {
+    background: rgba(220,38,38,0.12);
+    border-color: var(--danger);
+  }
+
+  .btn-row {
+    display: flex;
+    gap: 6px;
+  }
+
+  .btn-row .btn { flex: 1; }
+
+  /* ── MAP ── */
+  .map-container {
+    flex: 1;
+    position: relative;
+    min-width: 0;
+  }
+
+  #map {
+    width: 100%;
+    height: 100%;
+    background: var(--bg-primary);
+  }
+
+  .toggle-sidebar {
+    position: absolute;
+    top: 12px;
+    z-index: 1001;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: all 0.2s;
+  }
+
+  .toggle-sidebar:hover {
+    background: var(--bg-elevated);
+    color: var(--text-primary);
+  }
+
+  .toggle-left { left: 12px; }
+  .toggle-right { right: 12px; }
+
+  /* ── RIGHT SIDEBAR (RANKING) ── */
+  .sidebar-right {
+    width: var(--rank-width);
+    min-width: var(--rank-width);
+    background: var(--bg-secondary);
+    border-left: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    transition: margin-right 0.3s ease, opacity 0.3s ease;
+  }
+
+  .sidebar-right.collapsed {
+    margin-right: calc(-1 * var(--rank-width));
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .rank-header {
+    padding: 20px 18px 16px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(180deg, rgba(22,163,74,0.04) 0%, transparent 100%);
+  }
+
+  .rank-title {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--success);
+    margin-bottom: 6px;
+  }
+
+  .rank-subtitle {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+  }
+
+  .rank-actions {
+    padding: 12px 18px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 6px;
+  }
+
+  .rank-actions .btn { flex: 1; font-size: 10px; padding: 6px 8px; }
+
+  .rank-list-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px;
+  }
+
+  .rank-list {
+    min-height: 60px;
+  }
+
+  .rank-empty {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-muted);
+    font-size: 12px;
+    font-family: var(--font-mono);
+    line-height: 1.8;
+  }
+
+  .rank-empty-icon {
+    font-size: 28px;
+    opacity: 0.3;
+    margin-bottom: 8px;
+  }
+
+  .rank-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 10px;
+    margin-bottom: 2px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: grab;
+    transition: all 0.15s;
+    position: relative;
+  }
+
+  .rank-item:hover {
+    border-color: var(--border-bright);
+    background: var(--bg-elevated);
+  }
+
+  .rank-item:active {
+    cursor: grabbing;
+  }
+
+  .rank-item.sortable-ghost {
+    opacity: 0.3;
+    background: var(--accent-dim);
+    border-color: var(--accent);
+  }
+
+  .rank-item.sortable-chosen {
+    border-color: var(--accent);
+    box-shadow: 0 4px 16px rgba(37,99,235,0.1);
+  }
+
+  .rank-number {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+    min-width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-elevated);
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+
+  .rank-item-color {
+    width: 4px;
+    height: 28px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  .rank-item-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .rank-item-name {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.3;
+  }
+
+  .rank-item-region {
+    font-size: 10px;
+    font-family: var(--font-mono);
+    color: var(--text-muted);
+  }
+
+  .rank-item-remove {
+    width: 22px;
+    height: 22px;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.15s;
+  }
+
+  .rank-item-remove:hover {
+    background: rgba(239,83,80,0.15);
+    color: var(--danger);
+  }
+
+  .rank-footer {
+    padding: 12px 18px;
+    border-top: 1px solid var(--border);
+    background: var(--bg-tertiary);
+  }
+
+  .rank-progress {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .progress-bar {
+    flex: 1;
+    height: 4px;
+    background: var(--bg-primary);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: var(--success);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+  }
+
+  .progress-text {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+
+  /* ── LEAFLET OVERRIDES ── */
+  .leaflet-container {
+    background: #e8ecf0 !important;
+    font-family: var(--font-sans) !important;
+  }
+
+  .leaflet-control-zoom {
+    border: 1px solid var(--border) !important;
+    border-radius: 6px !important;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1) !important;
+  }
+
+  .leaflet-control-zoom a {
+    background: #fff !important;
+    color: var(--text-secondary) !important;
+    border-color: var(--border) !important;
+    width: 32px !important;
+    height: 32px !important;
+    line-height: 32px !important;
+    font-size: 16px !important;
+  }
+
+  .leaflet-control-zoom a:hover {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-primary) !important;
+  }
+
+  .marker-cluster {
+    background: rgba(37,99,235,0.12) !important;
+  }
+
+  .marker-cluster div {
+    background: #fff !important;
+    color: var(--accent) !important;
+    font-family: var(--font-mono) !important;
+    font-weight: 600 !important;
+    font-size: 12px !important;
+    border: 2px solid rgba(37,99,235,0.35) !important;
+    border-radius: 50% !important;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.12) !important;
+  }
+
+  .custom-marker {
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.8);
+    box-shadow: 0 1px 6px rgba(0,0,0,0.2);
+    transition: transform 0.15s;
+  }
+
+  .custom-marker:hover {
+    transform: scale(1.3);
+    z-index: 10000 !important;
+  }
+
+  .custom-marker.ranked {
+    border-color: var(--success) !important;
+    box-shadow: 0 0 8px rgba(22,163,74,0.35);
+  }
+
+  /* Popup */
+  .leaflet-popup-content-wrapper {
+    background: #fff !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12) !important;
+    color: var(--text-primary) !important;
+  }
+
+  .leaflet-popup-tip {
+    background: #fff !important;
+    border: 1px solid var(--border) !important;
+    box-shadow: none !important;
+  }
+
+  .leaflet-popup-close-button {
+    color: var(--text-muted) !important;
+    font-size: 18px !important;
+    padding: 6px 8px 0 0 !important;
+  }
+
+  .leaflet-popup-close-button:hover {
+    color: var(--text-primary) !important;
+  }
+
+  .leaflet-popup-content {
+    margin: 14px 16px !important;
+    min-width: 260px;
+    max-width: 320px;
+  }
+
+  .popup-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    line-height: 1.4;
+    padding-right: 16px;
+  }
+
+  .popup-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+
+  .popup-tag {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+  }
+
+  .popup-tag.region {
+    color: #fff;
+    border: none;
+    font-weight: 500;
+  }
+
+  .popup-desc {
+    font-size: 11px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 10px;
+    max-height: 80px;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.3s ease;
+  }
+
+  .popup-desc.expanded {
+    max-height: 600px;
+  }
+
+  .popup-desc-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: linear-gradient(transparent, #fff);
+    pointer-events: none;
+  }
+
+  .popup-desc.expanded .popup-desc-fade { display: none; }
+
+  .popup-expand {
+    font-size: 10px;
+    font-family: var(--font-mono);
+    color: var(--accent);
+    cursor: pointer;
+    margin-bottom: 10px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .popup-expand:hover { text-decoration: underline; }
+
+  .popup-btn {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.15s;
+  }
+
+  .popup-btn-add {
+    border-color: rgba(37,99,235,0.25);
+    color: var(--accent);
+    background: rgba(37,99,235,0.06);
+  }
+
+  .popup-btn-add:hover {
+    background: rgba(37,99,235,0.12);
+  }
+
+  .popup-btn-remove {
+    border-color: rgba(220,38,38,0.25);
+    color: var(--danger);
+    background: rgba(220,38,38,0.06);
+  }
+
+  .popup-btn-remove:hover {
+    background: rgba(220,38,38,0.12);
+  }
+
+  /* ── WELCOME OVERLAY ── */
+  .welcome-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(245,246,248,0.94);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    transition: opacity 0.4s;
+  }
+
+  .welcome-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .welcome-card {
+    text-align: center;
+    max-width: 420px;
+    padding: 40px;
+  }
+
+  .welcome-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    opacity: 0.5;
+  }
+
+  .welcome-title {
+    font-family: var(--font-mono);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+
+  .welcome-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  .welcome-upload {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    background: rgba(79,195,247,0.1);
+    border: 1px dashed var(--accent);
+    border-radius: 8px;
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .welcome-upload:hover {
+    background: rgba(79,195,247,0.2);
+    border-style: solid;
+  }
+
+  .welcome-upload input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .welcome-or {
+    margin: 16px 0;
+    font-size: 11px;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+  }
+
+  .welcome-auto {
+    font-size: 11px;
+    color: var(--text-muted);
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.15s;
+    font-family: var(--font-mono);
+  }
+
+  .welcome-auto:hover { color: var(--text-secondary); }
+
+  /* ── TOAST ── */
+  .toast-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3000;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .toast {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    padding: 10px 20px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-primary);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    animation: toastIn 0.3s ease, toastOut 0.3s ease 2.5s forwards;
+  }
+
+  @keyframes toastIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes toastOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+
+  /* ── SCROLLBAR ── */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border-bright); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+  /* ── ATTRIBUTION ── */
+  .leaflet-control-attribution {
+    background: rgba(255,255,255,0.85) !important;
+    color: var(--text-muted) !important;
+    font-size: 9px !important;
+  }
+
+  .leaflet-control-attribution a {
+    color: var(--text-secondary) !important;
+  }
+
+  /* Light sidebar shadows */
+  .sidebar-left {
+    box-shadow: 2px 0 8px rgba(0,0,0,0.05);
+  }
+
+  .sidebar-right {
+    box-shadow: -2px 0 8px rgba(0,0,0,0.05);
+  }
+</style>
+</head>
+<body>
+
+<div class="app-layout">
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="sidebar-left" id="sidebarLeft">
+    <div class="sidebar-header">
+      <div class="app-title">Anaesthetics Rank</div>
+      <div class="app-subtitle">Core / ACCS — August 2026</div>
+    </div>
+
+    <div class="sidebar-content">
+      <!-- Upload -->
+      <div class="sidebar-section">
+        <div class="section-label">Data Source</div>
+        <div class="upload-zone" id="uploadZone">
+          <input type="file" accept=".csv" id="csvInput">
+          <div class="upload-icon">⬆</div>
+          <div class="upload-text" id="uploadText">Drop CSV or <strong>click to browse</strong></div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="sidebar-section" id="statsSection" style="display:none">
+        <div class="section-label">Overview</div>
+        <div class="stats-grid">
+          <div class="stat-box">
+            <div class="stat-value accent" id="statTotal">0</div>
+            <div class="stat-label">Jobs</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-value success" id="statRanked">0</div>
+            <div class="stat-label">Ranked</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-value" id="statRegions">0</div>
+            <div class="stat-label">Regions</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-value warning" id="statVisible">0</div>
+            <div class="stat-label">Visible</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search -->
+      <div class="sidebar-section" id="searchSection" style="display:none">
+        <div class="section-label">Search</div>
+        <input type="text" class="search-input" id="searchInput" placeholder="Filter jobs by keyword...">
+      </div>
+
+      <!-- Regions -->
+      <div class="sidebar-section" id="regionSection" style="display:none">
+        <div class="section-label">Regions</div>
+        <div class="region-filters" id="regionFilters"></div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAP -->
+  <main class="map-container">
+    <button class="toggle-sidebar toggle-left" id="toggleLeft" title="Toggle filters">◀</button>
+    <button class="toggle-sidebar toggle-right" id="toggleRight" title="Toggle ranking">▶</button>
+    <div id="map"></div>
+
+    <!-- Welcome overlay -->
+    <div class="welcome-overlay" id="welcomeOverlay">
+      <div class="welcome-card">
+        <div class="welcome-icon">🏥</div>
+        <div class="welcome-title">Anaesthetics Rank</div>
+        <div class="welcome-desc">
+          Interactive map for ranking UK Core &amp; ACCS Anaesthetics training posts.
+          Load your CSV export to visualise all positions geographically, then drag-and-drop to build your preference list.
+        </div>
+        <label class="welcome-upload">
+          <input type="file" accept=".csv" id="welcomeCsvInput">
+          Load CSV File
+        </label>
+        <div class="welcome-or">— or —</div>
+        <span class="welcome-auto" id="autoLoadBtn">Try auto-loading from same folder</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- RIGHT SIDEBAR (RANKING) -->
+  <aside class="sidebar-right" id="sidebarRight">
+    <div class="rank-header">
+      <div class="rank-title">Your Ranking</div>
+      <div class="rank-subtitle" id="rankSubtitle">Drag to reorder preferences</div>
+    </div>
+
+    <div class="rank-actions">
+      <button class="btn btn-accent" id="addAllVisibleBtn" title="Add all currently visible (filtered) jobs">+ Visible</button>
+      <button class="btn btn-danger" id="clearAllBtn">Clear All</button>
+      <button class="btn btn-success" id="exportBtn">Export CSV</button>
+    </div>
+
+    <div class="rank-list-container">
+      <div class="rank-list" id="rankList">
+        <div class="rank-empty" id="rankEmpty">
+          <div class="rank-empty-icon">📋</div>
+          Click markers on the map<br>and add jobs to your ranking
+        </div>
+      </div>
+    </div>
+
+    <div class="rank-footer">
+      <div class="rank-progress">
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill" style="width:0%"></div>
+        </div>
+        <span class="progress-text" id="progressText">0 / 0</span>
+      </div>
+      <button class="btn btn-success" id="exportBtnBottom" style="width:100%">Export Ranking as CSV</button>
+    </div>
+  </aside>
+
+</div>
+
+<div class="toast-container" id="toastContainer"></div>
+
+<script>
+// ─── REGION COLORS ───
+const REGION_COLORS = {
+  'East Midlands': '#e74c3c',
+  'East of England': '#3498db',
+  'Kent, Surrey and Sussex': '#2ecc71',
+  'London': '#9b59b6',
+  'North East': '#f39c12',
+  'North West': '#1abc9c',
+  'South West': '#e67e22',
+  'Thames Valley': '#5dade2',
+  'Wales': '#c0392b',
+  'Wessex': '#16a085',
+  'West Midlands': '#8e44ad',
+  'Yorkshire and the Humber': '#d35400',
+};
+
+// ─── GEOCODING LOOKUP ───
+const LOCATIONS = {
+  // East Midlands
+  'lincoln': [53.23, -0.54],
+  'boston': [52.98, -0.03],
+  'qmc': [52.942, -1.185],
+  'queen\'s medical centre': [52.942, -1.185],
+  'city (nottingham)': [52.969, -1.179],
+  'city hospital': [52.969, -1.179],
+  'nottingham city': [52.969, -1.179],
+  'kmh': [53.131, -1.240],
+  'king\'s mill': [53.131, -1.240],
+  'kings mill': [53.131, -1.240],
+  'derby': [52.911, -1.508],
+  'rdh': [52.911, -1.508],
+  'royal derby': [52.911, -1.508],
+  'burton': [52.805, -1.642],
+  'chesterfield': [53.234, -1.427],
+  'leicester': [52.624, -1.105],
+  'kettering': [52.398, -0.726],
+  'northampton': [52.247, -0.874],
+  // East of England
+  'bedford': [52.136, -0.465],
+  'luton': [51.880, -0.418],
+  'peterborough': [52.570, -0.248],
+  'chelmsford': [51.736, 0.469],
+  'broomfield': [51.760, 0.469],
+  'colchester': [51.883, 0.898],
+  'southend': [51.539, 0.708],
+  'great yarmouth': [52.597, 1.728],
+  'gt yarmouth': [52.597, 1.728],
+  'james paget': [52.597, 1.728],
+  'kings lynn': [52.754, 0.396],
+  'king\'s lynn': [52.754, 0.396],
+  'norwich': [52.622, 1.220],
+  'norfolk & norwich': [52.622, 1.220],
+  'bury st. edmunds': [52.243, 0.714],
+  'bury st edmunds': [52.243, 0.714],
+  'west suffolk': [52.243, 0.714],
+  'ipswich': [52.057, 1.158],
+  'watford': [51.655, -0.396],
+  'lister hospital': [51.905, -0.198],
+  // Kent, Surrey and Sussex
+  'canterbury': [51.280, 1.080],
+  'queen elizabeth the queen mother': [51.353, 1.127],
+  'william harvey': [51.074, 1.013],
+  'east kent': [51.280, 1.080],
+  'medway': [51.370, 0.550],
+  'medway maritime': [51.370, 0.550],
+  'chatham': [51.370, 0.550],
+  'maidstone': [51.270, 0.520],
+  'maidstone & tunbridge wells': [51.270, 0.520],
+  'tunbridge wells': [51.140, 0.264],
+  'dartford': [51.450, 0.221],
+  'darent valley': [51.450, 0.221],
+  'guildford': [51.238, -0.607],
+  'royal surrey': [51.238, -0.607],
+  'st peter\'s': [51.387, -0.498],
+  'st peter\'s hospital': [51.387, -0.498],
+  'st peters': [51.387, -0.498],
+  'ashford & st peter': [51.387, -0.498],
+  'chertsey': [51.387, -0.498],
+  'frimley': [51.313, -0.748],
+  'frimley park': [51.313, -0.748],
+  'east surrey': [51.238, -0.170],
+  'redhill': [51.238, -0.170],
+  'brighton': [50.823, -0.137],
+  'chichester': [50.838, -0.776],
+  'st richard': [50.838, -0.776],
+  'eastbourne': [50.769, 0.281],
+  'east sussex': [50.769, 0.281],
+  'conquest': [50.855, 0.569],
+  // London
+  'uch': [51.525, -0.135],
+  'ucl': [51.525, -0.135],
+  'university college hospital': [51.525, -0.135],
+  'royal free': [51.554, -0.166],
+  'barnet': [51.651, -0.211],
+  'barnet and chase farm': [51.651, -0.211],
+  'chase farm': [51.665, -0.095],
+  'whittington': [51.566, -0.138],
+  'bhr': [51.551, 0.158],
+  'barking': [51.551, 0.158],
+  'homerton': [51.548, -0.043],
+  'newham': [51.518, 0.026],
+  'royal london': [51.518, -0.058],
+  'guy\'s': [51.503, -0.088],
+  'guys': [51.503, -0.088],
+  'st thomas': [51.499, -0.118],
+  'king\'s college': [51.468, -0.094],
+  'kings college': [51.468, -0.094],
+  'princess royal university': [51.378, 0.044],
+  'queen elizabeth hospital woolwich': [51.483, 0.062],
+  'st george': [51.427, -0.175],
+  'st georges': [51.427, -0.175],
+  'kingston': [51.413, -0.282],
+  'croydon': [51.373, -0.100],
+  'epsom': [51.334, -0.267],
+  'st helier': [51.377, -0.196],
+  // North East
+  'newcastle': [54.970, -1.610],
+  'north east': [54.970, -1.610],
+  'sunderland': [54.887, -1.410],
+  'durham': [54.776, -1.575],
+  'middlesbrough': [54.545, -1.210],
+  'carlisle': [54.896, -2.935],
+  // North West
+  'liverpool': [53.411, -2.971],
+  'royal liverpool': [53.411, -2.971],
+  'macclesfield': [53.260, -2.129],
+  'warrington': [53.389, -2.587],
+  'arrowe park': [53.378, -3.091],
+  'aintree': [53.469, -2.939],
+  'whiston': [53.431, -2.798],
+  'countess of chester': [53.197, -2.905],
+  'leighton': [53.098, -2.454],
+  'manchester': [53.462, -2.226],
+  'greater manchester': [53.462, -2.226],
+  'lancashire': [53.762, -2.703],
+  'bolton': [53.576, -2.429],
+  'blackpool': [53.817, -3.031],
+  'preston': [53.759, -2.708],
+  'burnley': [53.790, -2.247],
+  'south cumbria': [54.185, -2.773],
+  // South West Peninsula
+  'cornwall': [50.266, -5.053],
+  'truro': [50.266, -5.053],
+  'royal cornwall': [50.266, -5.053],
+  'exeter': [50.721, -3.530],
+  'royal devon': [50.721, -3.530],
+  'north devon': [51.066, -3.998],
+  'barnstaple': [51.066, -3.998],
+  'plymouth': [50.376, -4.143],
+  'derriford': [50.416, -4.114],
+  'taunton': [51.015, -3.103],
+  'musgrove': [51.015, -3.103],
+  'torbay': [50.461, -3.525],
+  // South West Severn
+  'bath': [51.379, -2.360],
+  'ruh': [51.379, -2.360],
+  'bristol': [51.459, -2.596],
+  'uhbw': [51.459, -2.596],
+  'cheltenham': [51.887, -2.078],
+  'gloucester': [51.865, -2.236],
+  'gloucestershire': [51.876, -2.157],
+  'grh': [51.865, -2.236],
+  'north bristol': [51.500, -2.596],
+  'nbt': [51.500, -2.596],
+  'southmead': [51.500, -2.596],
+  'swindon': [51.556, -1.780],
+  'great western': [51.556, -1.780],
+  'yeovil': [50.940, -2.634],
+  // Thames Valley
+  'stoke mandeville': [51.787, -0.784],
+  'wycombe': [51.629, -0.749],
+  'buckinghamshire': [51.787, -0.784],
+  'oxford': [51.752, -1.258],
+  'horton general': [51.997, -1.343],
+  'john radcliffe': [51.764, -1.220],
+  'reading': [51.455, -0.968],
+  'royal berkshire': [51.455, -0.968],
+  'milton keynes': [52.039, -0.760],
+  // Wales
+  'bangor': [53.193, -4.163],
+  'ysbyty gwynedd': [53.193, -4.163],
+  'wrexham': [53.048, -2.998],
+  'glan clwyd': [53.270, -3.497],
+  'cardiff': [51.481, -3.179],
+  'grange university': [51.720, -3.002],
+  'grange uni': [51.720, -3.002],
+  'newport': [51.588, -2.993],
+  'swansea': [51.618, -3.943],
+  'morriston': [51.686, -3.933],
+  'prince charles': [51.735, -3.370],
+  // Wessex
+  'poole': [50.722, -1.979],
+  'portsmouth': [50.800, -1.092],
+  'queen alexandra': [50.850, -1.077],
+  'southampton': [50.935, -1.396],
+  'southampton general': [50.935, -1.396],
+  // West Midlands
+  'queen elizabeth hospital birmingham': [52.453, -1.931],
+  'qe hospital': [52.453, -1.931],
+  'qe birmingham': [52.453, -1.931],
+  'russells hall': [52.511, -2.110],
+  'dudley': [52.511, -2.110],
+  'worcester': [52.193, -2.222],
+  'worcestershire royal': [52.193, -2.222],
+  'hereford': [52.060, -2.720],
+  'wye valley': [52.060, -2.720],
+  'midland metropolitan': [52.489, -1.973],
+  'smethwick': [52.489, -1.973],
+  'alexandra hospital': [52.301, -1.927],
+  'redditch': [52.301, -1.927],
+  'royal stoke': [52.987, -2.192],
+  'stoke university': [52.987, -2.192],
+  'new cross': [52.590, -2.134],
+  'wolverhampton': [52.590, -2.134],
+  'royal shrewsbury': [52.712, -2.728],
+  'shrewsbury': [52.712, -2.728],
+  'princess royal hospital': [52.681, -2.500],
+  'telford': [52.681, -2.500],
+  'manor hospital': [52.588, -1.972],
+  'walsall': [52.588, -1.972],
+  'heartlands': [52.478, -1.834],
+  'good hope': [52.570, -1.822],
+  'sutton coldfield': [52.570, -1.822],
+  'warwick': [52.281, -1.589],
+  'university hospital coventry': [52.421, -1.441],
+  'coventry': [52.421, -1.441],
+  'george eliot': [52.513, -1.468],
+  'george elliott': [52.513, -1.468],
+  'nuneaton': [52.513, -1.468],
+  // Yorkshire
+  'york': [53.969, -1.087],
+  'harrogate': [53.993, -1.528],
+  'hull': [53.744, -0.035],
+  'scarborough': [54.274, -0.399],
+  'sheffield': [53.383, -1.469],
+  'doncaster': [53.521, -1.133],
+  'rotherham': [53.434, -1.356],
+  'barnsley': [53.553, -1.479],
+  'leeds': [53.800, -1.553],
+  'bradford': [53.795, -1.752],
+  'airedale': [53.876, -1.906],
+  'calderdale': [53.708, -1.858],
+  'huddersfield': [53.644, -1.782],
+  'wakefield': [53.686, -1.498],
+};
+
+// Region center fallbacks
+const REGION_CENTERS = {
+  'East Midlands': [52.95, -1.15],
+  'East of England': [52.20, 0.50],
+  'Kent, Surrey and Sussex': [51.20, 0.30],
+  'London': [51.51, -0.12],
+  'North East': [54.97, -1.61],
+  'North West': [53.45, -2.55],
+  'South West': [50.90, -3.20],
+  'Thames Valley': [51.70, -1.00],
+  'Wales': [52.00, -3.50],
+  'Wessex': [50.90, -1.40],
+  'West Midlands': [52.50, -1.90],
+  'Yorkshire and the Humber': [53.70, -1.40],
+};
+
+const SUB_REGION_CENTERS = {
+  'East Midlands - North': [52.95, -1.45],
+  'East Midlands - South': [52.45, -0.95],
+  'Kent, Surrey and Sussex - Kent': [51.30, 0.70],
+  'Kent, Surrey and Sussex - Surrey': [51.28, -0.50],
+  'Kent, Surrey and Sussex - Sussex': [50.85, -0.10],
+  'North London': [51.54, -0.13],
+  'South London': [51.45, -0.08],
+  'North West - Cheshire and Merseyside': [53.41, -2.80],
+  'North West - Greater Manchester, Lancashire and South Cumbria': [53.55, -2.40],
+  'South West - Peninsula': [50.60, -3.80],
+  'South West - Severn': [51.50, -2.40],
+  'Thames Valley Oxford': [51.75, -1.00],
+  'Wales - North': [53.19, -4.00],
+  'Wales - South': [51.65, -3.20],
+  'Wessex - East Dorset': [50.72, -1.98],
+  'Wessex - South East Hampshire': [50.80, -1.09],
+  'Wessex - Southampton': [50.93, -1.40],
+  'Yorkshire and the Humber - North / East': [53.90, -0.80],
+  'Yorkshire and the Humber - South': [53.42, -1.35],
+  'Yorkshire and the Humber - West': [53.78, -1.65],
+  'East of England - Bedfordshire': [52.01, -0.44],
+  'East of England - Cambridgeshire': [52.57, -0.25],
+  'East of England - Essex': [51.72, 0.70],
+  'East of England - Norfolk': [52.63, 1.30],
+  'East of England - Suffolk': [52.15, 0.95],
+};
+
+// ─── APP STATE ───
+let allJobs = [];
+let rankedIds = []; // ordered array of job IDs (indices)
+let map, markers, clusterGroup;
+let activeFilters = new Set(Object.keys(REGION_COLORS));
+let searchQuery = '';
+let sortable;
+
+// ─── INIT ───
+document.addEventListener('DOMContentLoaded', () => {
+  initMap();
+  initEvents();
+  loadRankingsFromStorage();
+});
+
+function initMap() {
+  map = L.map('map', {
+    center: [53.5, -2.0],
+    zoom: 6,
+    zoomControl: true,
+    attributionControl: true,
+  });
+
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+    subdomains: 'abcd',
+    maxZoom: 19,
+  }).addTo(map);
+
+  clusterGroup = L.markerClusterGroup({
+    maxClusterRadius: 35,
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: false,
+    zoomToBoundsOnClick: true,
+    iconCreateFunction: (cluster) => {
+      const count = cluster.getChildCount();
+      const size = count < 10 ? 36 : count < 50 ? 44 : 52;
+      return L.divIcon({
+        html: `<div>${count}</div>`,
+        className: 'marker-cluster',
+        iconSize: L.point(size, size),
+      });
+    },
+  });
+  map.addLayer(clusterGroup);
+}
+
+function initEvents() {
+  document.getElementById('csvInput').addEventListener('change', handleFileUpload);
+  document.getElementById('welcomeCsvInput').addEventListener('change', handleFileUpload);
+  document.getElementById('autoLoadBtn').addEventListener('click', autoLoad);
+  document.getElementById('searchInput').addEventListener('input', (e) => {
+    searchQuery = e.target.value.toLowerCase();
+    updateMapMarkers();
+  });
+  document.getElementById('toggleLeft').addEventListener('click', () => {
+    document.getElementById('sidebarLeft').classList.toggle('collapsed');
+    setTimeout(() => map.invalidateSize(), 350);
+  });
+  document.getElementById('toggleRight').addEventListener('click', () => {
+    document.getElementById('sidebarRight').classList.toggle('collapsed');
+    setTimeout(() => map.invalidateSize(), 350);
+  });
+  document.getElementById('addAllVisibleBtn').addEventListener('click', addAllVisible);
+  document.getElementById('clearAllBtn').addEventListener('click', clearAllRankings);
+  document.getElementById('exportBtn').addEventListener('click', exportRankings);
+  document.getElementById('exportBtnBottom').addEventListener('click', exportRankings);
+
+  // Init sortable
+  sortable = new Sortable(document.getElementById('rankList'), {
+    animation: 200,
+    ghostClass: 'sortable-ghost',
+    chosenClass: 'sortable-chosen',
+    handle: '.rank-item',
+    onEnd: () => {
+      syncRankingsFromDOM();
+      updateRankNumbers();
+      saveRankingsToStorage();
+    },
+  });
+}
+
+// ─── FILE HANDLING ───
+function handleFileUpload(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  Papa.parse(file, {
+    header: true,
+    skipEmptyLines: true,
+    complete: (results) => {
+      processData(results.data);
+    },
+  });
+}
+
+async function autoLoad() {
+  try {
+    const resp = await fetch('Core_ACCS Jobs August 2026.csv');
+    const text = await resp.text();
+    const results = Papa.parse(text, { header: true, skipEmptyLines: true });
+    processData(results.data);
+  } catch (err) {
+    showToast('Could not auto-load CSV. Please upload manually.');
+  }
+}
+
+function processData(data) {
+  allJobs = data.filter(row => row.Preference && row.Preference !== 'Preference').map((row, i) => ({
+    id: i,
+    preference: row.Preference || '',
+    startDate: row['Start Date'] || '',
+    duration: row.Duration || '',
+    grade: row.Grade || '',
+    region: row.Region || '',
+    subRegion: row['Sub-Region'] || '',
+    area: row['Area(Sector)'] || '',
+    places: row['Places Available'] || '',
+    description: row.Description || '',
+    programmeName: row['Programme Name'] || '',
+    tags: row.Tags || '',
+    coords: null,
+  }));
+
+  // Geocode
+  allJobs.forEach(job => {
+    job.coords = geocodeJob(job);
+  });
+
+  // Restore saved rankings
+  restoreRankingsForData();
+
+  // Update UI
+  document.getElementById('welcomeOverlay').classList.add('hidden');
+  document.getElementById('uploadZone').classList.add('loaded');
+  document.getElementById('uploadText').innerHTML = `<strong>${allJobs.length}</strong> jobs loaded`;
+  document.getElementById('statsSection').style.display = '';
+  document.getElementById('searchSection').style.display = '';
+  document.getElementById('regionSection').style.display = '';
+
+  buildRegionFilters();
+  updateMapMarkers();
+  updateStats();
+
+  showToast(`${allJobs.length} positions loaded across ${Object.keys(REGION_COLORS).length} regions`);
+}
+
+// ─── GEOCODING ───
+function geocodeJob(job) {
+  const text = (job.preference + ' ' + job.area + ' ' + job.subRegion + ' ' + job.description).toLowerCase();
+
+  // 1. Check Area(Sector)
+  if (job.area && job.area !== '-') {
+    const areaLower = job.area.toLowerCase();
+    for (const [key, coords] of Object.entries(LOCATIONS)) {
+      if (areaLower.includes(key) || key.includes(areaLower)) {
+        return jitter(coords);
+      }
+    }
+  }
+
+  // 2. Parse Preference field for location names
+  const prefParts = job.preference.split(' - ').map(s => s.trim().toLowerCase());
+  for (const part of prefParts.reverse()) {
+    // Skip common non-location parts
+    if (part.startsWith('ct1') || part.startsWith('ct2') || part.startsWith('aug') || /^\d+$/.test(part)) continue;
+    for (const [key, coords] of Object.entries(LOCATIONS)) {
+      if (part.includes(key) || key.includes(part)) {
+        return jitter(coords);
+      }
+    }
+  }
+
+  // 3. Scan description for hospital names
+  const descLower = job.description.toLowerCase();
+  // Try longer keys first for specificity
+  const sortedKeys = Object.keys(LOCATIONS).sort((a, b) => b.length - a.length);
+  for (const key of sortedKeys) {
+    if (descLower.includes(key)) {
+      return jitter(LOCATIONS[key]);
+    }
+  }
+
+  // 4. Sub-Region fallback
+  if (job.subRegion && job.subRegion !== '-') {
+    const sub = SUB_REGION_CENTERS[job.subRegion];
+    if (sub) return jitter(sub);
+  }
+
+  // 5. Region fallback
+  const rc = REGION_CENTERS[job.region];
+  if (rc) return jitter(rc);
+
+  return jitter([53.5, -2.0]);
+}
+
+function jitter(coords) {
+  return [
+    coords[0] + (Math.random() - 0.5) * 0.04,
+    coords[1] + (Math.random() - 0.5) * 0.04,
+  ];
+}
+
+// ─── MAP MARKERS ───
+function updateMapMarkers() {
+  clusterGroup.clearLayers();
+  markers = {};
+
+  let visibleCount = 0;
+  allJobs.forEach(job => {
+    if (!activeFilters.has(job.region)) return;
+    if (searchQuery && !matchesSearch(job, searchQuery)) return;
+
+    visibleCount++;
+    const color = REGION_COLORS[job.region] || '#888';
+    const isRanked = rankedIds.includes(job.id);
+    const icon = L.divIcon({
+      className: `custom-marker ${isRanked ? 'ranked' : ''}`,
+      iconSize: [12, 12],
+      html: `<div style="width:12px;height:12px;background:${color};border-radius:50%;border:2px solid ${isRanked ? '#16a34a' : 'rgba(255,255,255,0.85)'};box-shadow:0 1px 4px rgba(0,0,0,0.2);"></div>`,
+    });
+
+    const marker = L.marker(job.coords, { icon });
+    marker.bindPopup(() => createPopupContent(job), {
+      maxWidth: 320,
+      minWidth: 260,
+    });
+    markers[job.id] = marker;
+    clusterGroup.addLayer(marker);
+  });
+
+  document.getElementById('statVisible').textContent = visibleCount;
+}
+
+function matchesSearch(job, query) {
+  const searchText = (job.preference + ' ' + job.region + ' ' + job.subRegion + ' ' + job.area + ' ' + job.description).toLowerCase();
+  return query.split(/\s+/).every(term => searchText.includes(term));
+}
+
+function createPopupContent(job) {
+  const color = REGION_COLORS[job.region] || '#888';
+  const isRanked = rankedIds.includes(job.id);
+  const rankPos = isRanked ? rankedIds.indexOf(job.id) + 1 : null;
+
+  const desc = job.description || 'No description available.';
+  const shortDesc = desc.length > 150 ? desc.substring(0, 150) + '...' : desc;
+
+  const div = document.createElement('div');
+  div.innerHTML = `
+    <div class="popup-title">${escapeHtml(job.preference)}</div>
+    <div class="popup-meta">
+      <span class="popup-tag region" style="background:${color}">${escapeHtml(job.region)}</span>
+      ${job.subRegion && job.subRegion !== '-' ? `<span class="popup-tag">${escapeHtml(job.subRegion)}</span>` : ''}
+      <span class="popup-tag">${job.duration} months</span>
+      <span class="popup-tag">${job.places} place${job.places !== '1' ? 's' : ''}</span>
+      ${rankPos ? `<span class="popup-tag" style="color:#16a34a;border-color:rgba(22,163,74,0.3)">Rank #${rankPos}</span>` : ''}
+    </div>
+    <div class="popup-desc" id="popup-desc-${job.id}">
+      ${escapeHtml(desc)}
+      <div class="popup-desc-fade"></div>
+    </div>
+    ${desc.length > 150 ? `<span class="popup-expand" onclick="document.getElementById('popup-desc-${job.id}').classList.toggle('expanded');this.textContent=this.textContent==='Show more'?'Show less':'Show more'">Show more</span>` : ''}
+    <button class="popup-btn ${isRanked ? 'popup-btn-remove' : 'popup-btn-add'}" onclick="${isRanked ? `removeFromRanking(${job.id})` : `addToRanking(${job.id})`}">
+      ${isRanked ? `Remove from ranking (#${rankPos})` : 'Add to ranking'}
+    </button>
+  `;
+  return div;
+}
+
+// ─── REGION FILTERS ───
+function buildRegionFilters() {
+  const container = document.getElementById('regionFilters');
+  container.innerHTML = '';
+
+  const regionCounts = {};
+  allJobs.forEach(j => {
+    regionCounts[j.region] = (regionCounts[j.region] || 0) + 1;
+  });
+
+  Object.entries(REGION_COLORS).forEach(([region, color]) => {
+    if (!regionCounts[region]) return;
+    const label = document.createElement('label');
+    label.className = 'region-filter';
+    label.innerHTML = `
+      <input type="checkbox" ${activeFilters.has(region) ? 'checked' : ''} data-region="${escapeHtml(region)}">
+      <span class="region-dot" style="background:${color}"></span>
+      <span class="region-name">${escapeHtml(region)}</span>
+      <span class="region-count">${regionCounts[region]}</span>
+    `;
+    label.querySelector('input').addEventListener('change', (e) => {
+      if (e.target.checked) activeFilters.add(region);
+      else activeFilters.delete(region);
+      updateMapMarkers();
+    });
+    container.appendChild(label);
+  });
+}
+
+// ─── RANKING ───
+function addToRanking(jobId) {
+  if (rankedIds.includes(jobId)) return;
+  rankedIds.push(jobId);
+  renderRankList();
+  updateMapMarkers();
+  updateStats();
+  saveRankingsToStorage();
+  map.closePopup();
+  showToast(`Added #${rankedIds.length}: ${truncate(allJobs[jobId].preference, 40)}`);
+}
+
+function removeFromRanking(jobId) {
+  rankedIds = rankedIds.filter(id => id !== jobId);
+  renderRankList();
+  updateMapMarkers();
+  updateStats();
+  saveRankingsToStorage();
+  map.closePopup();
+}
+
+function addAllVisible() {
+  let added = 0;
+  allJobs.forEach(job => {
+    if (!activeFilters.has(job.region)) return;
+    if (searchQuery && !matchesSearch(job, searchQuery)) return;
+    if (rankedIds.includes(job.id)) return;
+    rankedIds.push(job.id);
+    added++;
+  });
+  renderRankList();
+  updateMapMarkers();
+  updateStats();
+  saveRankingsToStorage();
+  showToast(`Added ${added} jobs to ranking`);
+}
+
+function clearAllRankings() {
+  if (rankedIds.length > 0 && !confirm('Clear all rankings? This cannot be undone.')) return;
+  rankedIds = [];
+  renderRankList();
+  updateMapMarkers();
+  updateStats();
+  saveRankingsToStorage();
+  showToast('Rankings cleared');
+}
+
+function renderRankList() {
+  const container = document.getElementById('rankList');
+  const emptyEl = document.getElementById('rankEmpty');
+
+  // Remove existing items
+  container.querySelectorAll('.rank-item').forEach(el => el.remove());
+
+  if (rankedIds.length === 0) {
+    if (emptyEl) emptyEl.style.display = '';
+    return;
+  }
+
+  if (emptyEl) emptyEl.style.display = 'none';
+
+  rankedIds.forEach((jobId, index) => {
+    const job = allJobs[jobId];
+    if (!job) return;
+    const color = REGION_COLORS[job.region] || '#888';
+
+    const item = document.createElement('div');
+    item.className = 'rank-item';
+    item.dataset.jobId = jobId;
+    item.innerHTML = `
+      <span class="rank-number">${index + 1}</span>
+      <span class="rank-item-color" style="background:${color}"></span>
+      <div class="rank-item-info">
+        <div class="rank-item-name" title="${escapeHtml(job.preference)}">${escapeHtml(job.preference)}</div>
+        <div class="rank-item-region">${escapeHtml(job.region)}</div>
+      </div>
+      <button class="rank-item-remove" title="Remove" onclick="removeFromRanking(${jobId})">×</button>
+    `;
+
+    // Click to fly to marker
+    item.addEventListener('dblclick', () => {
+      if (markers[jobId]) {
+        map.flyTo(job.coords, 12, { duration: 0.8 });
+        setTimeout(() => markers[jobId].openPopup(), 900);
+      }
+    });
+
+    container.appendChild(item);
+  });
+}
+
+function syncRankingsFromDOM() {
+  const items = document.querySelectorAll('.rank-item');
+  rankedIds = Array.from(items).map(el => parseInt(el.dataset.jobId));
+}
+
+function updateRankNumbers() {
+  document.querySelectorAll('.rank-item').forEach((el, i) => {
+    el.querySelector('.rank-number').textContent = i + 1;
+  });
+  updateStats();
+}
+
+// ─── STATS ───
+function updateStats() {
+  document.getElementById('statTotal').textContent = allJobs.length;
+  document.getElementById('statRanked').textContent = rankedIds.length;
+  document.getElementById('statRegions').textContent = new Set(allJobs.map(j => j.region)).size;
+
+  const pct = allJobs.length > 0 ? (rankedIds.length / allJobs.length * 100) : 0;
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressText').textContent = `${rankedIds.length} / ${allJobs.length}`;
+
+  document.getElementById('rankSubtitle').textContent =
+    rankedIds.length > 0
+      ? `${rankedIds.length} ranked — double-click to locate`
+      : 'Drag to reorder preferences';
+}
+
+// ─── PERSISTENCE ───
+function saveRankingsToStorage() {
+  const data = rankedIds.map(id => allJobs[id]?.preference).filter(Boolean);
+  localStorage.setItem('anaesthetics-rank-v1', JSON.stringify(data));
+}
+
+function loadRankingsFromStorage() {
+  // Will be applied when data is loaded
+}
+
+function restoreRankingsForData() {
+  try {
+    const saved = JSON.parse(localStorage.getItem('anaesthetics-rank-v1') || '[]');
+    if (!saved.length) return;
+
+    const prefMap = {};
+    allJobs.forEach(j => { prefMap[j.preference] = j.id; });
+
+    rankedIds = saved.map(pref => prefMap[pref]).filter(id => id !== undefined);
+    renderRankList();
+    updateStats();
+  } catch (e) {
+    // ignore corrupt data
+  }
+}
+
+// ─── EXPORT ───
+function exportRankings() {
+  if (rankedIds.length === 0) {
+    showToast('Nothing to export — add jobs first');
+    return;
+  }
+
+  let csv = '"Rank","Preference","Region","Sub-Region","Area","Duration","Places","Description"\n';
+  rankedIds.forEach((jobId, i) => {
+    const j = allJobs[jobId];
+    csv += `"${i + 1}","${escapeCsv(j.preference)}","${escapeCsv(j.region)}","${escapeCsv(j.subRegion)}","${escapeCsv(j.area)}","${j.duration}","${j.places}","${escapeCsv(j.description)}"\n`;
+  });
+
+  const blob = new Blob([csv], { type: 'text/csv' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `anaesthetics-ranking-${new Date().toISOString().slice(0, 10)}.csv`;
+  a.click();
+  URL.revokeObjectURL(url);
+  showToast(`Exported ${rankedIds.length} ranked positions`);
+}
+
+// ─── UTILITIES ───
+function escapeHtml(str) {
+  if (!str) return '';
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+function escapeCsv(str) {
+  if (!str) return '';
+  return str.replace(/"/g, '""');
+}
+
+function truncate(str, len) {
+  return str.length > len ? str.substring(0, len) + '…' : str;
+}
+
+function showToast(message) {
+  const container = document.getElementById('toastContainer');
+  const toast = document.createElement('div');
+  toast.className = 'toast';
+  toast.textContent = message;
+  container.appendChild(toast);
+  setTimeout(() => toast.remove(), 3000);
+}
+</script>
+
+</body>
+</html>
