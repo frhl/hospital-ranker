@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All UK Anaesthetics Training Hospitals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Instrument Sans', sans-serif; background: #f5f6f8; }
+  #map { width: 100vw; height: 100vh; }
+  .hospital-label {
+    background: rgba(255,255,255,0.92);
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    pointer-events: none;
+  }
+  .leaflet-popup-content-wrapper {
+    border-radius: 8px;
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 13px;
+  }
+  .leaflet-popup-content { margin: 10px 14px; line-height: 1.5; }
+  .leaflet-popup-content strong { font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+  .region-badge {
+    display: inline-block;
+    padding: 1px 8px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 4px;
+  }
+  #legend {
+    position: absolute; top: 12px; right: 12px; z-index: 1000;
+    background: rgba(255,255,255,0.95); border-radius: 8px;
+    padding: 12px 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    font-size: 12px; max-height: 90vh; overflow-y: auto;
+  }
+  #legend h3 { font-family: 'JetBrains Mono', monospace; font-size: 13px; margin-bottom: 8px; }
+  .legend-item { display: flex; align-items: center; gap: 8px; padding: 2px 0; cursor: pointer; }
+  .legend-item:hover { opacity: 0.7; }
+  .legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .legend-label { font-size: 11px; }
+  .legend-count { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #888; margin-left: auto; }
+  #title-bar {
+    position: absolute; top: 12px; left: 12px; z-index: 1000;
+    background: rgba(255,255,255,0.95); border-radius: 8px;
+    padding: 10px 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  }
+  #title-bar h1 { font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 600; }
+  #title-bar p { font-size: 11px; color: #666; margin-top: 2px; }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<div id="title-bar">
+  <h1>UK Anaesthetics Training Hospitals</h1>
+  <p id="subtitle">163 hospitals across 12 regions</p>
+</div>
+<div id="legend"></div>
+
+<script>
+const REGION_COLORS = {
+  'East Midlands': '#e74c3c',
+  'East of England': '#3498db',
+  'Kent, Surrey and Sussex': '#2ecc71',
+  'London': '#9b59b6',
+  'North East': '#f39c12',
+  'North West': '#1abc9c',
+  'South West': '#e67e22',
+  'Thames Valley': '#34495e',
+  'Wales': '#c0392b',
+  'Wessex': '#16a085',
+  'West Midlands': '#8e44ad',
+  'Yorkshire and the Humber': '#d35400',
+};
+
+const HOSPITALS = [
+  // East Midlands
+  ["Queen's Medical Centre, Nottingham", 52.9420, -1.1852, "East Midlands"],
+  ["Nottingham City Hospital", 52.9693, -1.1786, "East Midlands"],
+  ["King's Mill Hospital", 53.1313, -1.2402, "East Midlands"],
+  ["Royal Derby Hospital", 52.9108, -1.5079, "East Midlands"],
+  ["Queen's Hospital, Burton", 52.8049, -1.6423, "East Midlands"],
+  ["Chesterfield Royal Hospital", 53.2343, -1.4270, "East Midlands"],
+  ["Lincoln County Hospital", 53.2202, -0.5465, "East Midlands"],
+  ["Pilgrim Hospital, Boston", 52.9858, -0.0147, "East Midlands"],
+  ["Leicester Royal Infirmary", 52.6244, -1.1049, "East Midlands"],
+  ["Kettering General Hospital", 52.4040, -0.7170, "East Midlands"],
+  ["Northampton General Hospital", 52.2466, -0.8744, "East Midlands"],
+
+  // Thames Valley
+  ["Stoke Mandeville Hospital", 51.7920, -0.7870, "Thames Valley"],
+  ["Wycombe Hospital", 51.6280, -0.7530, "Thames Valley"],
+  ["Milton Keynes University Hospital", 52.0250, -0.7430, "Thames Valley"],
+  ["Horton General Hospital", 51.9970, -1.3430, "Thames Valley"],
+  ["John Radcliffe Hospital, Oxford", 51.7636, -1.2196, "Thames Valley"],
+  ["Royal Berkshire Hospital, Reading", 51.4551, -0.9675, "Thames Valley"],
+
+  // East of England
+  ["Bedford Hospital", 52.1398, -0.4610, "East of England"],
+  ["Luton & Dunstable Hospital", 51.8820, -0.4210, "East of England"],
+  ["Peterborough City Hospital", 52.5860, -0.2500, "East of England"],
+  ["Broomfield Hospital, Chelmsford", 51.7720, 0.4690, "East of England"],
+  ["Colchester General Hospital", 51.8920, 0.8720, "East of England"],
+  ["Southend University Hospital", 51.5440, 0.7020, "East of England"],
+  ["James Paget Hospital, Great Yarmouth", 52.5860, 1.7230, "East of England"],
+  ["Queen Elizabeth Hospital, King's Lynn", 52.7520, 0.3990, "East of England"],
+  ["Norfolk & Norwich University Hospital", 52.6220, 1.2190, "East of England"],
+  ["West Suffolk Hospital, Bury St Edmunds", 52.2434, 0.7070, "East of England"],
+  ["Ipswich Hospital", 52.0640, 1.1460, "East of England"],
+  ["Lister Hospital, Stevenage", 51.9100, -0.1990, "East of England"],
+  ["Watford General Hospital", 51.6630, -0.3960, "East of England"],
+
+  // Kent, Surrey and Sussex
+  ["Queen Elizabeth the Queen Mother Hospital", 51.3530, 1.1270, "Kent, Surrey and Sussex"],
+  ["William Harvey Hospital", 51.0740, 1.0130, "Kent, Surrey and Sussex"],
+  ["Medway Maritime Hospital", 51.3750, 0.5370, "Kent, Surrey and Sussex"],
+  ["Maidstone Hospital", 51.2650, 0.5090, "Kent, Surrey and Sussex"],
+  ["Tunbridge Wells Hospital", 51.1290, 0.2920, "Kent, Surrey and Sussex"],
+  ["Darent Valley Hospital", 51.4380, 0.2230, "Kent, Surrey and Sussex"],
+  ["Royal Surrey County Hospital", 51.2380, -0.5950, "Kent, Surrey and Sussex"],
+  ["St Peter's Hospital, Chertsey", 51.3870, -0.4980, "Kent, Surrey and Sussex"],
+  ["Frimley Park Hospital", 51.3110, -0.7480, "Kent, Surrey and Sussex"],
+  ["East Surrey Hospital", 51.2370, -0.1650, "Kent, Surrey and Sussex"],
+  ["Royal Sussex County Hospital, Brighton", 50.8230, -0.1370, "Kent, Surrey and Sussex"],
+  ["St Richard's Hospital, Chichester", 50.8380, -0.7830, "Kent, Surrey and Sussex"],
+  ["Worthing Hospital", 50.8210, -0.3790, "Kent, Surrey and Sussex"],
+  ["Eastbourne District General Hospital", 50.7690, 0.2810, "Kent, Surrey and Sussex"],
+  ["Conquest Hospital, Hastings", 50.8640, 0.5690, "Kent, Surrey and Sussex"],
+
+  // London
+  ["University College Hospital", 51.5246, -0.1340, "London"],
+  ["Royal Free Hospital", 51.5536, -0.1656, "London"],
+  ["Barnet Hospital", 51.6500, -0.2120, "London"],
+  ["Chase Farm Hospital", 51.6650, -0.0950, "London"],
+  ["Whittington Hospital", 51.5660, -0.1380, "London"],
+  ["Homerton University Hospital", 51.5490, -0.0430, "London"],
+  ["Newham University Hospital", 51.5180, 0.0260, "London"],
+  ["Royal London Hospital", 51.5185, -0.0590, "London"],
+  ["Whipps Cross University Hospital", 51.5710, -0.0090, "London"],
+  ["King George Hospital, Ilford", 51.5700, 0.0960, "London"],
+  ["Queen's Hospital, Romford", 51.5560, 0.1750, "London"],
+  ["St Mary's Hospital, Paddington", 51.5175, -0.1738, "London"],
+  ["Northwick Park Hospital", 51.5710, -0.3170, "London"],
+  ["Hammersmith Hospital", 51.5170, -0.2330, "London"],
+  ["Charing Cross Hospital", 51.4870, -0.2190, "London"],
+  ["Chelsea & Westminster Hospital", 51.4840, -0.1820, "London"],
+  ["West Middlesex University Hospital", 51.4730, -0.3220, "London"],
+  ["Hillingdon Hospital", 51.5350, -0.4490, "London"],
+  ["Ealing Hospital", 51.5130, -0.3420, "London"],
+  ["Guy's Hospital", 51.5040, -0.0870, "London"],
+  ["St Thomas' Hospital", 51.4985, -0.1175, "London"],
+  ["King's College Hospital", 51.4680, -0.0940, "London"],
+  ["Princess Royal University Hospital", 51.3780, 0.0440, "London"],
+  ["University Hospital Lewisham", 51.4500, -0.0140, "London"],
+  ["Queen Elizabeth Hospital, Woolwich", 51.4830, 0.0620, "London"],
+  ["St George's Hospital, Tooting", 51.4270, -0.1750, "London"],
+  ["Epsom Hospital", 51.3340, -0.2680, "London"],
+  ["St Helier Hospital", 51.3770, -0.1960, "London"],
+  ["Kingston Hospital", 51.4130, -0.2820, "London"],
+  ["Croydon University Hospital", 51.3730, -0.1000, "London"],
+
+  // North East
+  ["North East (generic)", 54.9700, -1.6100, "North East"],
+
+  // North West
+  ["Royal Liverpool University Hospital", 53.4100, -2.9670, "North West"],
+  ["Aintree University Hospital", 53.4690, -2.9390, "North West"],
+  ["Whiston Hospital", 53.4310, -2.7980, "North West"],
+  ["Leighton Hospital, Crewe", 53.0990, -2.4620, "North West"],
+  ["Warrington Hospital", 53.3800, -2.5850, "North West"],
+  ["Liverpool Women's Hospital", 53.4010, -2.9670, "North West"],
+  ["Macclesfield District General Hospital", 53.2600, -2.1290, "North West"],
+  ["Arrowe Park Hospital", 53.3780, -3.0910, "North West"],
+  ["Countess of Chester Hospital", 53.2020, -2.8920, "North West"],
+  ["Southport Hospital", 53.6550, -3.0120, "North West"],
+  ["Manchester Royal Infirmary", 53.4620, -2.2260, "North West"],
+  ["Salford Royal Hospital", 53.4870, -2.3250, "North West"],
+  ["Royal Oldham Hospital", 53.5480, -2.1200, "North West"],
+  ["Stepping Hill Hospital, Stockport", 53.3770, -2.1380, "North West"],
+  ["Tameside General Hospital", 53.4890, -2.0480, "North West"],
+  ["Royal Bolton Hospital", 53.5650, -2.4510, "North West"],
+  ["Wigan Infirmary", 53.5410, -2.6370, "North West"],
+  ["Royal Preston Hospital", 53.7670, -2.7210, "North West"],
+  ["Royal Blackburn Hospital", 53.7360, -2.4770, "North West"],
+  ["Blackpool Victoria Hospital", 53.8180, -3.0290, "North West"],
+  ["Royal Lancaster Infirmary", 54.0560, -2.8010, "North West"],
+  ["Furness General Hospital, Barrow", 54.1290, -3.2050, "North West"],
+  ["Wythenshawe Hospital", 53.3870, -2.2880, "North West"],
+  ["North Manchester General Hospital", 53.5180, -2.2060, "North West"],
+
+  // South West
+  ["Royal Cornwall Hospital, Truro", 50.2660, -5.0530, "South West"],
+  ["Royal Devon & Exeter Hospital", 50.7180, -3.5100, "South West"],
+  ["North Devon District Hospital", 51.0790, -3.9790, "South West"],
+  ["Derriford Hospital, Plymouth", 50.4170, -4.1140, "South West"],
+  ["Musgrove Park Hospital, Taunton", 51.0130, -3.1140, "South West"],
+  ["Torbay Hospital", 50.4610, -3.5250, "South West"],
+  ["Royal United Hospital, Bath", 51.3880, -2.3880, "South West"],
+  ["Bristol Royal Infirmary", 51.4580, -2.5930, "South West"],
+  ["Southmead Hospital, Bristol", 51.5010, -2.5960, "South West"],
+  ["Gloucestershire Royal Hospital", 51.8640, -2.2380, "South West"],
+  ["Cheltenham General Hospital", 51.8930, -2.0680, "South West"],
+  ["Great Western Hospital, Swindon", 51.5530, -1.7580, "South West"],
+  ["Yeovil District Hospital", 50.9400, -2.6340, "South West"],
+
+  // Wales
+  ["Ysbyty Gwynedd, Bangor", 53.2100, -4.1380, "Wales"],
+  ["Ysbyty Glan Clwyd, Rhyl", 53.2660, -3.4870, "Wales"],
+  ["Wrexham Maelor Hospital", 53.0490, -2.9880, "Wales"],
+  ["Grange University Hospital, Cwmbran", 51.6490, -3.0190, "Wales"],
+  ["University Hospital of Wales, Cardiff", 51.5070, -3.1900, "Wales"],
+  ["Morriston Hospital, Swansea", 51.6830, -3.9270, "Wales"],
+  ["Glangwili Hospital, Carmarthen", 51.8580, -4.3080, "Wales"],
+  ["Princess of Wales Hospital, Bridgend", 51.5120, -3.5710, "Wales"],
+
+  // Wessex
+  ["Poole Hospital", 50.7290, -1.9580, "Wessex"],
+  ["Queen Alexandra Hospital, Portsmouth", 50.8500, -1.0770, "Wessex"],
+  ["Southampton General Hospital", 50.9340, -1.4340, "Wessex"],
+
+  // West Midlands
+  ["Queen Elizabeth Hospital, Birmingham", 52.4530, -1.9380, "West Midlands"],
+  ["Russells Hall Hospital, Dudley", 52.5060, -2.1180, "West Midlands"],
+  ["Worcestershire Royal Hospital", 52.1930, -2.1770, "West Midlands"],
+  ["Wye Valley Hospital, Hereford", 52.0640, -2.7160, "West Midlands"],
+  ["Midland Metropolitan University Hospital", 52.5000, -1.9630, "West Midlands"],
+  ["Alexandra Hospital, Redditch", 52.3020, -1.9420, "West Midlands"],
+  ["Royal Stoke University Hospital", 53.0010, -2.1870, "West Midlands"],
+  ["New Cross Hospital, Wolverhampton", 52.5910, -2.1260, "West Midlands"],
+  ["Royal Shrewsbury Hospital", 52.7090, -2.7500, "West Midlands"],
+  ["Princess Royal Hospital, Telford", 52.6880, -2.5150, "West Midlands"],
+  ["Manor Hospital, Walsall", 52.5880, -1.9800, "West Midlands"],
+  ["Heartlands Hospital, Birmingham", 52.4780, -1.8280, "West Midlands"],
+  ["Good Hope Hospital, Sutton Coldfield", 52.5710, -1.8200, "West Midlands"],
+  ["Warwick Hospital", 52.2810, -1.5890, "West Midlands"],
+  ["University Hospital Coventry", 52.4210, -1.4410, "West Midlands"],
+  ["George Eliot Hospital, Nuneaton", 52.5090, -1.4680, "West Midlands"],
+
+  // Yorkshire and the Humber
+  ["York Hospital", 53.9690, -1.0870, "Yorkshire and the Humber"],
+  ["Harrogate District Hospital", 53.9910, -1.5160, "Yorkshire and the Humber"],
+  ["Hull Royal Infirmary", 53.7440, -0.3440, "Yorkshire and the Humber"],
+  ["Scarborough Hospital", 54.2640, -0.3960, "Yorkshire and the Humber"],
+  ["Diana, Princess of Wales Hospital", 53.5640, -0.0770, "Yorkshire and the Humber"],
+  ["Scunthorpe General Hospital", 53.5850, -0.6530, "Yorkshire and the Humber"],
+  ["Sheffield Teaching Hospitals", 53.3740, -1.4900, "Yorkshire and the Humber"],
+  ["Doncaster Royal Infirmary", 53.5180, -1.1190, "Yorkshire and the Humber"],
+  ["Rotherham Hospital", 53.4300, -1.3540, "Yorkshire and the Humber"],
+  ["Barnsley Hospital", 53.5560, -1.4810, "Yorkshire and the Humber"],
+  ["Leeds Teaching Hospitals", 53.8060, -1.5220, "Yorkshire and the Humber"],
+  ["Bradford Royal Infirmary", 53.7920, -1.7680, "Yorkshire and the Humber"],
+  ["Airedale General Hospital", 53.8710, -1.9130, "Yorkshire and the Humber"],
+  ["Calderdale Royal Hospital", 53.7060, -1.8350, "Yorkshire and the Humber"],
+  ["Huddersfield Royal Infirmary", 53.6440, -1.7840, "Yorkshire and the Humber"],
+  ["Pinderfields Hospital, Wakefield", 53.6830, -1.4750, "Yorkshire and the Humber"],
+];
+
+const map = L.map('map', {
+  center: [53.5, -2.0],
+  zoom: 6,
+  zoomControl: true,
+});
+
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+  subdomains: 'abcd',
+  maxZoom: 19,
+}).addTo(map);
+
+// Count per region
+const regionCounts = {};
+HOSPITALS.forEach(h => {
+  regionCounts[h[3]] = (regionCounts[h[3]] || 0) + 1;
+});
+
+// Build legend
+const legend = document.getElementById('legend');
+let legendHTML = '<h3>Regions</h3>';
+Object.keys(REGION_COLORS).forEach(region => {
+  const color = REGION_COLORS[region];
+  const count = regionCounts[region] || 0;
+  legendHTML += `<div class="legend-item" data-region="${region}">
+    <div class="legend-dot" style="background:${color}"></div>
+    <span class="legend-label">${region}</span>
+    <span class="legend-count">${count}</span>
+  </div>`;
+});
+legend.innerHTML = legendHTML;
+
+// Add markers
+HOSPITALS.forEach(([name, lat, lng, region]) => {
+  const color = REGION_COLORS[region] || '#888';
+  const marker = L.circleMarker([lat, lng], {
+    radius: 7,
+    color: '#fff',
+    weight: 2,
+    fillColor: color,
+    fillOpacity: 0.9,
+  }).addTo(map);
+
+  marker.bindTooltip(name, {
+    permanent: false,
+    direction: 'top',
+    offset: [0, -10],
+    className: 'hospital-label',
+  });
+
+  marker.bindPopup(`
+    <strong>${name}</strong><br>
+    <div class="region-badge" style="background:${color}">${region}</div><br>
+    <span style="font-size:11px;color:#666">${lat.toFixed(4)}, ${lng.toFixed(4)}</span>
+  `);
+});
+
+document.getElementById('subtitle').textContent = `${HOSPITALS.length} hospitals across ${Object.keys(REGION_COLORS).length} regions`;
+</script>
+</body>
+</html>
