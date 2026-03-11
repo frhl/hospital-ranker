@@ -1219,8 +1219,7 @@ function initMap() {
   });
   map.addLayer(clusterGroup);
 
-  // Clear route on map click
-  map.on('popupclose', clearRoute);
+  // Route is cleared on map click (initMapClickHandler), not on popup close
 }
 
 function initEvents() {
