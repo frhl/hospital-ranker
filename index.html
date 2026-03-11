@@ -707,6 +707,12 @@ const EMBEDDED_CSV_DATA = [{"Current Assigned Rank": "X", "Preference": "Bucking
     box-shadow: 0 0 8px rgba(22,163,74,0.35);
   }
 
+  .custom-marker-invisible {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
   /* Popup */
   .leaflet-popup-content-wrapper {
     background: #fff !important;
@@ -1330,11 +1336,21 @@ function processData(data) {
 
 // ─── MAP MARKERS ───
 let activeRouteLayer = null; // polyline for currently selected job
+let radiusLayer = null; // layer group for spread-radius circles
 
+function haversineMeters(lat1, lng1, lat2, lng2) {
+  const R = 6371000;
+  const toRad = d => d * Math.PI / 180;
+  const dLat = toRad(lat2 - lat1), dLng = toRad(lng2 - lng1);
+  const a = Math.sin(dLat/2)**2 + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLng/2)**2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
 
 function updateMapMarkers() {
   clusterGroup.clearLayers();
   clearRoute();
+  if (radiusLayer) { map.removeLayer(radiusLayer); radiusLayer = null; }
+  radiusLayer = L.layerGroup().addTo(map);
   markers = {};
 
   let visibleCount = 0;
@@ -1347,21 +1363,49 @@ function updateMapMarkers() {
     const color = REGION_COLORS[job.region] || '#888';
     const isRanked = rankedIds.includes(job.id);
     const hasMultiple = job.hospitals.length >= 2;
-    const size = hasMultiple ? 14 : 12;
-    const icon = L.divIcon({
-      className: `custom-marker ${isRanked ? 'ranked' : ''}`,
-      iconSize: [size, size],
-      html: `<div style="width:${size}px;height:${size}px;background:${color};border-radius:50%;border:2px solid ${isRanked ? '#16a34a' : 'rgba(255,255,255,0.85)'};box-shadow:0 1px 4px rgba(0,0,0,0.2);"></div>`,
-    });
 
-    const marker = L.marker(job.coords, { icon });
-    marker.on('click', () => showRoute(job));
-    marker.bindPopup(() => createPopupContent(job), {
-      maxWidth: 340,
-      minWidth: 280,
-    });
-    markers[job.id] = marker;
-    clusterGroup.addLayer(marker);
+    if (hasMultiple) {
+      // Compute max distance from centroid to any hospital (in meters)
+      const maxDist = Math.max(...job.hospitals.map(h =>
+        haversineMeters(job.coords[0], job.coords[1], h.lat, h.lng)
+      ));
+      const radiusM = Math.max(maxDist, 2000); // minimum 2km so it's visible
+
+      L.circle(job.coords, {
+        radius: radiusM,
+        color: color,
+        weight: 1.5,
+        opacity: 0.6,
+        fillColor: color,
+        fillOpacity: 0.10,
+        interactive: false,
+      }).addTo(radiusLayer);
+
+      // Invisible marker for popup/click interaction
+      const icon = L.divIcon({
+        className: 'custom-marker-invisible',
+        iconSize: [24, 24],
+        iconAnchor: [12, 12],
+        html: `<div style="width:24px;height:24px;cursor:pointer;"></div>`,
+      });
+      const marker = L.marker(job.coords, { icon });
+      marker.on('click', () => showRoute(job));
+      marker.bindPopup(() => createPopupContent(job), { maxWidth: 340, minWidth: 280 });
+      markers[job.id] = marker;
+      clusterGroup.addLayer(marker);
+    } else {
+      // Single hospital — normal dot marker
+      const icon = L.divIcon({
+        className: `custom-marker ${isRanked ? 'ranked' : ''}`,
+        iconSize: [12, 12],
+        html: `<div style="width:12px;height:12px;background:${color};border-radius:50%;border:2px solid ${isRanked ? '#16a34a' : 'rgba(255,255,255,0.85)'};box-shadow:0 1px 4px rgba(0,0,0,0.2);"></div>`,
+      });
+      const marker = L.marker(job.coords, { icon });
+      marker.on('click', () => showRoute(job));
+      marker.bindPopup(() => createPopupContent(job), { maxWidth: 340, minWidth: 280 });
+      markers[job.id] = marker;
+      clusterGroup.addLayer(marker);
+    }
   });
 
   document.getElementById('statVisible').textContent = visibleCount;
