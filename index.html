@@ -757,7 +757,47 @@ const EMBEDDED_CSV_DATA = [{"Current Assigned Rank": "X", "Preference": "Bucking
     box-shadow: none !important;
   }
 
-  /* Popup */
+  /* Info panel (fixed overlay) */
+  .info-panel {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    padding: 16px 20px;
+    max-width: 400px;
+    width: calc(100% - 40px);
+    max-height: 50vh;
+    overflow-y: auto;
+    font-size: 13px;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .info-panel.hidden {
+    display: none;
+  }
+  .info-panel-close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--text-muted);
+    line-height: 1;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .info-panel-close:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+  }
+
+  /* Popup (legacy, kept for compatibility) */
   .leaflet-popup-content-wrapper {
     background: #fff !important;
     border: 1px solid var(--border) !important;
@@ -1155,6 +1195,12 @@ const EMBEDDED_CSV_DATA = [{"Current Assigned Rank": "X", "Preference": "Bucking
     <button class="toggle-sidebar toggle-right" id="toggleRight" title="Toggle ranking">▶</button>
     <div id="map"></div>
 
+    <!-- Job info panel (fixed, survives zoom) -->
+    <div class="info-panel hidden" id="infoPanel">
+      <button class="info-panel-close" id="infoPanelClose">&times;</button>
+      <div id="infoPanelContent"></div>
+    </div>
+
     <!-- Welcome overlay -->
     <div class="welcome-overlay" id="welcomeOverlay">
       <div class="welcome-card">
@@ -1319,6 +1365,7 @@ function initEvents() {
   document.getElementById('saveJsonBtn').addEventListener('click', saveProgressJson);
   document.getElementById('loadJsonInput').addEventListener('change', loadProgressJson);
   document.getElementById('shareUrlBtn').addEventListener('click', copyShareUrl);
+  document.getElementById('infoPanelClose').addEventListener('click', () => { hideInfoPanel(); clearRoute(); });
   document.getElementById('filterCore').addEventListener('change', (e) => {
     showCore = e.target.checked;
     updateMapMarkers();
@@ -1458,8 +1505,7 @@ function updateMapMarkers() {
     });
 
     const marker = L.marker(job.coords, { icon });
-    marker.on('click', () => showRoute(job));
-    marker.bindPopup(() => createPopupContent(job), { maxWidth: 340, minWidth: 280, autoPan: true, closeOnClick: false, autoClose: false });
+    marker.on('click', () => { showRoute(job); showInfoPanel(job); });
     markers[job.id] = marker;
     clusterGroup.addLayer(marker);
   });
@@ -1531,7 +1577,7 @@ function initMapClickHandler() {
     // Only clear if not clicking a marker
     if (!e.originalEvent._markerClicked) {
       clearRoute();
-      map.closePopup();
+      hideInfoPanel();
     }
   });
 }
@@ -1540,6 +1586,18 @@ function matchesSearch(job, query) {
   const hospNames = job.hospitals.map(h => h.name).join(' ');
   const searchText = (job.preference + ' ' + job.region + ' ' + job.subRegion + ' ' + job.area + ' ' + job.description + ' ' + hospNames).toLowerCase();
   return query.split(/\s+/).every(term => searchText.includes(term));
+}
+
+function showInfoPanel(job) {
+  const panel = document.getElementById('infoPanel');
+  const content = document.getElementById('infoPanelContent');
+  content.innerHTML = '';
+  content.appendChild(createPopupContent(job));
+  panel.classList.remove('hidden');
+}
+
+function hideInfoPanel() {
+  document.getElementById('infoPanel').classList.add('hidden');
 }
 
 function createPopupContent(job) {
@@ -1620,7 +1678,7 @@ function addToRanking(jobId) {
   updateMapMarkers();
   updateStats();
   saveRankingsToStorage();
-  map.closePopup();
+  hideInfoPanel();
   showToast(`Added #${rankedIds.length}: ${truncate(allJobs[jobId].preference, 40)}`);
 }
 
@@ -1630,7 +1688,7 @@ function removeFromRanking(jobId) {
   updateMapMarkers();
   updateStats();
   saveRankingsToStorage();
-  map.closePopup();
+  hideInfoPanel();
 }
 
 function getVisibleJobs() {
