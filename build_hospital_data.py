@@ -256,7 +256,8 @@ HOSPITAL_PATTERNS = [
     (r'Queen Elizabeth the Queen Mother|QEQM', "Queen Elizabeth the Queen Mother Hospital"),
     (r'William Harvey Hospital', "William Harvey Hospital"),
     (r'Medway Maritime', "Medway Maritime Hospital"),
-    (r'Maidstone & Tunbridge Wells|Maidstone Hospital', "Maidstone Hospital"),
+    (r'Maidstone\s*(?:&|and)\s*Tunbridge Wells', ["Maidstone Hospital", "Tunbridge Wells Hospital"]),
+    (r'Maidstone Hospital', "Maidstone Hospital"),
     (r'Tunbridge Wells Hospital', "Tunbridge Wells Hospital"),
     (r'Darent Valley', "Darent Valley Hospital"),
     (r'Royal Surrey County|Royal Surrey Hospital|Royal Surrey NHS', "Royal Surrey County Hospital"),
@@ -266,17 +267,19 @@ HOSPITAL_PATTERNS = [
     (r'Brighton.*University Hospitals Sussex|Brighton.*Sussex', "Royal Sussex County Hospital, Brighton"),
     (r"St Richard'?s", "St Richard's Hospital, Chichester"),
     (r'Worthing.*University Hospitals Sussex|Worthing.*Sussex|\bWorthing\b', "Worthing Hospital"),
-    (r'East Sussex Healthcare|EAST SUSSEX HEALTHCARE', "Eastbourne District General Hospital"),
-    (r'East Kent Hospitals', "Queen Elizabeth the Queen Mother Hospital"),
+    (r'East Sussex Healthcare|EAST SUSSEX HEALTHCARE', ["Eastbourne District General Hospital", "Conquest Hospital, Hastings"]),
+    (r'Conquest Hospital', "Conquest Hospital, Hastings"),
+    (r'East Kent Hospitals', ["Queen Elizabeth the Queen Mother Hospital", "William Harvey Hospital"]),
 
     # London - North Central
     (r'\bUCH\b|University College Hospital', "University College Hospital"),
     (r'Royal Free', "Royal Free Hospital"),
-    (r'Barnet\b(?:\s*(?:and|&)\s*Chase Farm)?|Chase Farm', "Barnet Hospital"),
+    (r'Barnet\b', "Barnet Hospital"),
+    (r'Chase Farm', "Chase Farm Hospital"),
     (r'Whittington', "Whittington Hospital"),
 
     # London - North East
-    (r'\bBHR\b|Barking,?\s*Havering', "Queen's Hospital, Romford"),
+    (r'\bBHR\b|Barking,?\s*Havering', ["Queen's Hospital, Romford", "King George Hospital, Ilford"]),
     (r'Homerton', "Homerton University Hospital"),
     (r'Newham\s*Hospital', "Newham University Hospital"),
     (r'Royal London Hospital', "Royal London Hospital"),
@@ -293,15 +296,18 @@ HOSPITAL_PATTERNS = [
     (r'Ealing Hospital', "Ealing Hospital"),
 
     # London - South East
-    (r"Guy'?s\s*(?:&|and)?\s*St\s*Thomas|Guy'?s Hospital|St Thomas", "Guy's Hospital"),
+    (r"Guy'?s\s*(?:&|and)?\s*St\s*Thomas", ["Guy's Hospital", "St Thomas' Hospital"]),
+    (r"Guy'?s Hospital", "Guy's Hospital"),
+    (r"St Thomas'?\s*Hospital", "St Thomas' Hospital"),
     (r"King'?s College Hospital", "King's College Hospital"),
     (r'Princess Royal University Hospital|PRUH', "Princess Royal University Hospital"),
-    (r'University Hospital Lewisham|Lewisham Hospital', "University Hospital Lewisham"),
+    (r'University Hospital\s+Lewisham|Lewisham Hospital', "University Hospital Lewisham"),
     (r'Queen Elizabeth Hospital,?\s*Woolwich', "Queen Elizabeth Hospital, Woolwich"),
 
     # London - South West
     (r"St George'?s", "St George's Hospital, Tooting"),
-    (r'Epsom\s*(?:&|and)?\s*St Helier|Epsom Hospital', "Epsom Hospital"),
+    (r'Epsom\s*(?:&|and)\s*St Helier', ["Epsom Hospital", "St Helier Hospital"]),
+    (r'Epsom Hospital', "Epsom Hospital"),
     (r'St Helier Hospital', "St Helier Hospital"),
     (r'Kingston Hospital', "Kingston Hospital"),
     (r'Croydon\s*(?:University)?\s*Hospital', "Croydon University Hospital"),
@@ -314,7 +320,7 @@ HOSPITAL_PATTERNS = [
     (r'Warrington\s*Hospital|Warrington\b', "Warrington Hospital"),
     (r"Liverpool Women'?s", "Liverpool Women's Hospital"),
     (r'Macclesfield', "Macclesfield District General Hospital"),
-    (r'Arrowe Park', "Arrowe Park Hospital"),
+    (r'Arrowe Park|\bWirral\b', "Arrowe Park Hospital"),
     (r'Countess of Chester', "Countess of Chester Hospital"),
     (r'Southport\s*Hospital|Southport\b', "Southport Hospital"),
 
@@ -416,9 +422,30 @@ def extract_hospitals(description, region):
     seen = set()
     for pattern, name in HOSPITAL_PATTERNS:
         if re.search(pattern, description, re.IGNORECASE):
-            if name not in seen:
+            # Handle multi-hospital trust patterns (name is a list)
+            names = name if isinstance(name, list) else [name]
+            for n in names:
+                if n not in seen:
+                    seen.add(n)
+                    found.append(n)
+
+    # Handle ambiguous "Queen Elizabeth Hospital" (no qualifier) based on region
+    if re.search(r'Queen Elizabeth Hospital(?!.*(?:Woolwich|Birmingham|King.?s?\s*Lynn|the Queen Mother))', description, re.IGNORECASE):
+        if "Queen Elizabeth Hospital, Woolwich" not in seen and \
+           "Queen Elizabeth Hospital, Birmingham" not in seen and \
+           "Queen Elizabeth Hospital, King's Lynn" not in seen:
+            if 'London' in region:
+                name = "Queen Elizabeth Hospital, Woolwich"
+            elif 'West Midlands' in region:
+                name = "Queen Elizabeth Hospital, Birmingham"
+            elif 'East of England' in region:
+                name = "Queen Elizabeth Hospital, King's Lynn"
+            else:
+                name = None
+            if name and name not in seen:
                 seen.add(name)
                 found.append(name)
+
     return found
 
 

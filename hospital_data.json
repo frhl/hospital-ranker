@@ -1,0 +1,7573 @@
+{
+  "hospital_coords": {
+    "Queen's Medical Centre, Nottingham": {
+      "lat": 52.942,
+      "lng": -1.1852
+    },
+    "Nottingham City Hospital": {
+      "lat": 52.9693,
+      "lng": -1.1786
+    },
+    "King's Mill Hospital": {
+      "lat": 53.1313,
+      "lng": -1.2402
+    },
+    "Royal Derby Hospital": {
+      "lat": 52.9108,
+      "lng": -1.5079
+    },
+    "Queen's Hospital, Burton": {
+      "lat": 52.8049,
+      "lng": -1.6423
+    },
+    "Chesterfield Royal Hospital": {
+      "lat": 53.2343,
+      "lng": -1.427
+    },
+    "Lincoln County Hospital": {
+      "lat": 53.2202,
+      "lng": -0.5465
+    },
+    "Pilgrim Hospital, Boston": {
+      "lat": 52.9858,
+      "lng": -0.0147
+    },
+    "Leicester Royal Infirmary": {
+      "lat": 52.6244,
+      "lng": -1.1049
+    },
+    "Kettering General Hospital": {
+      "lat": 52.404,
+      "lng": -0.717
+    },
+    "Northampton General Hospital": {
+      "lat": 52.2466,
+      "lng": -0.8744
+    },
+    "Stoke Mandeville Hospital": {
+      "lat": 51.792,
+      "lng": -0.787
+    },
+    "Wycombe Hospital": {
+      "lat": 51.628,
+      "lng": -0.753
+    },
+    "Milton Keynes University Hospital": {
+      "lat": 52.025,
+      "lng": -0.743
+    },
+    "Horton General Hospital": {
+      "lat": 51.997,
+      "lng": -1.343
+    },
+    "John Radcliffe Hospital, Oxford": {
+      "lat": 51.7636,
+      "lng": -1.2196
+    },
+    "Royal Berkshire Hospital, Reading": {
+      "lat": 51.4551,
+      "lng": -0.9675
+    },
+    "Bedford Hospital": {
+      "lat": 52.1398,
+      "lng": -0.461
+    },
+    "Luton & Dunstable Hospital": {
+      "lat": 51.882,
+      "lng": -0.421
+    },
+    "Peterborough City Hospital": {
+      "lat": 52.586,
+      "lng": -0.25
+    },
+    "Broomfield Hospital, Chelmsford": {
+      "lat": 51.772,
+      "lng": 0.469
+    },
+    "Colchester General Hospital": {
+      "lat": 51.892,
+      "lng": 0.872
+    },
+    "Southend University Hospital": {
+      "lat": 51.544,
+      "lng": 0.702
+    },
+    "James Paget Hospital, Great Yarmouth": {
+      "lat": 52.586,
+      "lng": 1.723
+    },
+    "Queen Elizabeth Hospital, King's Lynn": {
+      "lat": 52.752,
+      "lng": 0.399
+    },
+    "Norfolk & Norwich University Hospital": {
+      "lat": 52.622,
+      "lng": 1.219
+    },
+    "West Suffolk Hospital, Bury St Edmunds": {
+      "lat": 52.2434,
+      "lng": 0.707
+    },
+    "Ipswich Hospital": {
+      "lat": 52.064,
+      "lng": 1.146
+    },
+    "Lister Hospital, Stevenage": {
+      "lat": 51.91,
+      "lng": -0.199
+    },
+    "Watford General Hospital": {
+      "lat": 51.663,
+      "lng": -0.396
+    },
+    "Queen Elizabeth the Queen Mother Hospital": {
+      "lat": 51.353,
+      "lng": 1.127
+    },
+    "William Harvey Hospital": {
+      "lat": 51.074,
+      "lng": 1.013
+    },
+    "Medway Maritime Hospital": {
+      "lat": 51.375,
+      "lng": 0.537
+    },
+    "Maidstone Hospital": {
+      "lat": 51.265,
+      "lng": 0.509
+    },
+    "Tunbridge Wells Hospital": {
+      "lat": 51.129,
+      "lng": 0.292
+    },
+    "Darent Valley Hospital": {
+      "lat": 51.438,
+      "lng": 0.223
+    },
+    "Royal Surrey County Hospital": {
+      "lat": 51.238,
+      "lng": -0.595
+    },
+    "St Peter's Hospital, Chertsey": {
+      "lat": 51.387,
+      "lng": -0.498
+    },
+    "Frimley Park Hospital": {
+      "lat": 51.311,
+      "lng": -0.748
+    },
+    "East Surrey Hospital": {
+      "lat": 51.237,
+      "lng": -0.165
+    },
+    "Royal Sussex County Hospital, Brighton": {
+      "lat": 50.823,
+      "lng": -0.137
+    },
+    "St Richard's Hospital, Chichester": {
+      "lat": 50.838,
+      "lng": -0.783
+    },
+    "Worthing Hospital": {
+      "lat": 50.821,
+      "lng": -0.379
+    },
+    "Eastbourne District General Hospital": {
+      "lat": 50.769,
+      "lng": 0.281
+    },
+    "Conquest Hospital, Hastings": {
+      "lat": 50.864,
+      "lng": 0.569
+    },
+    "University College Hospital": {
+      "lat": 51.5246,
+      "lng": -0.134
+    },
+    "Royal Free Hospital": {
+      "lat": 51.5536,
+      "lng": -0.1656
+    },
+    "Barnet Hospital": {
+      "lat": 51.65,
+      "lng": -0.212
+    },
+    "Chase Farm Hospital": {
+      "lat": 51.665,
+      "lng": -0.095
+    },
+    "Whittington Hospital": {
+      "lat": 51.566,
+      "lng": -0.138
+    },
+    "Homerton University Hospital": {
+      "lat": 51.549,
+      "lng": -0.043
+    },
+    "Newham University Hospital": {
+      "lat": 51.518,
+      "lng": 0.026
+    },
+    "Royal London Hospital": {
+      "lat": 51.5185,
+      "lng": -0.059
+    },
+    "Whipps Cross University Hospital": {
+      "lat": 51.571,
+      "lng": -0.009
+    },
+    "King George Hospital, Ilford": {
+      "lat": 51.57,
+      "lng": 0.096
+    },
+    "Queen's Hospital, Romford": {
+      "lat": 51.556,
+      "lng": 0.175
+    },
+    "St Mary's Hospital, Paddington": {
+      "lat": 51.5175,
+      "lng": -0.1738
+    },
+    "Northwick Park Hospital": {
+      "lat": 51.571,
+      "lng": -0.317
+    },
+    "Hammersmith Hospital": {
+      "lat": 51.517,
+      "lng": -0.233
+    },
+    "Charing Cross Hospital": {
+      "lat": 51.487,
+      "lng": -0.219
+    },
+    "Chelsea & Westminster Hospital": {
+      "lat": 51.484,
+      "lng": -0.182
+    },
+    "West Middlesex University Hospital": {
+      "lat": 51.473,
+      "lng": -0.322
+    },
+    "Hillingdon Hospital": {
+      "lat": 51.535,
+      "lng": -0.449
+    },
+    "Ealing Hospital": {
+      "lat": 51.513,
+      "lng": -0.342
+    },
+    "Guy's Hospital": {
+      "lat": 51.504,
+      "lng": -0.087
+    },
+    "St Thomas' Hospital": {
+      "lat": 51.4985,
+      "lng": -0.1175
+    },
+    "King's College Hospital": {
+      "lat": 51.468,
+      "lng": -0.094
+    },
+    "Princess Royal University Hospital": {
+      "lat": 51.378,
+      "lng": 0.044
+    },
+    "University Hospital Lewisham": {
+      "lat": 51.45,
+      "lng": -0.014
+    },
+    "Queen Elizabeth Hospital, Woolwich": {
+      "lat": 51.483,
+      "lng": 0.062
+    },
+    "St George's Hospital, Tooting": {
+      "lat": 51.427,
+      "lng": -0.175
+    },
+    "Epsom Hospital": {
+      "lat": 51.334,
+      "lng": -0.268
+    },
+    "St Helier Hospital": {
+      "lat": 51.377,
+      "lng": -0.196
+    },
+    "Kingston Hospital": {
+      "lat": 51.413,
+      "lng": -0.282
+    },
+    "Croydon University Hospital": {
+      "lat": 51.373,
+      "lng": -0.1
+    },
+    "North East (generic)": {
+      "lat": 54.97,
+      "lng": -1.61
+    },
+    "Royal Liverpool University Hospital": {
+      "lat": 53.41,
+      "lng": -2.967
+    },
+    "Aintree University Hospital": {
+      "lat": 53.469,
+      "lng": -2.939
+    },
+    "Whiston Hospital": {
+      "lat": 53.431,
+      "lng": -2.798
+    },
+    "Leighton Hospital, Crewe": {
+      "lat": 53.099,
+      "lng": -2.462
+    },
+    "Warrington Hospital": {
+      "lat": 53.38,
+      "lng": -2.585
+    },
+    "Liverpool Women's Hospital": {
+      "lat": 53.401,
+      "lng": -2.967
+    },
+    "Macclesfield District General Hospital": {
+      "lat": 53.26,
+      "lng": -2.129
+    },
+    "Arrowe Park Hospital": {
+      "lat": 53.378,
+      "lng": -3.091
+    },
+    "Countess of Chester Hospital": {
+      "lat": 53.202,
+      "lng": -2.892
+    },
+    "Southport Hospital": {
+      "lat": 53.655,
+      "lng": -3.012
+    },
+    "Manchester Royal Infirmary": {
+      "lat": 53.462,
+      "lng": -2.226
+    },
+    "Salford Royal Hospital": {
+      "lat": 53.487,
+      "lng": -2.325
+    },
+    "Royal Oldham Hospital": {
+      "lat": 53.548,
+      "lng": -2.12
+    },
+    "Stepping Hill Hospital, Stockport": {
+      "lat": 53.377,
+      "lng": -2.138
+    },
+    "Tameside General Hospital": {
+      "lat": 53.489,
+      "lng": -2.048
+    },
+    "Royal Bolton Hospital": {
+      "lat": 53.565,
+      "lng": -2.451
+    },
+    "Wigan Infirmary": {
+      "lat": 53.541,
+      "lng": -2.637
+    },
+    "Royal Preston Hospital": {
+      "lat": 53.767,
+      "lng": -2.721
+    },
+    "Royal Blackburn Hospital": {
+      "lat": 53.736,
+      "lng": -2.477
+    },
+    "Blackpool Victoria Hospital": {
+      "lat": 53.818,
+      "lng": -3.029
+    },
+    "Royal Lancaster Infirmary": {
+      "lat": 54.056,
+      "lng": -2.801
+    },
+    "Furness General Hospital, Barrow": {
+      "lat": 54.129,
+      "lng": -3.205
+    },
+    "Wythenshawe Hospital": {
+      "lat": 53.387,
+      "lng": -2.288
+    },
+    "North Manchester General Hospital": {
+      "lat": 53.518,
+      "lng": -2.206
+    },
+    "Royal Cornwall Hospital, Truro": {
+      "lat": 50.266,
+      "lng": -5.053
+    },
+    "Royal Devon & Exeter Hospital": {
+      "lat": 50.718,
+      "lng": -3.51
+    },
+    "North Devon District Hospital": {
+      "lat": 51.079,
+      "lng": -3.979
+    },
+    "Derriford Hospital, Plymouth": {
+      "lat": 50.417,
+      "lng": -4.114
+    },
+    "Musgrove Park Hospital, Taunton": {
+      "lat": 51.013,
+      "lng": -3.114
+    },
+    "Torbay Hospital": {
+      "lat": 50.461,
+      "lng": -3.525
+    },
+    "Royal United Hospital, Bath": {
+      "lat": 51.388,
+      "lng": -2.388
+    },
+    "Bristol Royal Infirmary": {
+      "lat": 51.458,
+      "lng": -2.593
+    },
+    "Southmead Hospital, Bristol": {
+      "lat": 51.501,
+      "lng": -2.596
+    },
+    "Gloucestershire Royal Hospital": {
+      "lat": 51.864,
+      "lng": -2.238
+    },
+    "Cheltenham General Hospital": {
+      "lat": 51.893,
+      "lng": -2.068
+    },
+    "Great Western Hospital, Swindon": {
+      "lat": 51.553,
+      "lng": -1.758
+    },
+    "Yeovil District Hospital": {
+      "lat": 50.94,
+      "lng": -2.634
+    },
+    "Ysbyty Gwynedd, Bangor": {
+      "lat": 53.21,
+      "lng": -4.138
+    },
+    "Ysbyty Glan Clwyd, Rhyl": {
+      "lat": 53.266,
+      "lng": -3.487
+    },
+    "Wrexham Maelor Hospital": {
+      "lat": 53.049,
+      "lng": -2.988
+    },
+    "Grange University Hospital, Cwmbran": {
+      "lat": 51.649,
+      "lng": -3.019
+    },
+    "University Hospital of Wales, Cardiff": {
+      "lat": 51.507,
+      "lng": -3.19
+    },
+    "Morriston Hospital, Swansea": {
+      "lat": 51.683,
+      "lng": -3.927
+    },
+    "Glangwili Hospital, Carmarthen": {
+      "lat": 51.858,
+      "lng": -4.308
+    },
+    "Princess of Wales Hospital, Bridgend": {
+      "lat": 51.512,
+      "lng": -3.571
+    },
+    "Poole Hospital": {
+      "lat": 50.729,
+      "lng": -1.958
+    },
+    "Queen Alexandra Hospital, Portsmouth": {
+      "lat": 50.85,
+      "lng": -1.077
+    },
+    "Southampton General Hospital": {
+      "lat": 50.934,
+      "lng": -1.434
+    },
+    "Queen Elizabeth Hospital, Birmingham": {
+      "lat": 52.453,
+      "lng": -1.938
+    },
+    "Russells Hall Hospital, Dudley": {
+      "lat": 52.506,
+      "lng": -2.118
+    },
+    "Worcestershire Royal Hospital": {
+      "lat": 52.193,
+      "lng": -2.177
+    },
+    "Wye Valley Hospital, Hereford": {
+      "lat": 52.064,
+      "lng": -2.716
+    },
+    "Midland Metropolitan University Hospital": {
+      "lat": 52.5,
+      "lng": -1.963
+    },
+    "Alexandra Hospital, Redditch": {
+      "lat": 52.302,
+      "lng": -1.942
+    },
+    "Royal Stoke University Hospital": {
+      "lat": 53.001,
+      "lng": -2.187
+    },
+    "New Cross Hospital, Wolverhampton": {
+      "lat": 52.591,
+      "lng": -2.126
+    },
+    "Royal Shrewsbury Hospital": {
+      "lat": 52.709,
+      "lng": -2.75
+    },
+    "Princess Royal Hospital, Telford": {
+      "lat": 52.688,
+      "lng": -2.515
+    },
+    "Manor Hospital, Walsall": {
+      "lat": 52.588,
+      "lng": -1.98
+    },
+    "Heartlands Hospital, Birmingham": {
+      "lat": 52.478,
+      "lng": -1.828
+    },
+    "Good Hope Hospital, Sutton Coldfield": {
+      "lat": 52.571,
+      "lng": -1.82
+    },
+    "Warwick Hospital": {
+      "lat": 52.281,
+      "lng": -1.589
+    },
+    "University Hospital Coventry": {
+      "lat": 52.421,
+      "lng": -1.441
+    },
+    "George Eliot Hospital, Nuneaton": {
+      "lat": 52.509,
+      "lng": -1.468
+    },
+    "York Hospital": {
+      "lat": 53.969,
+      "lng": -1.087
+    },
+    "Harrogate District Hospital": {
+      "lat": 53.991,
+      "lng": -1.516
+    },
+    "Hull Royal Infirmary": {
+      "lat": 53.744,
+      "lng": -0.344
+    },
+    "Scarborough Hospital": {
+      "lat": 54.264,
+      "lng": -0.396
+    },
+    "Diana, Princess of Wales Hospital": {
+      "lat": 53.564,
+      "lng": -0.077
+    },
+    "Scunthorpe General Hospital": {
+      "lat": 53.585,
+      "lng": -0.653
+    },
+    "Sheffield Teaching Hospitals": {
+      "lat": 53.374,
+      "lng": -1.49
+    },
+    "Doncaster Royal Infirmary": {
+      "lat": 53.518,
+      "lng": -1.119
+    },
+    "Rotherham Hospital": {
+      "lat": 53.43,
+      "lng": -1.354
+    },
+    "Barnsley Hospital": {
+      "lat": 53.556,
+      "lng": -1.481
+    },
+    "Leeds Teaching Hospitals": {
+      "lat": 53.806,
+      "lng": -1.522
+    },
+    "Bradford Royal Infirmary": {
+      "lat": 53.792,
+      "lng": -1.768
+    },
+    "Airedale General Hospital": {
+      "lat": 53.871,
+      "lng": -1.913
+    },
+    "Calderdale Royal Hospital": {
+      "lat": 53.706,
+      "lng": -1.835
+    },
+    "Huddersfield Royal Infirmary": {
+      "lat": 53.644,
+      "lng": -1.784
+    },
+    "Pinderfields Hospital, Wakefield": {
+      "lat": 53.683,
+      "lng": -1.475
+    }
+  },
+  "job_hospitals": [
+    {
+      "id": 0,
+      "preference": "Buckinghamshire Healthcare NHS Trust - CT1 - Aug - 1",
+      "hospitals": [
+        {
+          "name": "Stoke Mandeville Hospital",
+          "lat": 51.792,
+          "lng": -0.787
+        },
+        {
+          "name": "Wycombe Hospital",
+          "lat": 51.628,
+          "lng": -0.753
+        }
+      ],
+      "centroid": [
+        51.71,
+        -0.77
+      ],
+      "spread_miles": 11.4
+    },
+    {
+      "id": 1,
+      "preference": "Buckinghamshire Healthcare NHS Trust - CT1 - Aug - 2",
+      "hospitals": [
+        {
+          "name": "Stoke Mandeville Hospital",
+          "lat": 51.792,
+          "lng": -0.787
+        },
+        {
+          "name": "Milton Keynes University Hospital",
+          "lat": 52.025,
+          "lng": -0.743
+        }
+      ],
+      "centroid": [
+        51.9085,
+        -0.765
+      ],
+      "spread_miles": 16.2
+    },
+    {
+      "id": 2,
+      "preference": "East Midlands - CT1 - Aug - 1",
+      "hospitals": [
+        {
+          "name": "Queen's Medical Centre, Nottingham",
+          "lat": 52.942,
+          "lng": -1.1852
+        },
+        {
+          "name": "Nottingham City Hospital",
+          "lat": 52.9693,
+          "lng": -1.1786
+        },
+        {
+          "name": "Lincoln County Hospital",
+          "lat": 53.2202,
+          "lng": -0.5465
+        },
+        {
+          "name": "Pilgrim Hospital, Boston",
+          "lat": 52.9858,
+          "lng": -0.0147
+        }
+      ],
+      "centroid": [
+        53.0293,
+        -0.7313
+      ],
+      "spread_miles": 48.8
+    },
+    {
+      "id": 3,
+      "preference": "East Midlands - CT1 - Aug - 10",
+      "hospitals": [
+        {
+          "name": "Queen's Medical Centre, Nottingham",
+          "lat": 52.942,
+          "lng": -1.1852
+        },
+        {
+          "name": "Nottingham City Hospital",
+          "lat": 52.9693,
+          "lng": -1.1786
+        },
+        {
+          "name": "King's Mill Hospital",
+          "lat": 53.1313,
+          "lng": -1.2402
+        }
+      ],
+      "centroid": [
+        53.0142,
+        -1.2013
+      ],
+      "spread_miles": 13.3
+    },
+    {
+      "id": 4,
+      "preference": "East Midlands - CT1 - Aug - 11",
+      "hospitals": [
+        {
+          "name": "Queen's Medical Centre, Nottingham",
+          "lat": 52.942,
+          "lng": -1.1852
+        },
+        {
+          "name": "Nottingham City Hospital",
+          "lat": 52.9693,
+          "lng": -1.1786
+        },
+        {
+          "name": "King's Mill Hospital",
+          "lat": 53.1313,
+          "lng": -1.2402
+        }
+      ],
+      "centroid": [
+        53.0142,
+        -1.2013
+      ],
+      "spread_miles": 13.3
+    },
+    {
+      "id": 5,
+      "preference": "East Midlands - CT1 - Aug - 12",
+      "hospitals": [
+        {
+          "name": "Queen's Medical Centre, Nottingham",
+          "lat": 52.942,
+          "lng": -1.1852
+        },
+        {
+          "name": "Nottingham City Hospital",
+          "lat": 52.9693,
+          "lng": -1.1786
+        },
+        {
+          "name": "King's Mill Hospital",
+          "lat": 53.1313,
+          "lng": -1.2402
+        }
+      ],
+      "centroid": [
+        53.0142,
+        -1.2013
+      ],
+      "spread_miles": 13.3
+    },
+    {
+      "id": 6,
+      "preference": "East Midlands - CT1 - Aug - 13",
+      "hospitals": [
+        {
+          "name": "Royal Derby Hospital",
+          "lat": 52.9108,
+          "lng": -1.5079
+        },
+        {
+          "name": "Queen's Hospital, Burton",
+          "lat": 52.8049,
+          "lng": -1.6423
+        },
+        {
+          "name": "Chesterfield Royal Hospital",
+          "lat": 53.2343,
+          "lng": -1.427
+        }
+      ],
+      "centroid": [
+        52.9833,
+        -1.5257
+      ],
+      "spread_miles": 31.0
+    },
+    {
+      "id": 7,
+      "preference": "East Midlands - CT1 - Aug - 14",
+      "hospitals": [
+        {
+          "name": "Royal Derby Hospital",
+          "lat": 52.9108,
+          "lng": -1.5079
+        },
+        {
+          "name": "Queen's Hospital, Burton",
+          "lat": 52.8049,
+          "lng": -1.6423
+        },
+        {
+          "name": "Chesterfield Royal Hospital",
+          "lat": 53.2343,
+          "lng": -1.427
+        }
+      ],
+      "centroid": [
+        52.9833,
+        -1.5257
+      ],
+      "spread_miles": 31.0
+    },
+    {
+      "id": 8,
+      "preference": "East Midlands - CT1 - Aug - 15",
+      "hospitals": [
+        {
+          "name": "Royal Derby Hospital",
+          "lat": 52.9108,
+          "lng": -1.5079
+        },
+        {
+          "name": "Queen's Hospital, Burton",
+          "lat": 52.8049,
+          "lng": -1.6423
+        },
+        {
+          "name": "Chesterfield Royal Hospital",
+          "lat": 53.2343,
+          "lng": -1.427
+        }
+      ],
+      "centroid": [
+        52.9833,
+        -1.5257
+      ],
+      "spread_miles": 31.0
+    },
+    {
+      "id": 9,
+      "preference": "East Midlands - CT1 - Aug - 16",
+      "hospitals": [
+        {
+          "name": "Royal Derby Hospital",
+          "lat": 52.9108,
+          "lng": -1.5079
+        },
+        {
+          "name": "Queen's Hospital, Burton",
+          "lat": 52.8049,
+          "lng": -1.6423
+        },
+        {
+          "name": "Chesterfield Royal Hospital",
+          "lat": 53.2343,
+          "lng": -1.427
+        }
+      ],
+      "centroid": [
+        52.9833,
+        -1.5257
+      ],
+      "spread_miles": 31.0
+    },
+    {
+      "id": 10,
+      "preference": "East Midlands - CT1 - Aug - 17",
+      "hospitals": [
+        {
+          "name": "Royal Derby Hospital",
+          "lat": 52.9108,
+          "lng": -1.5079
+        },
+        {
+          "name": "Queen's Hospital, Burton",
+          "lat": 52.8049,
+          "lng": -1.6423
+        },
+        {
+          "name": "Chesterfield Royal Hospital",
+          "lat": 53.2343,
+          "lng": -1.427
+        }
+      ],
+      "centroid": [
+        52.9833,
+        -1.5257
+      ],
+      "spread_miles": 31.0
+    },
+    {
+      "id": 11,
+      "preference": "East Midlands - CT1 - Aug - 18",
+      "hospitals": [
+        {
+          "name": "Royal Derby Hospital",
+          "lat": 52.9108,
+          "lng": -1.5079
+        },
+        {
+          "name": "Queen's Hospital, Burton",
+          "lat": 52.8049,
+          "lng": -1.6423
+        },
+        {
+          "name": "Chesterfield Royal Hospital",
+          "lat": 53.2343,
+          "lng": -1.427
+        }
+      ],
+      "centroid": [
+        52.9833,
+        -1.5257
+      ],
+      "spread_miles": 31.0
+    },
+    {
+      "id": 12,
+      "preference": "East Midlands - CT1 - Aug - 19",
+      "hospitals": [
+        {
+          "name": "Leicester Royal Infirmary",
+          "lat": 52.6244,
+          "lng": -1.1049
+        },
+        {
+          "name": "Kettering General Hospital",
+          "lat": 52.404,
+          "lng": -0.717
+        },
+        {
+          "name": "Northampton General Hospital",
+          "lat": 52.2466,
+          "lng": -0.8744
+        }
+      ],
+      "centroid": [
+        52.425,
+        -0.8988
+      ],
+      "spread_miles": 27.9
+    },
+    {
+      "id": 13,
+      "preference": "East Midlands - CT1 - Aug - 2",
+      "hospitals": [
+        {
+          "name": "Queen's Medical Centre, Nottingham",
+          "lat": 52.942,
+          "lng": -1.1852
+        },
+        {
+          "name": "Nottingham City Hospital",
+          "lat": 52.9693,
+          "lng": -1.1786
+        },
+        {
+          "name": "Lincoln County Hospital",
+          "lat": 53.2202,
+          "lng": -0.5465
+        },
+        {
+          "name": "Pilgrim Hospital, Boston",
+          "lat": 52.9858,
+          "lng": -0.0147
+        }
+      ],
+      "centroid": [
+        53.0293,
+        -0.7313
+      ],
+      "spread_miles": 48.8
+    },
+    {
+      "id": 14,
+      "preference": "East Midlands - CT1 - Aug - 20",
+      "hospitals": [
+        {
+          "name": "Leicester Royal Infirmary",
+          "lat": 52.6244,
+          "lng": -1.1049
+        },
+        {
+          "name": "Kettering General Hospital",
+          "lat": 52.404,
+          "lng": -0.717
+        },
+        {
+          "name": "Northampton General Hospital",
+          "lat": 52.2466,
+          "lng": -0.8744
+        }
+      ],
+      "centroid": [
+        52.425,
+        -0.8988
+      ],
+      "spread_miles": 27.9
+    },
+    {
+      "id": 15,
+      "preference": "East Midlands - CT1 - Aug - 21",
+      "hospitals": [
+        {
+          "name": "Leicester Royal Infirmary",
+          "lat": 52.6244,
+          "lng": -1.1049
+        },
+        {
+          "name": "Kettering General Hospital",
+          "lat": 52.404,
+          "lng": -0.717
+        },
+        {
+          "name": "Northampton General Hospital",
+          "lat": 52.2466,
+          "lng": -0.8744
+        }
+      ],
+      "centroid": [
+        52.425,
+        -0.8988
+      ],
+      "spread_miles": 27.9
+    },
+    {
+      "id": 16,
+      "preference": "East Midlands - CT1 - Aug - 22",
+      "hospitals": [
+        {
+          "name": "Leicester Royal Infirmary",
+          "lat": 52.6244,
+          "lng": -1.1049
+        },
+        {
+          "name": "Kettering General Hospital",
+          "lat": 52.404,
+          "lng": -0.717
+        },
+        {
+          "name": "Northampton General Hospital",
+          "lat": 52.2466,
+          "lng": -0.8744
+        }
+      ],
+      "centroid": [
+        52.425,
+        -0.8988
+      ],
+      "spread_miles": 27.9
+    },
+    {
+      "id": 17,
+      "preference": "East Midlands - CT1 - Aug - 23",
+      "hospitals": [
+        {
+          "name": "Leicester Royal Infirmary",
+          "lat": 52.6244,
+          "lng": -1.1049
+        },
+        {
+          "name": "Kettering General Hospital",
+          "lat": 52.404,
+          "lng": -0.717
+        },
+        {
+          "name": "Northampton General Hospital",
+          "lat": 52.2466,
+          "lng": -0.8744
+        }
+      ],
+      "centroid": [
+        52.425,
+        -0.8988
+      ],
+      "spread_miles": 27.9
+    },
+    {
+      "id": 18,
+      "preference": "East Midlands - CT1 - Aug - 24",
+      "hospitals": [
+        {
+          "name": "Leicester Royal Infirmary",
+          "lat": 52.6244,
+          "lng": -1.1049
+        },
+        {
+          "name": "Kettering General Hospital",
+          "lat": 52.404,
+          "lng": -0.717
+        },
+        {
+          "name": "Northampton General Hospital",
+          "lat": 52.2466,
+          "lng": -0.8744
+        }
+      ],
+      "centroid": [
+        52.425,
+        -0.8988
+      ],
+      "spread_miles": 27.9
+    },
+    {
+      "id": 19,
+      "preference": "East Midlands - CT1 - Aug - 3",
+      "hospitals": [
+        {
+          "name": "Queen's Medical Centre, Nottingham",
+          "lat": 52.942,
+          "lng": -1.1852
+        },
+        {
+          "name": "Nottingham City Hospital",
+          "lat": 52.9693,
+          "lng": -1.1786
+        },
+        {
+          "name": "Lincoln County Hospital",
+          "lat": 53.2202,
+          "lng": -0.5465
+        },
+        {
+          "name": "Pilgrim Hospital, Boston",
+          "lat": 52.9858,
+          "lng": -0.0147
+        }
+      ],
+      "centroid": [
+        53.0293,
+        -0.7313
+      ],
+      "spread_miles": 48.8
+    },
+    {
+      "id": 20,
+      "preference": "East Midlands - CT1 - Aug - 4",
+      "hospitals": [
+        {
+          "name": "Queen's Medical Centre, Nottingham",
+          "lat": 52.942,
+          "lng": -1.1852
+        },
+        {
+          "name": "Nottingham City Hospital",
+          "lat": 52.9693,
+          "lng": -1.1786
+        },
+        {
+          "name": "Lincoln County Hospital",
+          "lat": 53.2202,
+          "lng": -0.5465
+        },
+        {
+          "name": "Pilgrim Hospital, Boston",
+          "lat": 52.9858,
+          "lng": -0.0147
+        }
+      ],
+      "centroid": [
+        53.0293,
+        -0.7313
+      ],
+      "spread_miles": 48.8
+    },
+    {
+      "id": 21,
+      "preference": "East Midlands - CT1 - Aug - 5",
+      "hospitals": [
+        {
+          "name": "Queen's Medical Centre, Nottingham",
+          "lat": 52.942,
+          "lng": -1.1852
+        },
+        {
+          "name": "Nottingham City Hospital",
+          "lat": 52.9693,
+          "lng": -1.1786
+        },
+        {
+          "name": "Lincoln County Hospital",
+          "lat": 53.2202,
+          "lng": -0.5465
+        },
+        {
+          "name": "Pilgrim Hospital, Boston",
+          "lat": 52.9858,
+          "lng": -0.0147
+        }
+      ],
+      "centroid": [
+        53.0293,
+        -0.7313
+      ],
+      "spread_miles": 48.8
+    },
+    {
+      "id": 22,
+      "preference": "East Midlands - CT1 - Aug - 6",
+      "hospitals": [
+        {
+          "name": "Queen's Medical Centre, Nottingham",
+          "lat": 52.942,
+          "lng": -1.1852
+        },
+        {
+          "name": "Nottingham City Hospital",
+          "lat": 52.9693,
+          "lng": -1.1786
+        },
+        {
+          "name": "Lincoln County Hospital",
+          "lat": 53.2202,
+          "lng": -0.5465
+        },
+        {
+          "name": "Pilgrim Hospital, Boston",
+          "lat": 52.9858,
+          "lng": -0.0147
+        }
+      ],
+      "centroid": [
+        53.0293,
+        -0.7313
+      ],
+      "spread_miles": 48.8
+    },
+    {
+      "id": 23,
+      "preference": "East Midlands - CT1 - Aug - 7",
+      "hospitals": [
+        {
+          "name": "Queen's Medical Centre, Nottingham",
+          "lat": 52.942,
+          "lng": -1.1852
+        },
+        {
+          "name": "Nottingham City Hospital",
+          "lat": 52.9693,
+          "lng": -1.1786
+        },
+        {
+          "name": "King's Mill Hospital",
+          "lat": 53.1313,
+          "lng": -1.2402
+        }
+      ],
+      "centroid": [
+        53.0142,
+        -1.2013
+      ],
+      "spread_miles": 13.3
+    },
+    {
+      "id": 24,
+      "preference": "East Midlands - CT1 - Aug - 8",
+      "hospitals": [
+        {
+          "name": "Queen's Medical Centre, Nottingham",
+          "lat": 52.942,
+          "lng": -1.1852
+        },
+        {
+          "name": "Nottingham City Hospital",
+          "lat": 52.9693,
+          "lng": -1.1786
+        },
+        {
+          "name": "King's Mill Hospital",
+          "lat": 53.1313,
+          "lng": -1.2402
+        }
+      ],
+      "centroid": [
+        53.0142,
+        -1.2013
+      ],
+      "spread_miles": 13.3
+    },
+    {
+      "id": 25,
+      "preference": "East Midlands - CT1 - Aug - 9",
+      "hospitals": [
+        {
+          "name": "Queen's Medical Centre, Nottingham",
+          "lat": 52.942,
+          "lng": -1.1852
+        },
+        {
+          "name": "Nottingham City Hospital",
+          "lat": 52.9693,
+          "lng": -1.1786
+        },
+        {
+          "name": "King's Mill Hospital",
+          "lat": 53.1313,
+          "lng": -1.2402
+        }
+      ],
+      "centroid": [
+        53.0142,
+        -1.2013
+      ],
+      "spread_miles": 13.3
+    },
+    {
+      "id": 26,
+      "preference": "East Midlands - North - CT1 - Aug - 29",
+      "hospitals": [
+        {
+          "name": "Royal Derby Hospital",
+          "lat": 52.9108,
+          "lng": -1.5079
+        }
+      ],
+      "centroid": [
+        52.9108,
+        -1.5079
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 27,
+      "preference": "East Midlands - North - CT1 - Aug - 30",
+      "hospitals": [
+        {
+          "name": "King's Mill Hospital",
+          "lat": 53.1313,
+          "lng": -1.2402
+        },
+        {
+          "name": "Royal Derby Hospital",
+          "lat": 52.9108,
+          "lng": -1.5079
+        }
+      ],
+      "centroid": [
+        53.0211,
+        -1.374
+      ],
+      "spread_miles": 18.9
+    },
+    {
+      "id": 28,
+      "preference": "East Midlands - North - CT1 - Aug - 31",
+      "hospitals": [
+        {
+          "name": "Queen's Medical Centre, Nottingham",
+          "lat": 52.942,
+          "lng": -1.1852
+        },
+        {
+          "name": "Nottingham City Hospital",
+          "lat": 52.9693,
+          "lng": -1.1786
+        },
+        {
+          "name": "King's Mill Hospital",
+          "lat": 53.1313,
+          "lng": -1.2402
+        }
+      ],
+      "centroid": [
+        53.0142,
+        -1.2013
+      ],
+      "spread_miles": 13.3
+    },
+    {
+      "id": 29,
+      "preference": "East Midlands - North - CT1 - Aug - 32",
+      "hospitals": [
+        {
+          "name": "Queen's Medical Centre, Nottingham",
+          "lat": 52.942,
+          "lng": -1.1852
+        },
+        {
+          "name": "Nottingham City Hospital",
+          "lat": 52.9693,
+          "lng": -1.1786
+        },
+        {
+          "name": "King's Mill Hospital",
+          "lat": 53.1313,
+          "lng": -1.2402
+        }
+      ],
+      "centroid": [
+        53.0142,
+        -1.2013
+      ],
+      "spread_miles": 13.3
+    },
+    {
+      "id": 30,
+      "preference": "East Midlands - South - CT1 - Aug - 25",
+      "hospitals": [
+        {
+          "name": "Leicester Royal Infirmary",
+          "lat": 52.6244,
+          "lng": -1.1049
+        },
+        {
+          "name": "Northampton General Hospital",
+          "lat": 52.2466,
+          "lng": -0.8744
+        }
+      ],
+      "centroid": [
+        52.4355,
+        -0.9896
+      ],
+      "spread_miles": 27.9
+    },
+    {
+      "id": 31,
+      "preference": "East Midlands - South - CT1 - Aug - 26",
+      "hospitals": [
+        {
+          "name": "Leicester Royal Infirmary",
+          "lat": 52.6244,
+          "lng": -1.1049
+        },
+        {
+          "name": "Northampton General Hospital",
+          "lat": 52.2466,
+          "lng": -0.8744
+        }
+      ],
+      "centroid": [
+        52.4355,
+        -0.9896
+      ],
+      "spread_miles": 27.9
+    },
+    {
+      "id": 32,
+      "preference": "East Midlands - South - CT1 - Aug - 27",
+      "hospitals": [
+        {
+          "name": "Kettering General Hospital",
+          "lat": 52.404,
+          "lng": -0.717
+        },
+        {
+          "name": "Northampton General Hospital",
+          "lat": 52.2466,
+          "lng": -0.8744
+        }
+      ],
+      "centroid": [
+        52.3253,
+        -0.7957
+      ],
+      "spread_miles": 12.7
+    },
+    {
+      "id": 33,
+      "preference": "East Midlands - South - CT1 - Aug - 28",
+      "hospitals": [
+        {
+          "name": "Northampton General Hospital",
+          "lat": 52.2466,
+          "lng": -0.8744
+        }
+      ],
+      "centroid": [
+        52.2466,
+        -0.8744
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 34,
+      "preference": "East of England - Bedfordshire - Bedford - CT1 - Aug - 17",
+      "hospitals": [
+        {
+          "name": "Bedford Hospital",
+          "lat": 52.1398,
+          "lng": -0.461
+        },
+        {
+          "name": "Luton & Dunstable Hospital",
+          "lat": 51.882,
+          "lng": -0.421
+        }
+      ],
+      "centroid": [
+        52.0109,
+        -0.441
+      ],
+      "spread_miles": 17.9
+    },
+    {
+      "id": 35,
+      "preference": "East of England - Bedfordshire - Luton - CT1 - Aug - 11",
+      "hospitals": [
+        {
+          "name": "Luton & Dunstable Hospital",
+          "lat": 51.882,
+          "lng": -0.421
+        },
+        {
+          "name": "Watford General Hospital",
+          "lat": 51.663,
+          "lng": -0.396
+        }
+      ],
+      "centroid": [
+        51.7725,
+        -0.4085
+      ],
+      "spread_miles": 15.2
+    },
+    {
+      "id": 36,
+      "preference": "East of England - Cambridgeshire - Peterborough - CT1 - Aug - 10",
+      "hospitals": [
+        {
+          "name": "Peterborough City Hospital",
+          "lat": 52.586,
+          "lng": -0.25
+        },
+        {
+          "name": "Queen Elizabeth Hospital, King's Lynn",
+          "lat": 52.752,
+          "lng": 0.399
+        }
+      ],
+      "centroid": [
+        52.669,
+        0.0745
+      ],
+      "spread_miles": 29.5
+    },
+    {
+      "id": 37,
+      "preference": "East of England - Essex - Chelmsford - CT1 - Aug - 1",
+      "hospitals": [
+        {
+          "name": "Broomfield Hospital, Chelmsford",
+          "lat": 51.772,
+          "lng": 0.469
+        },
+        {
+          "name": "Southend University Hospital",
+          "lat": 51.544,
+          "lng": 0.702
+        }
+      ],
+      "centroid": [
+        51.658,
+        0.5855
+      ],
+      "spread_miles": 18.7
+    },
+    {
+      "id": 38,
+      "preference": "East of England - Essex - Chelmsford - CT1 - Aug - 12",
+      "hospitals": [
+        {
+          "name": "Broomfield Hospital, Chelmsford",
+          "lat": 51.772,
+          "lng": 0.469
+        },
+        {
+          "name": "Southend University Hospital",
+          "lat": 51.544,
+          "lng": 0.702
+        }
+      ],
+      "centroid": [
+        51.658,
+        0.5855
+      ],
+      "spread_miles": 18.7
+    },
+    {
+      "id": 39,
+      "preference": "East of England - Essex - Colchester - CT1 - Aug - 18",
+      "hospitals": [
+        {
+          "name": "Colchester General Hospital",
+          "lat": 51.892,
+          "lng": 0.872
+        },
+        {
+          "name": "Ipswich Hospital",
+          "lat": 52.064,
+          "lng": 1.146
+        }
+      ],
+      "centroid": [
+        51.978,
+        1.009
+      ],
+      "spread_miles": 16.7
+    },
+    {
+      "id": 40,
+      "preference": "East of England - Essex - Colchester - CT1 - Aug - 3",
+      "hospitals": [
+        {
+          "name": "Colchester General Hospital",
+          "lat": 51.892,
+          "lng": 0.872
+        },
+        {
+          "name": "Ipswich Hospital",
+          "lat": 52.064,
+          "lng": 1.146
+        }
+      ],
+      "centroid": [
+        51.978,
+        1.009
+      ],
+      "spread_miles": 16.7
+    },
+    {
+      "id": 41,
+      "preference": "East of England - Essex - Southend - CT1 - Aug - 13",
+      "hospitals": [
+        {
+          "name": "Broomfield Hospital, Chelmsford",
+          "lat": 51.772,
+          "lng": 0.469
+        },
+        {
+          "name": "Southend University Hospital",
+          "lat": 51.544,
+          "lng": 0.702
+        }
+      ],
+      "centroid": [
+        51.658,
+        0.5855
+      ],
+      "spread_miles": 18.7
+    },
+    {
+      "id": 42,
+      "preference": "East of England - Essex - Southend - CT1 - Aug - 14",
+      "hospitals": [
+        {
+          "name": "Broomfield Hospital, Chelmsford",
+          "lat": 51.772,
+          "lng": 0.469
+        },
+        {
+          "name": "Southend University Hospital",
+          "lat": 51.544,
+          "lng": 0.702
+        }
+      ],
+      "centroid": [
+        51.658,
+        0.5855
+      ],
+      "spread_miles": 18.7
+    },
+    {
+      "id": 43,
+      "preference": "East of England - Essex - Southend - CT1 - Aug - 2",
+      "hospitals": [
+        {
+          "name": "Broomfield Hospital, Chelmsford",
+          "lat": 51.772,
+          "lng": 0.469
+        },
+        {
+          "name": "Southend University Hospital",
+          "lat": 51.544,
+          "lng": 0.702
+        }
+      ],
+      "centroid": [
+        51.658,
+        0.5855
+      ],
+      "spread_miles": 18.7
+    },
+    {
+      "id": 44,
+      "preference": "East of England - Norfolk - Great Yarmouth - CT1 - Aug - 8",
+      "hospitals": [
+        {
+          "name": "James Paget Hospital, Great Yarmouth",
+          "lat": 52.586,
+          "lng": 1.723
+        },
+        {
+          "name": "Norfolk & Norwich University Hospital",
+          "lat": 52.622,
+          "lng": 1.219
+        }
+      ],
+      "centroid": [
+        52.604,
+        1.471
+      ],
+      "spread_miles": 21.3
+    },
+    {
+      "id": 45,
+      "preference": "East of England - Norfolk - Kings Lynn - CT1 - Aug - 16",
+      "hospitals": [
+        {
+          "name": "Peterborough City Hospital",
+          "lat": 52.586,
+          "lng": -0.25
+        },
+        {
+          "name": "Queen Elizabeth Hospital, King's Lynn",
+          "lat": 52.752,
+          "lng": 0.399
+        }
+      ],
+      "centroid": [
+        52.669,
+        0.0745
+      ],
+      "spread_miles": 29.5
+    },
+    {
+      "id": 46,
+      "preference": "East of England - Norfolk - Kings Lynn - CT1 - Aug - 7",
+      "hospitals": [
+        {
+          "name": "Peterborough City Hospital",
+          "lat": 52.586,
+          "lng": -0.25
+        },
+        {
+          "name": "Queen Elizabeth Hospital, King's Lynn",
+          "lat": 52.752,
+          "lng": 0.399
+        }
+      ],
+      "centroid": [
+        52.669,
+        0.0745
+      ],
+      "spread_miles": 29.5
+    },
+    {
+      "id": 47,
+      "preference": "East of England - Norfolk - Norwich - CT1 - Aug - 5",
+      "hospitals": [
+        {
+          "name": "James Paget Hospital, Great Yarmouth",
+          "lat": 52.586,
+          "lng": 1.723
+        },
+        {
+          "name": "Norfolk & Norwich University Hospital",
+          "lat": 52.622,
+          "lng": 1.219
+        }
+      ],
+      "centroid": [
+        52.604,
+        1.471
+      ],
+      "spread_miles": 21.3
+    },
+    {
+      "id": 48,
+      "preference": "East of England - Norfolk - Norwich - CT1 - Aug - 6",
+      "hospitals": [
+        {
+          "name": "James Paget Hospital, Great Yarmouth",
+          "lat": 52.586,
+          "lng": 1.723
+        },
+        {
+          "name": "Norfolk & Norwich University Hospital",
+          "lat": 52.622,
+          "lng": 1.219
+        }
+      ],
+      "centroid": [
+        52.604,
+        1.471
+      ],
+      "spread_miles": 21.3
+    },
+    {
+      "id": 49,
+      "preference": "East of England - Suffolk - Bury St. Edmunds - CT1 - Aug - 9",
+      "hospitals": [
+        {
+          "name": "West Suffolk Hospital, Bury St Edmunds",
+          "lat": 52.2434,
+          "lng": 0.707
+        },
+        {
+          "name": "Lister Hospital, Stevenage",
+          "lat": 51.91,
+          "lng": -0.199
+        }
+      ],
+      "centroid": [
+        52.0767,
+        0.254
+      ],
+      "spread_miles": 44.8
+    },
+    {
+      "id": 50,
+      "preference": "East of England - Suffolk - Ipswich - CT1 - Aug - 15",
+      "hospitals": [
+        {
+          "name": "Colchester General Hospital",
+          "lat": 51.892,
+          "lng": 0.872
+        },
+        {
+          "name": "Ipswich Hospital",
+          "lat": 52.064,
+          "lng": 1.146
+        }
+      ],
+      "centroid": [
+        51.978,
+        1.009
+      ],
+      "spread_miles": 16.7
+    },
+    {
+      "id": 51,
+      "preference": "East of England - Suffolk - Ipswich - CT1 - Aug - 4",
+      "hospitals": [
+        {
+          "name": "Colchester General Hospital",
+          "lat": 51.892,
+          "lng": 0.872
+        },
+        {
+          "name": "Ipswich Hospital",
+          "lat": 52.064,
+          "lng": 1.146
+        }
+      ],
+      "centroid": [
+        51.978,
+        1.009
+      ],
+      "spread_miles": 16.7
+    },
+    {
+      "id": 52,
+      "preference": "Kent, Surrey and Sussex - Kent - CT1 - Aug - 1",
+      "hospitals": [
+        {
+          "name": "Queen Elizabeth the Queen Mother Hospital",
+          "lat": 51.353,
+          "lng": 1.127
+        },
+        {
+          "name": "William Harvey Hospital",
+          "lat": 51.074,
+          "lng": 1.013
+        }
+      ],
+      "centroid": [
+        51.2135,
+        1.07
+      ],
+      "spread_miles": 19.9
+    },
+    {
+      "id": 53,
+      "preference": "Kent, Surrey and Sussex - Kent - CT1 - Aug - 18",
+      "hospitals": [
+        {
+          "name": "Maidstone Hospital",
+          "lat": 51.265,
+          "lng": 0.509
+        },
+        {
+          "name": "Tunbridge Wells Hospital",
+          "lat": 51.129,
+          "lng": 0.292
+        },
+        {
+          "name": "Darent Valley Hospital",
+          "lat": 51.438,
+          "lng": 0.223
+        }
+      ],
+      "centroid": [
+        51.2773,
+        0.3413
+      ],
+      "spread_miles": 21.6
+    },
+    {
+      "id": 54,
+      "preference": "Kent, Surrey and Sussex - Kent - CT1 - Aug - 19",
+      "hospitals": [
+        {
+          "name": "Medway Maritime Hospital",
+          "lat": 51.375,
+          "lng": 0.537
+        },
+        {
+          "name": "Darent Valley Hospital",
+          "lat": 51.438,
+          "lng": 0.223
+        }
+      ],
+      "centroid": [
+        51.4065,
+        0.38
+      ],
+      "spread_miles": 14.2
+    },
+    {
+      "id": 55,
+      "preference": "Kent, Surrey and Sussex - Kent - CT1 - Aug - 2",
+      "hospitals": [
+        {
+          "name": "Queen Elizabeth the Queen Mother Hospital",
+          "lat": 51.353,
+          "lng": 1.127
+        },
+        {
+          "name": "William Harvey Hospital",
+          "lat": 51.074,
+          "lng": 1.013
+        }
+      ],
+      "centroid": [
+        51.2135,
+        1.07
+      ],
+      "spread_miles": 19.9
+    },
+    {
+      "id": 56,
+      "preference": "Kent, Surrey and Sussex - Kent - CT1 - Aug - 20",
+      "hospitals": [
+        {
+          "name": "Medway Maritime Hospital",
+          "lat": 51.375,
+          "lng": 0.537
+        },
+        {
+          "name": "Darent Valley Hospital",
+          "lat": 51.438,
+          "lng": 0.223
+        }
+      ],
+      "centroid": [
+        51.4065,
+        0.38
+      ],
+      "spread_miles": 14.2
+    },
+    {
+      "id": 57,
+      "preference": "Kent, Surrey and Sussex - Kent - CT1 - Aug - 21",
+      "hospitals": [
+        {
+          "name": "Medway Maritime Hospital",
+          "lat": 51.375,
+          "lng": 0.537
+        },
+        {
+          "name": "Darent Valley Hospital",
+          "lat": 51.438,
+          "lng": 0.223
+        }
+      ],
+      "centroid": [
+        51.4065,
+        0.38
+      ],
+      "spread_miles": 14.2
+    },
+    {
+      "id": 58,
+      "preference": "Kent, Surrey and Sussex - Kent - CT1 - Aug - 22",
+      "hospitals": [
+        {
+          "name": "Maidstone Hospital",
+          "lat": 51.265,
+          "lng": 0.509
+        },
+        {
+          "name": "Tunbridge Wells Hospital",
+          "lat": 51.129,
+          "lng": 0.292
+        },
+        {
+          "name": "Queen Elizabeth the Queen Mother Hospital",
+          "lat": 51.353,
+          "lng": 1.127
+        },
+        {
+          "name": "William Harvey Hospital",
+          "lat": 51.074,
+          "lng": 1.013
+        }
+      ],
+      "centroid": [
+        51.2052,
+        0.7352
+      ],
+      "spread_miles": 39.3
+    },
+    {
+      "id": 59,
+      "preference": "Kent, Surrey and Sussex - Kent - CT1 - Aug - 23",
+      "hospitals": [
+        {
+          "name": "Medway Maritime Hospital",
+          "lat": 51.375,
+          "lng": 0.537
+        },
+        {
+          "name": "Queen Elizabeth the Queen Mother Hospital",
+          "lat": 51.353,
+          "lng": 1.127
+        },
+        {
+          "name": "William Harvey Hospital",
+          "lat": 51.074,
+          "lng": 1.013
+        }
+      ],
+      "centroid": [
+        51.2673,
+        0.8923
+      ],
+      "spread_miles": 29.3
+    },
+    {
+      "id": 60,
+      "preference": "Kent, Surrey and Sussex - Kent - CT1 - Aug - 3",
+      "hospitals": [
+        {
+          "name": "Medway Maritime Hospital",
+          "lat": 51.375,
+          "lng": 0.537
+        }
+      ],
+      "centroid": [
+        51.375,
+        0.537
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 61,
+      "preference": "Kent, Surrey and Sussex - Kent - CT1 - Aug - 4",
+      "hospitals": [
+        {
+          "name": "Maidstone Hospital",
+          "lat": 51.265,
+          "lng": 0.509
+        },
+        {
+          "name": "Tunbridge Wells Hospital",
+          "lat": 51.129,
+          "lng": 0.292
+        }
+      ],
+      "centroid": [
+        51.197,
+        0.4005
+      ],
+      "spread_miles": 13.3
+    },
+    {
+      "id": 62,
+      "preference": "Kent, Surrey and Sussex - Kent - CT1 - Aug - 5",
+      "hospitals": [
+        {
+          "name": "Medway Maritime Hospital",
+          "lat": 51.375,
+          "lng": 0.537
+        },
+        {
+          "name": "Maidstone Hospital",
+          "lat": 51.265,
+          "lng": 0.509
+        },
+        {
+          "name": "Tunbridge Wells Hospital",
+          "lat": 51.129,
+          "lng": 0.292
+        }
+      ],
+      "centroid": [
+        51.2563,
+        0.446
+      ],
+      "spread_miles": 20.0
+    },
+    {
+      "id": 63,
+      "preference": "Kent, Surrey and Sussex - Surrey - CT1 - Aug - 10",
+      "hospitals": [
+        {
+          "name": "Royal Surrey County Hospital",
+          "lat": 51.238,
+          "lng": -0.595
+        }
+      ],
+      "centroid": [
+        51.238,
+        -0.595
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 64,
+      "preference": "Kent, Surrey and Sussex - Surrey - CT1 - Aug - 24",
+      "hospitals": [
+        {
+          "name": "Frimley Park Hospital",
+          "lat": 51.311,
+          "lng": -0.748
+        }
+      ],
+      "centroid": [
+        51.311,
+        -0.748
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 65,
+      "preference": "Kent, Surrey and Sussex - Surrey - CT1 - Aug - 25",
+      "hospitals": [
+        {
+          "name": "Royal Surrey County Hospital",
+          "lat": 51.238,
+          "lng": -0.595
+        }
+      ],
+      "centroid": [
+        51.238,
+        -0.595
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 66,
+      "preference": "Kent, Surrey and Sussex - Surrey - CT1 - Aug - 6",
+      "hospitals": [
+        {
+          "name": "St Peter's Hospital, Chertsey",
+          "lat": 51.387,
+          "lng": -0.498
+        }
+      ],
+      "centroid": [
+        51.387,
+        -0.498
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 67,
+      "preference": "Kent, Surrey and Sussex - Surrey - CT1 - Aug - 7",
+      "hospitals": [
+        {
+          "name": "St Peter's Hospital, Chertsey",
+          "lat": 51.387,
+          "lng": -0.498
+        },
+        {
+          "name": "Frimley Park Hospital",
+          "lat": 51.311,
+          "lng": -0.748
+        }
+      ],
+      "centroid": [
+        51.349,
+        -0.623
+      ],
+      "spread_miles": 12.0
+    },
+    {
+      "id": 68,
+      "preference": "Kent, Surrey and Sussex - Surrey - CT1 - Aug - 8",
+      "hospitals": [
+        {
+          "name": "East Surrey Hospital",
+          "lat": 51.237,
+          "lng": -0.165
+        }
+      ],
+      "centroid": [
+        51.237,
+        -0.165
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 69,
+      "preference": "Kent, Surrey and Sussex - Surrey - CT1 - Aug - 9",
+      "hospitals": [
+        {
+          "name": "Frimley Park Hospital",
+          "lat": 51.311,
+          "lng": -0.748
+        }
+      ],
+      "centroid": [
+        51.311,
+        -0.748
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 70,
+      "preference": "Kent, Surrey and Sussex - Sussex - CT1 - Aug - 11",
+      "hospitals": [
+        {
+          "name": "Royal Sussex County Hospital, Brighton",
+          "lat": 50.823,
+          "lng": -0.137
+        },
+        {
+          "name": "St Richard's Hospital, Chichester",
+          "lat": 50.838,
+          "lng": -0.783
+        }
+      ],
+      "centroid": [
+        50.8305,
+        -0.46
+      ],
+      "spread_miles": 28.2
+    },
+    {
+      "id": 71,
+      "preference": "Kent, Surrey and Sussex - Sussex - CT1 - Aug - 12",
+      "hospitals": [
+        {
+          "name": "East Surrey Hospital",
+          "lat": 51.237,
+          "lng": -0.165
+        },
+        {
+          "name": "Royal Sussex County Hospital, Brighton",
+          "lat": 50.823,
+          "lng": -0.137
+        },
+        {
+          "name": "Eastbourne District General Hospital",
+          "lat": 50.769,
+          "lng": 0.281
+        },
+        {
+          "name": "Conquest Hospital, Hastings",
+          "lat": 50.864,
+          "lng": 0.569
+        }
+      ],
+      "centroid": [
+        50.9232,
+        0.137
+      ],
+      "spread_miles": 41.0
+    },
+    {
+      "id": 72,
+      "preference": "Kent, Surrey and Sussex - Sussex - CT1 - Aug - 13",
+      "hospitals": [
+        {
+          "name": "Royal Sussex County Hospital, Brighton",
+          "lat": 50.823,
+          "lng": -0.137
+        },
+        {
+          "name": "Eastbourne District General Hospital",
+          "lat": 50.769,
+          "lng": 0.281
+        },
+        {
+          "name": "Conquest Hospital, Hastings",
+          "lat": 50.864,
+          "lng": 0.569
+        }
+      ],
+      "centroid": [
+        50.8187,
+        0.2377
+      ],
+      "spread_miles": 30.9
+    },
+    {
+      "id": 73,
+      "preference": "Kent, Surrey and Sussex - Sussex - CT1 - Aug - 14",
+      "hospitals": [
+        {
+          "name": "St Richard's Hospital, Chichester",
+          "lat": 50.838,
+          "lng": -0.783
+        },
+        {
+          "name": "Worthing Hospital",
+          "lat": 50.821,
+          "lng": -0.379
+        }
+      ],
+      "centroid": [
+        50.8295,
+        -0.581
+      ],
+      "spread_miles": 17.7
+    },
+    {
+      "id": 74,
+      "preference": "Kent, Surrey and Sussex - Sussex - CT1 - Aug - 15",
+      "hospitals": [
+        {
+          "name": "Royal Sussex County Hospital, Brighton",
+          "lat": 50.823,
+          "lng": -0.137
+        },
+        {
+          "name": "St Richard's Hospital, Chichester",
+          "lat": 50.838,
+          "lng": -0.783
+        },
+        {
+          "name": "Worthing Hospital",
+          "lat": 50.821,
+          "lng": -0.379
+        }
+      ],
+      "centroid": [
+        50.8273,
+        -0.433
+      ],
+      "spread_miles": 28.2
+    },
+    {
+      "id": 75,
+      "preference": "Kent, Surrey and Sussex - Sussex - CT1 - Aug - 16",
+      "hospitals": [
+        {
+          "name": "Royal Sussex County Hospital, Brighton",
+          "lat": 50.823,
+          "lng": -0.137
+        },
+        {
+          "name": "St Richard's Hospital, Chichester",
+          "lat": 50.838,
+          "lng": -0.783
+        }
+      ],
+      "centroid": [
+        50.8305,
+        -0.46
+      ],
+      "spread_miles": 28.2
+    },
+    {
+      "id": 76,
+      "preference": "Kent, Surrey and Sussex - Sussex - CT1 - Aug - 17",
+      "hospitals": [
+        {
+          "name": "St Richard's Hospital, Chichester",
+          "lat": 50.838,
+          "lng": -0.783
+        },
+        {
+          "name": "Worthing Hospital",
+          "lat": 50.821,
+          "lng": -0.379
+        }
+      ],
+      "centroid": [
+        50.8295,
+        -0.581
+      ],
+      "spread_miles": 17.7
+    },
+    {
+      "id": 77,
+      "preference": "Kent, Surrey and Sussex - Sussex - CT1 - Aug - 26",
+      "hospitals": [
+        {
+          "name": "Royal Sussex County Hospital, Brighton",
+          "lat": 50.823,
+          "lng": -0.137
+        },
+        {
+          "name": "Eastbourne District General Hospital",
+          "lat": 50.769,
+          "lng": 0.281
+        },
+        {
+          "name": "Conquest Hospital, Hastings",
+          "lat": 50.864,
+          "lng": 0.569
+        }
+      ],
+      "centroid": [
+        50.8187,
+        0.2377
+      ],
+      "spread_miles": 30.9
+    },
+    {
+      "id": 78,
+      "preference": "Kent, Surrey and Sussex - Sussex - CT1 - Aug - 27",
+      "hospitals": [
+        {
+          "name": "Royal Sussex County Hospital, Brighton",
+          "lat": 50.823,
+          "lng": -0.137
+        },
+        {
+          "name": "Eastbourne District General Hospital",
+          "lat": 50.769,
+          "lng": 0.281
+        },
+        {
+          "name": "Conquest Hospital, Hastings",
+          "lat": 50.864,
+          "lng": 0.569
+        }
+      ],
+      "centroid": [
+        50.8187,
+        0.2377
+      ],
+      "spread_miles": 30.9
+    },
+    {
+      "id": 79,
+      "preference": "Kent, Surrey and Sussex - Sussex - CT1 - Aug - 28",
+      "hospitals": [
+        {
+          "name": "Eastbourne District General Hospital",
+          "lat": 50.769,
+          "lng": 0.281
+        },
+        {
+          "name": "Conquest Hospital, Hastings",
+          "lat": 50.864,
+          "lng": 0.569
+        }
+      ],
+      "centroid": [
+        50.8165,
+        0.425
+      ],
+      "spread_miles": 14.2
+    },
+    {
+      "id": 80,
+      "preference": "Kent, Surrey and Sussex - Sussex - CT1 - Aug - 29",
+      "hospitals": [
+        {
+          "name": "Worthing Hospital",
+          "lat": 50.821,
+          "lng": -0.379
+        }
+      ],
+      "centroid": [
+        50.821,
+        -0.379
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 81,
+      "preference": "Milton Keynes Hospital NHS Foundation Trust - CT1 - Aug - 1",
+      "hospitals": [
+        {
+          "name": "Milton Keynes University Hospital",
+          "lat": 52.025,
+          "lng": -0.743
+        }
+      ],
+      "centroid": [
+        52.025,
+        -0.743
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 82,
+      "preference": "North East - CT1 - Aug - 1",
+      "hospitals": [
+        {
+          "name": "North East (generic)",
+          "lat": 54.97,
+          "lng": -1.61
+        }
+      ],
+      "centroid": [
+        54.97,
+        -1.61
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 83,
+      "preference": "North East - CT1 - Aug - 2",
+      "hospitals": [
+        {
+          "name": "North East (generic)",
+          "lat": 54.97,
+          "lng": -1.61
+        }
+      ],
+      "centroid": [
+        54.97,
+        -1.61
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 84,
+      "preference": "North London - North Central East London - CT1 - Aug - 20",
+      "hospitals": [
+        {
+          "name": "University College Hospital",
+          "lat": 51.5246,
+          "lng": -0.134
+        },
+        {
+          "name": "Barnet Hospital",
+          "lat": 51.65,
+          "lng": -0.212
+        },
+        {
+          "name": "Chase Farm Hospital",
+          "lat": 51.665,
+          "lng": -0.095
+        },
+        {
+          "name": "Queen's Hospital, Romford",
+          "lat": 51.556,
+          "lng": 0.175
+        },
+        {
+          "name": "King George Hospital, Ilford",
+          "lat": 51.57,
+          "lng": 0.096
+        }
+      ],
+      "centroid": [
+        51.5931,
+        -0.034
+      ],
+      "spread_miles": 17.8
+    },
+    {
+      "id": 85,
+      "preference": "North London - North Central East London - CT1 - Aug - 21",
+      "hospitals": [
+        {
+          "name": "University College Hospital",
+          "lat": 51.5246,
+          "lng": -0.134
+        },
+        {
+          "name": "Barnet Hospital",
+          "lat": 51.65,
+          "lng": -0.212
+        },
+        {
+          "name": "Chase Farm Hospital",
+          "lat": 51.665,
+          "lng": -0.095
+        },
+        {
+          "name": "Queen's Hospital, Romford",
+          "lat": 51.556,
+          "lng": 0.175
+        },
+        {
+          "name": "King George Hospital, Ilford",
+          "lat": 51.57,
+          "lng": 0.096
+        }
+      ],
+      "centroid": [
+        51.5931,
+        -0.034
+      ],
+      "spread_miles": 17.8
+    },
+    {
+      "id": 86,
+      "preference": "North London - North Central East London - CT1 - Aug - 22",
+      "hospitals": [
+        {
+          "name": "University College Hospital",
+          "lat": 51.5246,
+          "lng": -0.134
+        },
+        {
+          "name": "Barnet Hospital",
+          "lat": 51.65,
+          "lng": -0.212
+        },
+        {
+          "name": "Chase Farm Hospital",
+          "lat": 51.665,
+          "lng": -0.095
+        },
+        {
+          "name": "Whittington Hospital",
+          "lat": 51.566,
+          "lng": -0.138
+        }
+      ],
+      "centroid": [
+        51.6014,
+        -0.1447
+      ],
+      "spread_miles": 9.8
+    },
+    {
+      "id": 87,
+      "preference": "North London - North Central East London - CT1 - Aug - 23",
+      "hospitals": [
+        {
+          "name": "University College Hospital",
+          "lat": 51.5246,
+          "lng": -0.134
+        },
+        {
+          "name": "Barnet Hospital",
+          "lat": 51.65,
+          "lng": -0.212
+        },
+        {
+          "name": "Chase Farm Hospital",
+          "lat": 51.665,
+          "lng": -0.095
+        },
+        {
+          "name": "Whittington Hospital",
+          "lat": 51.566,
+          "lng": -0.138
+        }
+      ],
+      "centroid": [
+        51.6014,
+        -0.1447
+      ],
+      "spread_miles": 9.8
+    },
+    {
+      "id": 88,
+      "preference": "North London - North Central East London - CT1 - Aug - 24",
+      "hospitals": [
+        {
+          "name": "University College Hospital",
+          "lat": 51.5246,
+          "lng": -0.134
+        },
+        {
+          "name": "Royal Free Hospital",
+          "lat": 51.5536,
+          "lng": -0.1656
+        },
+        {
+          "name": "Barnet Hospital",
+          "lat": 51.65,
+          "lng": -0.212
+        },
+        {
+          "name": "Chase Farm Hospital",
+          "lat": 51.665,
+          "lng": -0.095
+        }
+      ],
+      "centroid": [
+        51.5983,
+        -0.1517
+      ],
+      "spread_miles": 9.8
+    },
+    {
+      "id": 89,
+      "preference": "North London - North Central East London - CT1 - Aug - 25",
+      "hospitals": [
+        {
+          "name": "University College Hospital",
+          "lat": 51.5246,
+          "lng": -0.134
+        },
+        {
+          "name": "Barnet Hospital",
+          "lat": 51.65,
+          "lng": -0.212
+        },
+        {
+          "name": "Chase Farm Hospital",
+          "lat": 51.665,
+          "lng": -0.095
+        }
+      ],
+      "centroid": [
+        51.6132,
+        -0.147
+      ],
+      "spread_miles": 9.8
+    },
+    {
+      "id": 90,
+      "preference": "North London - North Central East London - CT1 - Aug - 26",
+      "hospitals": [
+        {
+          "name": "Royal Free Hospital",
+          "lat": 51.5536,
+          "lng": -0.1656
+        },
+        {
+          "name": "Barnet Hospital",
+          "lat": 51.65,
+          "lng": -0.212
+        },
+        {
+          "name": "Chase Farm Hospital",
+          "lat": 51.665,
+          "lng": -0.095
+        },
+        {
+          "name": "Whittington Hospital",
+          "lat": 51.566,
+          "lng": -0.138
+        }
+      ],
+      "centroid": [
+        51.6086,
+        -0.1527
+      ],
+      "spread_miles": 8.3
+    },
+    {
+      "id": 91,
+      "preference": "North London - North Central East London - CT1 - Aug - 27",
+      "hospitals": [
+        {
+          "name": "Royal Free Hospital",
+          "lat": 51.5536,
+          "lng": -0.1656
+        },
+        {
+          "name": "Barnet Hospital",
+          "lat": 51.65,
+          "lng": -0.212
+        },
+        {
+          "name": "Chase Farm Hospital",
+          "lat": 51.665,
+          "lng": -0.095
+        },
+        {
+          "name": "Whittington Hospital",
+          "lat": 51.566,
+          "lng": -0.138
+        }
+      ],
+      "centroid": [
+        51.6086,
+        -0.1527
+      ],
+      "spread_miles": 8.3
+    },
+    {
+      "id": 92,
+      "preference": "North London - North Central East London - CT1 - Aug - 28",
+      "hospitals": [
+        {
+          "name": "Royal Free Hospital",
+          "lat": 51.5536,
+          "lng": -0.1656
+        },
+        {
+          "name": "Whittington Hospital",
+          "lat": 51.566,
+          "lng": -0.138
+        },
+        {
+          "name": "Queen's Hospital, Romford",
+          "lat": 51.556,
+          "lng": 0.175
+        },
+        {
+          "name": "King George Hospital, Ilford",
+          "lat": 51.57,
+          "lng": 0.096
+        }
+      ],
+      "centroid": [
+        51.5614,
+        -0.0082
+      ],
+      "spread_miles": 14.6
+    },
+    {
+      "id": 93,
+      "preference": "North London - North Central East London - CT1 - Aug - 29",
+      "hospitals": [
+        {
+          "name": "Royal Free Hospital",
+          "lat": 51.5536,
+          "lng": -0.1656
+        },
+        {
+          "name": "Whittington Hospital",
+          "lat": 51.566,
+          "lng": -0.138
+        },
+        {
+          "name": "Queen's Hospital, Romford",
+          "lat": 51.556,
+          "lng": 0.175
+        },
+        {
+          "name": "King George Hospital, Ilford",
+          "lat": 51.57,
+          "lng": 0.096
+        }
+      ],
+      "centroid": [
+        51.5614,
+        -0.0082
+      ],
+      "spread_miles": 14.6
+    },
+    {
+      "id": 94,
+      "preference": "North London - North Central East London - CT1 - Aug - 30",
+      "hospitals": [
+        {
+          "name": "University College Hospital",
+          "lat": 51.5246,
+          "lng": -0.134
+        },
+        {
+          "name": "Royal Free Hospital",
+          "lat": 51.5536,
+          "lng": -0.1656
+        },
+        {
+          "name": "Barnet Hospital",
+          "lat": 51.65,
+          "lng": -0.212
+        },
+        {
+          "name": "Chase Farm Hospital",
+          "lat": 51.665,
+          "lng": -0.095
+        },
+        {
+          "name": "Queen's Hospital, Romford",
+          "lat": 51.556,
+          "lng": 0.175
+        },
+        {
+          "name": "King George Hospital, Ilford",
+          "lat": 51.57,
+          "lng": 0.096
+        }
+      ],
+      "centroid": [
+        51.5865,
+        -0.0559
+      ],
+      "spread_miles": 17.8
+    },
+    {
+      "id": 95,
+      "preference": "North London - North Central East London - CT1 - Aug - 31",
+      "hospitals": [
+        {
+          "name": "University College Hospital",
+          "lat": 51.5246,
+          "lng": -0.134
+        },
+        {
+          "name": "Royal Free Hospital",
+          "lat": 51.5536,
+          "lng": -0.1656
+        },
+        {
+          "name": "Whittington Hospital",
+          "lat": 51.566,
+          "lng": -0.138
+        },
+        {
+          "name": "Queen's Hospital, Romford",
+          "lat": 51.556,
+          "lng": 0.175
+        },
+        {
+          "name": "King George Hospital, Ilford",
+          "lat": 51.57,
+          "lng": 0.096
+        }
+      ],
+      "centroid": [
+        51.554,
+        -0.0333
+      ],
+      "spread_miles": 14.6
+    },
+    {
+      "id": 96,
+      "preference": "North London - North Central East London - CT1 - Aug - 32",
+      "hospitals": [
+        {
+          "name": "University College Hospital",
+          "lat": 51.5246,
+          "lng": -0.134
+        },
+        {
+          "name": "Royal Free Hospital",
+          "lat": 51.5536,
+          "lng": -0.1656
+        },
+        {
+          "name": "Barnet Hospital",
+          "lat": 51.65,
+          "lng": -0.212
+        },
+        {
+          "name": "Chase Farm Hospital",
+          "lat": 51.665,
+          "lng": -0.095
+        },
+        {
+          "name": "Whittington Hospital",
+          "lat": 51.566,
+          "lng": -0.138
+        }
+      ],
+      "centroid": [
+        51.5918,
+        -0.1489
+      ],
+      "spread_miles": 9.8
+    },
+    {
+      "id": 97,
+      "preference": "North London - North Central East London - CT1 - Aug - 33",
+      "hospitals": [
+        {
+          "name": "University College Hospital",
+          "lat": 51.5246,
+          "lng": -0.134
+        },
+        {
+          "name": "Royal Free Hospital",
+          "lat": 51.5536,
+          "lng": -0.1656
+        },
+        {
+          "name": "Whittington Hospital",
+          "lat": 51.566,
+          "lng": -0.138
+        },
+        {
+          "name": "Queen's Hospital, Romford",
+          "lat": 51.556,
+          "lng": 0.175
+        },
+        {
+          "name": "King George Hospital, Ilford",
+          "lat": 51.57,
+          "lng": 0.096
+        }
+      ],
+      "centroid": [
+        51.554,
+        -0.0333
+      ],
+      "spread_miles": 14.6
+    },
+    {
+      "id": 98,
+      "preference": "North London - North Central East London - CT1 - Aug - 34",
+      "hospitals": [
+        {
+          "name": "University College Hospital",
+          "lat": 51.5246,
+          "lng": -0.134
+        },
+        {
+          "name": "Royal Free Hospital",
+          "lat": 51.5536,
+          "lng": -0.1656
+        },
+        {
+          "name": "Barnet Hospital",
+          "lat": 51.65,
+          "lng": -0.212
+        },
+        {
+          "name": "Chase Farm Hospital",
+          "lat": 51.665,
+          "lng": -0.095
+        }
+      ],
+      "centroid": [
+        51.5983,
+        -0.1517
+      ],
+      "spread_miles": 9.8
+    },
+    {
+      "id": 99,
+      "preference": "North London - North Central East London - CT1 - Aug - 35",
+      "hospitals": [
+        {
+          "name": "University College Hospital",
+          "lat": 51.5246,
+          "lng": -0.134
+        },
+        {
+          "name": "Royal Free Hospital",
+          "lat": 51.5536,
+          "lng": -0.1656
+        },
+        {
+          "name": "Barnet Hospital",
+          "lat": 51.65,
+          "lng": -0.212
+        },
+        {
+          "name": "Chase Farm Hospital",
+          "lat": 51.665,
+          "lng": -0.095
+        },
+        {
+          "name": "Whittington Hospital",
+          "lat": 51.566,
+          "lng": -0.138
+        }
+      ],
+      "centroid": [
+        51.5918,
+        -0.1489
+      ],
+      "spread_miles": 9.8
+    },
+    {
+      "id": 100,
+      "preference": "North London - North Central East London - CT1 - Aug - 36",
+      "hospitals": [
+        {
+          "name": "University College Hospital",
+          "lat": 51.5246,
+          "lng": -0.134
+        },
+        {
+          "name": "Royal Free Hospital",
+          "lat": 51.5536,
+          "lng": -0.1656
+        },
+        {
+          "name": "Barnet Hospital",
+          "lat": 51.65,
+          "lng": -0.212
+        },
+        {
+          "name": "Chase Farm Hospital",
+          "lat": 51.665,
+          "lng": -0.095
+        },
+        {
+          "name": "Whittington Hospital",
+          "lat": 51.566,
+          "lng": -0.138
+        }
+      ],
+      "centroid": [
+        51.5918,
+        -0.1489
+      ],
+      "spread_miles": 9.8
+    },
+    {
+      "id": 101,
+      "preference": "North London - North Central East London - CT1 - Aug - 37",
+      "hospitals": [
+        {
+          "name": "University College Hospital",
+          "lat": 51.5246,
+          "lng": -0.134
+        },
+        {
+          "name": "Royal Free Hospital",
+          "lat": 51.5536,
+          "lng": -0.1656
+        },
+        {
+          "name": "Barnet Hospital",
+          "lat": 51.65,
+          "lng": -0.212
+        },
+        {
+          "name": "Chase Farm Hospital",
+          "lat": 51.665,
+          "lng": -0.095
+        },
+        {
+          "name": "Whittington Hospital",
+          "lat": 51.566,
+          "lng": -0.138
+        }
+      ],
+      "centroid": [
+        51.5918,
+        -0.1489
+      ],
+      "spread_miles": 9.8
+    },
+    {
+      "id": 102,
+      "preference": "North London - North Central East London - CT1 - Aug - 38",
+      "hospitals": [
+        {
+          "name": "University College Hospital",
+          "lat": 51.5246,
+          "lng": -0.134
+        },
+        {
+          "name": "Royal Free Hospital",
+          "lat": 51.5536,
+          "lng": -0.1656
+        },
+        {
+          "name": "Barnet Hospital",
+          "lat": 51.65,
+          "lng": -0.212
+        },
+        {
+          "name": "Chase Farm Hospital",
+          "lat": 51.665,
+          "lng": -0.095
+        },
+        {
+          "name": "Whittington Hospital",
+          "lat": 51.566,
+          "lng": -0.138
+        }
+      ],
+      "centroid": [
+        51.5918,
+        -0.1489
+      ],
+      "spread_miles": 9.8
+    },
+    {
+      "id": 103,
+      "preference": "North London - North Central East London - CT1 - Aug - 39",
+      "hospitals": [
+        {
+          "name": "University College Hospital",
+          "lat": 51.5246,
+          "lng": -0.134
+        },
+        {
+          "name": "Royal Free Hospital",
+          "lat": 51.5536,
+          "lng": -0.1656
+        },
+        {
+          "name": "Barnet Hospital",
+          "lat": 51.65,
+          "lng": -0.212
+        },
+        {
+          "name": "Chase Farm Hospital",
+          "lat": 51.665,
+          "lng": -0.095
+        },
+        {
+          "name": "Whittington Hospital",
+          "lat": 51.566,
+          "lng": -0.138
+        }
+      ],
+      "centroid": [
+        51.5918,
+        -0.1489
+      ],
+      "spread_miles": 9.8
+    },
+    {
+      "id": 104,
+      "preference": "North London - North Central East London - CT1 - Aug - 40",
+      "hospitals": [
+        {
+          "name": "University College Hospital",
+          "lat": 51.5246,
+          "lng": -0.134
+        },
+        {
+          "name": "Royal Free Hospital",
+          "lat": 51.5536,
+          "lng": -0.1656
+        },
+        {
+          "name": "Barnet Hospital",
+          "lat": 51.65,
+          "lng": -0.212
+        },
+        {
+          "name": "Chase Farm Hospital",
+          "lat": 51.665,
+          "lng": -0.095
+        },
+        {
+          "name": "Whittington Hospital",
+          "lat": 51.566,
+          "lng": -0.138
+        }
+      ],
+      "centroid": [
+        51.5918,
+        -0.1489
+      ],
+      "spread_miles": 9.8
+    },
+    {
+      "id": 105,
+      "preference": "North London - North Central East London - CT1 - Aug - 41",
+      "hospitals": [
+        {
+          "name": "University College Hospital",
+          "lat": 51.5246,
+          "lng": -0.134
+        },
+        {
+          "name": "Royal Free Hospital",
+          "lat": 51.5536,
+          "lng": -0.1656
+        },
+        {
+          "name": "Whittington Hospital",
+          "lat": 51.566,
+          "lng": -0.138
+        }
+      ],
+      "centroid": [
+        51.5481,
+        -0.1459
+      ],
+      "spread_miles": 2.9
+    },
+    {
+      "id": 106,
+      "preference": "North London - North Central East London - CT1 - Aug - 42",
+      "hospitals": [
+        {
+          "name": "Queen's Hospital, Romford",
+          "lat": 51.556,
+          "lng": 0.175
+        },
+        {
+          "name": "King George Hospital, Ilford",
+          "lat": 51.57,
+          "lng": 0.096
+        },
+        {
+          "name": "Homerton University Hospital",
+          "lat": 51.549,
+          "lng": -0.043
+        },
+        {
+          "name": "Royal London Hospital",
+          "lat": 51.5185,
+          "lng": -0.059
+        }
+      ],
+      "centroid": [
+        51.5484,
+        0.0422
+      ],
+      "spread_miles": 10.4
+    },
+    {
+      "id": 107,
+      "preference": "North London - North Central East London - CT1 - Aug - 43",
+      "hospitals": [
+        {
+          "name": "Queen's Hospital, Romford",
+          "lat": 51.556,
+          "lng": 0.175
+        },
+        {
+          "name": "King George Hospital, Ilford",
+          "lat": 51.57,
+          "lng": 0.096
+        },
+        {
+          "name": "Homerton University Hospital",
+          "lat": 51.549,
+          "lng": -0.043
+        },
+        {
+          "name": "Royal London Hospital",
+          "lat": 51.5185,
+          "lng": -0.059
+        }
+      ],
+      "centroid": [
+        51.5484,
+        0.0422
+      ],
+      "spread_miles": 10.4
+    },
+    {
+      "id": 108,
+      "preference": "North London - North Central East London - CT1 - Aug - 44",
+      "hospitals": [
+        {
+          "name": "Queen's Hospital, Romford",
+          "lat": 51.556,
+          "lng": 0.175
+        },
+        {
+          "name": "King George Hospital, Ilford",
+          "lat": 51.57,
+          "lng": 0.096
+        },
+        {
+          "name": "Newham University Hospital",
+          "lat": 51.518,
+          "lng": 0.026
+        },
+        {
+          "name": "Royal London Hospital",
+          "lat": 51.5185,
+          "lng": -0.059
+        },
+        {
+          "name": "Whipps Cross University Hospital",
+          "lat": 51.571,
+          "lng": -0.009
+        }
+      ],
+      "centroid": [
+        51.5467,
+        0.0458
+      ],
+      "spread_miles": 10.4
+    },
+    {
+      "id": 109,
+      "preference": "North London - North Central East London - CT1 - Aug - 45",
+      "hospitals": [
+        {
+          "name": "Queen's Hospital, Romford",
+          "lat": 51.556,
+          "lng": 0.175
+        },
+        {
+          "name": "King George Hospital, Ilford",
+          "lat": 51.57,
+          "lng": 0.096
+        },
+        {
+          "name": "Newham University Hospital",
+          "lat": 51.518,
+          "lng": 0.026
+        },
+        {
+          "name": "Royal London Hospital",
+          "lat": 51.5185,
+          "lng": -0.059
+        },
+        {
+          "name": "Whipps Cross University Hospital",
+          "lat": 51.571,
+          "lng": -0.009
+        }
+      ],
+      "centroid": [
+        51.5467,
+        0.0458
+      ],
+      "spread_miles": 10.4
+    },
+    {
+      "id": 110,
+      "preference": "North London - North Central East London - CT1 - Aug - 46",
+      "hospitals": [
+        {
+          "name": "Queen's Hospital, Romford",
+          "lat": 51.556,
+          "lng": 0.175
+        },
+        {
+          "name": "King George Hospital, Ilford",
+          "lat": 51.57,
+          "lng": 0.096
+        },
+        {
+          "name": "Newham University Hospital",
+          "lat": 51.518,
+          "lng": 0.026
+        },
+        {
+          "name": "Royal London Hospital",
+          "lat": 51.5185,
+          "lng": -0.059
+        },
+        {
+          "name": "Whipps Cross University Hospital",
+          "lat": 51.571,
+          "lng": -0.009
+        }
+      ],
+      "centroid": [
+        51.5467,
+        0.0458
+      ],
+      "spread_miles": 10.4
+    },
+    {
+      "id": 111,
+      "preference": "North London - North Central East London - CT1 - Aug - 47",
+      "hospitals": [
+        {
+          "name": "Queen's Hospital, Romford",
+          "lat": 51.556,
+          "lng": 0.175
+        },
+        {
+          "name": "King George Hospital, Ilford",
+          "lat": 51.57,
+          "lng": 0.096
+        },
+        {
+          "name": "Newham University Hospital",
+          "lat": 51.518,
+          "lng": 0.026
+        },
+        {
+          "name": "Royal London Hospital",
+          "lat": 51.5185,
+          "lng": -0.059
+        },
+        {
+          "name": "Whipps Cross University Hospital",
+          "lat": 51.571,
+          "lng": -0.009
+        }
+      ],
+      "centroid": [
+        51.5467,
+        0.0458
+      ],
+      "spread_miles": 10.4
+    },
+    {
+      "id": 112,
+      "preference": "North London - North Central East London - CT1 - Aug - 48",
+      "hospitals": [
+        {
+          "name": "Queen's Hospital, Romford",
+          "lat": 51.556,
+          "lng": 0.175
+        },
+        {
+          "name": "King George Hospital, Ilford",
+          "lat": 51.57,
+          "lng": 0.096
+        },
+        {
+          "name": "Royal London Hospital",
+          "lat": 51.5185,
+          "lng": -0.059
+        }
+      ],
+      "centroid": [
+        51.5482,
+        0.0707
+      ],
+      "spread_miles": 10.4
+    },
+    {
+      "id": 113,
+      "preference": "North London - North Central East London - CT1 - Aug - 49",
+      "hospitals": [
+        {
+          "name": "Queen's Hospital, Romford",
+          "lat": 51.556,
+          "lng": 0.175
+        },
+        {
+          "name": "King George Hospital, Ilford",
+          "lat": 51.57,
+          "lng": 0.096
+        },
+        {
+          "name": "Royal London Hospital",
+          "lat": 51.5185,
+          "lng": -0.059
+        }
+      ],
+      "centroid": [
+        51.5482,
+        0.0707
+      ],
+      "spread_miles": 10.4
+    },
+    {
+      "id": 114,
+      "preference": "North London - North Central East London - CT1 - Aug - 50",
+      "hospitals": [
+        {
+          "name": "Queen's Hospital, Romford",
+          "lat": 51.556,
+          "lng": 0.175
+        },
+        {
+          "name": "King George Hospital, Ilford",
+          "lat": 51.57,
+          "lng": 0.096
+        },
+        {
+          "name": "Royal London Hospital",
+          "lat": 51.5185,
+          "lng": -0.059
+        }
+      ],
+      "centroid": [
+        51.5482,
+        0.0707
+      ],
+      "spread_miles": 10.4
+    },
+    {
+      "id": 115,
+      "preference": "North London - North Central East London - CT1 - Aug - 51",
+      "hospitals": [
+        {
+          "name": "Queen's Hospital, Romford",
+          "lat": 51.556,
+          "lng": 0.175
+        },
+        {
+          "name": "King George Hospital, Ilford",
+          "lat": 51.57,
+          "lng": 0.096
+        },
+        {
+          "name": "Homerton University Hospital",
+          "lat": 51.549,
+          "lng": -0.043
+        },
+        {
+          "name": "Royal London Hospital",
+          "lat": 51.5185,
+          "lng": -0.059
+        }
+      ],
+      "centroid": [
+        51.5484,
+        0.0422
+      ],
+      "spread_miles": 10.4
+    },
+    {
+      "id": 116,
+      "preference": "North London - North Central East London - CT1 - Aug - 52",
+      "hospitals": [
+        {
+          "name": "Queen's Hospital, Romford",
+          "lat": 51.556,
+          "lng": 0.175
+        },
+        {
+          "name": "King George Hospital, Ilford",
+          "lat": 51.57,
+          "lng": 0.096
+        },
+        {
+          "name": "Homerton University Hospital",
+          "lat": 51.549,
+          "lng": -0.043
+        },
+        {
+          "name": "Royal London Hospital",
+          "lat": 51.5185,
+          "lng": -0.059
+        }
+      ],
+      "centroid": [
+        51.5484,
+        0.0422
+      ],
+      "spread_miles": 10.4
+    },
+    {
+      "id": 117,
+      "preference": "North London - North Central East London - CT1 - Aug - 53",
+      "hospitals": [
+        {
+          "name": "Queen's Hospital, Romford",
+          "lat": 51.556,
+          "lng": 0.175
+        },
+        {
+          "name": "King George Hospital, Ilford",
+          "lat": 51.57,
+          "lng": 0.096
+        },
+        {
+          "name": "Royal London Hospital",
+          "lat": 51.5185,
+          "lng": -0.059
+        },
+        {
+          "name": "Whipps Cross University Hospital",
+          "lat": 51.571,
+          "lng": -0.009
+        }
+      ],
+      "centroid": [
+        51.5539,
+        0.0507
+      ],
+      "spread_miles": 10.4
+    },
+    {
+      "id": 118,
+      "preference": "North London - North Central East London - CT1 - Aug - 54",
+      "hospitals": [
+        {
+          "name": "Royal London Hospital",
+          "lat": 51.5185,
+          "lng": -0.059
+        },
+        {
+          "name": "Whipps Cross University Hospital",
+          "lat": 51.571,
+          "lng": -0.009
+        }
+      ],
+      "centroid": [
+        51.5448,
+        -0.034
+      ],
+      "spread_miles": 4.2
+    },
+    {
+      "id": 119,
+      "preference": "North London - North Central East London - CT1 - Aug - 55",
+      "hospitals": [
+        {
+          "name": "Royal London Hospital",
+          "lat": 51.5185,
+          "lng": -0.059
+        },
+        {
+          "name": "Whipps Cross University Hospital",
+          "lat": 51.571,
+          "lng": -0.009
+        }
+      ],
+      "centroid": [
+        51.5448,
+        -0.034
+      ],
+      "spread_miles": 4.2
+    },
+    {
+      "id": 120,
+      "preference": "North London - North Central East London - CT1 - Aug - 56",
+      "hospitals": [
+        {
+          "name": "Royal London Hospital",
+          "lat": 51.5185,
+          "lng": -0.059
+        },
+        {
+          "name": "Whipps Cross University Hospital",
+          "lat": 51.571,
+          "lng": -0.009
+        }
+      ],
+      "centroid": [
+        51.5448,
+        -0.034
+      ],
+      "spread_miles": 4.2
+    },
+    {
+      "id": 121,
+      "preference": "North London - North Central East London - CT1 - Aug - 57",
+      "hospitals": [
+        {
+          "name": "Royal London Hospital",
+          "lat": 51.5185,
+          "lng": -0.059
+        },
+        {
+          "name": "Whipps Cross University Hospital",
+          "lat": 51.571,
+          "lng": -0.009
+        }
+      ],
+      "centroid": [
+        51.5448,
+        -0.034
+      ],
+      "spread_miles": 4.2
+    },
+    {
+      "id": 122,
+      "preference": "North London - North Central East London - CT1 - Aug - 58",
+      "hospitals": [
+        {
+          "name": "Homerton University Hospital",
+          "lat": 51.549,
+          "lng": -0.043
+        },
+        {
+          "name": "Royal London Hospital",
+          "lat": 51.5185,
+          "lng": -0.059
+        }
+      ],
+      "centroid": [
+        51.5337,
+        -0.051
+      ],
+      "spread_miles": 2.2
+    },
+    {
+      "id": 123,
+      "preference": "North London - North Central East London - CT1 - Aug - 59",
+      "hospitals": [
+        {
+          "name": "Homerton University Hospital",
+          "lat": 51.549,
+          "lng": -0.043
+        },
+        {
+          "name": "Royal London Hospital",
+          "lat": 51.5185,
+          "lng": -0.059
+        }
+      ],
+      "centroid": [
+        51.5337,
+        -0.051
+      ],
+      "spread_miles": 2.2
+    },
+    {
+      "id": 124,
+      "preference": "North London - North West London - CT1 - Aug - 1",
+      "hospitals": [
+        {
+          "name": "Northwick Park Hospital",
+          "lat": 51.571,
+          "lng": -0.317
+        },
+        {
+          "name": "Hammersmith Hospital",
+          "lat": 51.517,
+          "lng": -0.233
+        },
+        {
+          "name": "Hillingdon Hospital",
+          "lat": 51.535,
+          "lng": -0.449
+        }
+      ],
+      "centroid": [
+        51.541,
+        -0.333
+      ],
+      "spread_miles": 9.4
+    },
+    {
+      "id": 125,
+      "preference": "North London - North West London - CT1 - Aug - 10",
+      "hospitals": [
+        {
+          "name": "Northwick Park Hospital",
+          "lat": 51.571,
+          "lng": -0.317
+        },
+        {
+          "name": "Hammersmith Hospital",
+          "lat": 51.517,
+          "lng": -0.233
+        }
+      ],
+      "centroid": [
+        51.544,
+        -0.275
+      ],
+      "spread_miles": 5.2
+    },
+    {
+      "id": 126,
+      "preference": "North London - North West London - CT1 - Aug - 11",
+      "hospitals": [
+        {
+          "name": "St Mary's Hospital, Paddington",
+          "lat": 51.5175,
+          "lng": -0.1738
+        },
+        {
+          "name": "Northwick Park Hospital",
+          "lat": 51.571,
+          "lng": -0.317
+        },
+        {
+          "name": "Charing Cross Hospital",
+          "lat": 51.487,
+          "lng": -0.219
+        },
+        {
+          "name": "Chelsea & Westminster Hospital",
+          "lat": 51.484,
+          "lng": -0.182
+        }
+      ],
+      "centroid": [
+        51.5149,
+        -0.223
+      ],
+      "spread_miles": 8.4
+    },
+    {
+      "id": 127,
+      "preference": "North London - North West London - CT1 - Aug - 12",
+      "hospitals": [
+        {
+          "name": "St Mary's Hospital, Paddington",
+          "lat": 51.5175,
+          "lng": -0.1738
+        },
+        {
+          "name": "Northwick Park Hospital",
+          "lat": 51.571,
+          "lng": -0.317
+        },
+        {
+          "name": "Hammersmith Hospital",
+          "lat": 51.517,
+          "lng": -0.233
+        }
+      ],
+      "centroid": [
+        51.5352,
+        -0.2413
+      ],
+      "spread_miles": 7.2
+    },
+    {
+      "id": 128,
+      "preference": "North London - North West London - CT1 - Aug - 13",
+      "hospitals": [
+        {
+          "name": "St Mary's Hospital, Paddington",
+          "lat": 51.5175,
+          "lng": -0.1738
+        },
+        {
+          "name": "Northwick Park Hospital",
+          "lat": 51.571,
+          "lng": -0.317
+        }
+      ],
+      "centroid": [
+        51.5442,
+        -0.2454
+      ],
+      "spread_miles": 7.2
+    },
+    {
+      "id": 129,
+      "preference": "North London - North West London - CT1 - Aug - 14",
+      "hospitals": [
+        {
+          "name": "St Mary's Hospital, Paddington",
+          "lat": 51.5175,
+          "lng": -0.1738
+        },
+        {
+          "name": "West Middlesex University Hospital",
+          "lat": 51.473,
+          "lng": -0.322
+        }
+      ],
+      "centroid": [
+        51.4952,
+        -0.2479
+      ],
+      "spread_miles": 7.1
+    },
+    {
+      "id": 130,
+      "preference": "North London - North West London - CT1 - Aug - 15",
+      "hospitals": [
+        {
+          "name": "Chelsea & Westminster Hospital",
+          "lat": 51.484,
+          "lng": -0.182
+        },
+        {
+          "name": "Hillingdon Hospital",
+          "lat": 51.535,
+          "lng": -0.449
+        }
+      ],
+      "centroid": [
+        51.5095,
+        -0.3155
+      ],
+      "spread_miles": 12.0
+    },
+    {
+      "id": 131,
+      "preference": "North London - North West London - CT1 - Aug - 16",
+      "hospitals": [
+        {
+          "name": "St Mary's Hospital, Paddington",
+          "lat": 51.5175,
+          "lng": -0.1738
+        },
+        {
+          "name": "West Middlesex University Hospital",
+          "lat": 51.473,
+          "lng": -0.322
+        },
+        {
+          "name": "Ealing Hospital",
+          "lat": 51.513,
+          "lng": -0.342
+        }
+      ],
+      "centroid": [
+        51.5012,
+        -0.2793
+      ],
+      "spread_miles": 7.2
+    },
+    {
+      "id": 132,
+      "preference": "North London - North West London - CT1 - Aug - 17",
+      "hospitals": [
+        {
+          "name": "St Mary's Hospital, Paddington",
+          "lat": 51.5175,
+          "lng": -0.1738
+        },
+        {
+          "name": "Northwick Park Hospital",
+          "lat": 51.571,
+          "lng": -0.317
+        },
+        {
+          "name": "Ealing Hospital",
+          "lat": 51.513,
+          "lng": -0.342
+        }
+      ],
+      "centroid": [
+        51.5338,
+        -0.2776
+      ],
+      "spread_miles": 7.2
+    },
+    {
+      "id": 133,
+      "preference": "North London - North West London - CT1 - Aug - 18",
+      "hospitals": [
+        {
+          "name": "Northwick Park Hospital",
+          "lat": 51.571,
+          "lng": -0.317
+        },
+        {
+          "name": "Hammersmith Hospital",
+          "lat": 51.517,
+          "lng": -0.233
+        }
+      ],
+      "centroid": [
+        51.544,
+        -0.275
+      ],
+      "spread_miles": 5.2
+    },
+    {
+      "id": 134,
+      "preference": "North London - North West London - CT1 - Aug - 19",
+      "hospitals": [
+        {
+          "name": "Charing Cross Hospital",
+          "lat": 51.487,
+          "lng": -0.219
+        },
+        {
+          "name": "Chelsea & Westminster Hospital",
+          "lat": 51.484,
+          "lng": -0.182
+        },
+        {
+          "name": "Hillingdon Hospital",
+          "lat": 51.535,
+          "lng": -0.449
+        }
+      ],
+      "centroid": [
+        51.502,
+        -0.2833
+      ],
+      "spread_miles": 12.0
+    },
+    {
+      "id": 135,
+      "preference": "North London - North West London - CT1 - Aug - 2",
+      "hospitals": [
+        {
+          "name": "Chelsea & Westminster Hospital",
+          "lat": 51.484,
+          "lng": -0.182
+        },
+        {
+          "name": "Hillingdon Hospital",
+          "lat": 51.535,
+          "lng": -0.449
+        }
+      ],
+      "centroid": [
+        51.5095,
+        -0.3155
+      ],
+      "spread_miles": 12.0
+    },
+    {
+      "id": 136,
+      "preference": "North London - North West London - CT1 - Aug - 3",
+      "hospitals": [
+        {
+          "name": "St Mary's Hospital, Paddington",
+          "lat": 51.5175,
+          "lng": -0.1738
+        },
+        {
+          "name": "Northwick Park Hospital",
+          "lat": 51.571,
+          "lng": -0.317
+        },
+        {
+          "name": "Charing Cross Hospital",
+          "lat": 51.487,
+          "lng": -0.219
+        },
+        {
+          "name": "West Middlesex University Hospital",
+          "lat": 51.473,
+          "lng": -0.322
+        }
+      ],
+      "centroid": [
+        51.5121,
+        -0.258
+      ],
+      "spread_miles": 7.2
+    },
+    {
+      "id": 137,
+      "preference": "North London - North West London - CT1 - Aug - 4",
+      "hospitals": [
+        {
+          "name": "St Mary's Hospital, Paddington",
+          "lat": 51.5175,
+          "lng": -0.1738
+        },
+        {
+          "name": "Charing Cross Hospital",
+          "lat": 51.487,
+          "lng": -0.219
+        },
+        {
+          "name": "Chelsea & Westminster Hospital",
+          "lat": 51.484,
+          "lng": -0.182
+        },
+        {
+          "name": "West Middlesex University Hospital",
+          "lat": 51.473,
+          "lng": -0.322
+        }
+      ],
+      "centroid": [
+        51.4904,
+        -0.2242
+      ],
+      "spread_miles": 7.1
+    },
+    {
+      "id": 138,
+      "preference": "North London - North West London - CT1 - Aug - 5",
+      "hospitals": [
+        {
+          "name": "St Mary's Hospital, Paddington",
+          "lat": 51.5175,
+          "lng": -0.1738
+        },
+        {
+          "name": "Northwick Park Hospital",
+          "lat": 51.571,
+          "lng": -0.317
+        },
+        {
+          "name": "Charing Cross Hospital",
+          "lat": 51.487,
+          "lng": -0.219
+        }
+      ],
+      "centroid": [
+        51.5252,
+        -0.2366
+      ],
+      "spread_miles": 7.2
+    },
+    {
+      "id": 139,
+      "preference": "North London - North West London - CT1 - Aug - 6",
+      "hospitals": [
+        {
+          "name": "St Mary's Hospital, Paddington",
+          "lat": 51.5175,
+          "lng": -0.1738
+        },
+        {
+          "name": "Northwick Park Hospital",
+          "lat": 51.571,
+          "lng": -0.317
+        },
+        {
+          "name": "Charing Cross Hospital",
+          "lat": 51.487,
+          "lng": -0.219
+        }
+      ],
+      "centroid": [
+        51.5252,
+        -0.2366
+      ],
+      "spread_miles": 7.2
+    },
+    {
+      "id": 140,
+      "preference": "North London - North West London - CT1 - Aug - 7",
+      "hospitals": [
+        {
+          "name": "St Mary's Hospital, Paddington",
+          "lat": 51.5175,
+          "lng": -0.1738
+        },
+        {
+          "name": "Northwick Park Hospital",
+          "lat": 51.571,
+          "lng": -0.317
+        },
+        {
+          "name": "Chelsea & Westminster Hospital",
+          "lat": 51.484,
+          "lng": -0.182
+        },
+        {
+          "name": "Hillingdon Hospital",
+          "lat": 51.535,
+          "lng": -0.449
+        }
+      ],
+      "centroid": [
+        51.5269,
+        -0.2804
+      ],
+      "spread_miles": 12.0
+    },
+    {
+      "id": 141,
+      "preference": "North London - North West London - CT1 - Aug - 8",
+      "hospitals": [
+        {
+          "name": "St Mary's Hospital, Paddington",
+          "lat": 51.5175,
+          "lng": -0.1738
+        },
+        {
+          "name": "Charing Cross Hospital",
+          "lat": 51.487,
+          "lng": -0.219
+        },
+        {
+          "name": "West Middlesex University Hospital",
+          "lat": 51.473,
+          "lng": -0.322
+        }
+      ],
+      "centroid": [
+        51.4925,
+        -0.2383
+      ],
+      "spread_miles": 7.1
+    },
+    {
+      "id": 142,
+      "preference": "North London - North West London - CT1 - Aug - 9",
+      "hospitals": [
+        {
+          "name": "St Mary's Hospital, Paddington",
+          "lat": 51.5175,
+          "lng": -0.1738
+        },
+        {
+          "name": "Hammersmith Hospital",
+          "lat": 51.517,
+          "lng": -0.233
+        },
+        {
+          "name": "West Middlesex University Hospital",
+          "lat": 51.473,
+          "lng": -0.322
+        }
+      ],
+      "centroid": [
+        51.5025,
+        -0.2429
+      ],
+      "spread_miles": 7.1
+    },
+    {
+      "id": 143,
+      "preference": "North West - Cheshire and Merseyside - CT1 - Aug - 10",
+      "hospitals": [
+        {
+          "name": "Royal Liverpool University Hospital",
+          "lat": 53.41,
+          "lng": -2.967
+        },
+        {
+          "name": "Macclesfield District General Hospital",
+          "lat": 53.26,
+          "lng": -2.129
+        }
+      ],
+      "centroid": [
+        53.335,
+        -2.548
+      ],
+      "spread_miles": 36.1
+    },
+    {
+      "id": 144,
+      "preference": "North West - Cheshire and Merseyside - CT1 - Aug - 11",
+      "hospitals": [
+        {
+          "name": "Royal Liverpool University Hospital",
+          "lat": 53.41,
+          "lng": -2.967
+        },
+        {
+          "name": "Liverpool Women's Hospital",
+          "lat": 53.401,
+          "lng": -2.967
+        },
+        {
+          "name": "Southport Hospital",
+          "lat": 53.655,
+          "lng": -3.012
+        }
+      ],
+      "centroid": [
+        53.4887,
+        -2.982
+      ],
+      "spread_miles": 17.6
+    },
+    {
+      "id": 145,
+      "preference": "North West - Cheshire and Merseyside - CT1 - Aug - 12",
+      "hospitals": [
+        {
+          "name": "Royal Liverpool University Hospital",
+          "lat": 53.41,
+          "lng": -2.967
+        },
+        {
+          "name": "Warrington Hospital",
+          "lat": 53.38,
+          "lng": -2.585
+        }
+      ],
+      "centroid": [
+        53.395,
+        -2.776
+      ],
+      "spread_miles": 15.9
+    },
+    {
+      "id": 146,
+      "preference": "North West - Cheshire and Merseyside - CT1 - Aug - 13",
+      "hospitals": [
+        {
+          "name": "Aintree University Hospital",
+          "lat": 53.469,
+          "lng": -2.939
+        },
+        {
+          "name": "Warrington Hospital",
+          "lat": 53.38,
+          "lng": -2.585
+        }
+      ],
+      "centroid": [
+        53.4245,
+        -2.762
+      ],
+      "spread_miles": 15.8
+    },
+    {
+      "id": 147,
+      "preference": "North West - Cheshire and Merseyside - CT1 - Aug - 14",
+      "hospitals": [
+        {
+          "name": "Aintree University Hospital",
+          "lat": 53.469,
+          "lng": -2.939
+        },
+        {
+          "name": "Whiston Hospital",
+          "lat": 53.431,
+          "lng": -2.798
+        }
+      ],
+      "centroid": [
+        53.45,
+        -2.8685
+      ],
+      "spread_miles": 6.4
+    },
+    {
+      "id": 148,
+      "preference": "North West - Cheshire and Merseyside - CT1 - Aug - 15",
+      "hospitals": [
+        {
+          "name": "Royal Liverpool University Hospital",
+          "lat": 53.41,
+          "lng": -2.967
+        },
+        {
+          "name": "Whiston Hospital",
+          "lat": 53.431,
+          "lng": -2.798
+        }
+      ],
+      "centroid": [
+        53.4205,
+        -2.8825
+      ],
+      "spread_miles": 7.1
+    },
+    {
+      "id": 149,
+      "preference": "North West - Cheshire and Merseyside - CT1 - Aug - 2",
+      "hospitals": [
+        {
+          "name": "Aintree University Hospital",
+          "lat": 53.469,
+          "lng": -2.939
+        },
+        {
+          "name": "Whiston Hospital",
+          "lat": 53.431,
+          "lng": -2.798
+        }
+      ],
+      "centroid": [
+        53.45,
+        -2.8685
+      ],
+      "spread_miles": 6.4
+    },
+    {
+      "id": 150,
+      "preference": "North West - Cheshire and Merseyside - CT1 - Aug - 3",
+      "hospitals": [
+        {
+          "name": "Aintree University Hospital",
+          "lat": 53.469,
+          "lng": -2.939
+        },
+        {
+          "name": "Warrington Hospital",
+          "lat": 53.38,
+          "lng": -2.585
+        }
+      ],
+      "centroid": [
+        53.4245,
+        -2.762
+      ],
+      "spread_miles": 15.8
+    },
+    {
+      "id": 151,
+      "preference": "North West - Cheshire and Merseyside - CT1 - Aug - 4",
+      "hospitals": [
+        {
+          "name": "Aintree University Hospital",
+          "lat": 53.469,
+          "lng": -2.939
+        },
+        {
+          "name": "Liverpool Women's Hospital",
+          "lat": 53.401,
+          "lng": -2.967
+        }
+      ],
+      "centroid": [
+        53.435,
+        -2.953
+      ],
+      "spread_miles": 4.8
+    },
+    {
+      "id": 152,
+      "preference": "North West - Cheshire and Merseyside - CT1 - Aug - 5",
+      "hospitals": [
+        {
+          "name": "Royal Liverpool University Hospital",
+          "lat": 53.41,
+          "lng": -2.967
+        },
+        {
+          "name": "Leighton Hospital, Crewe",
+          "lat": 53.099,
+          "lng": -2.462
+        }
+      ],
+      "centroid": [
+        53.2545,
+        -2.7145
+      ],
+      "spread_miles": 30.0
+    },
+    {
+      "id": 153,
+      "preference": "North West - Cheshire and Merseyside - CT1 - Aug - 6",
+      "hospitals": [
+        {
+          "name": "Royal Liverpool University Hospital",
+          "lat": 53.41,
+          "lng": -2.967
+        },
+        {
+          "name": "Leighton Hospital, Crewe",
+          "lat": 53.099,
+          "lng": -2.462
+        }
+      ],
+      "centroid": [
+        53.2545,
+        -2.7145
+      ],
+      "spread_miles": 30.0
+    },
+    {
+      "id": 154,
+      "preference": "North West - Cheshire and Merseyside - CT1 - Aug - 7",
+      "hospitals": [
+        {
+          "name": "Whiston Hospital",
+          "lat": 53.431,
+          "lng": -2.798
+        },
+        {
+          "name": "Leighton Hospital, Crewe",
+          "lat": 53.099,
+          "lng": -2.462
+        }
+      ],
+      "centroid": [
+        53.265,
+        -2.63
+      ],
+      "spread_miles": 26.8
+    },
+    {
+      "id": 155,
+      "preference": "North West - Cheshire and Merseyside - CT1 - Aug - 8",
+      "hospitals": [
+        {
+          "name": "Macclesfield District General Hospital",
+          "lat": 53.26,
+          "lng": -2.129
+        },
+        {
+          "name": "Arrowe Park Hospital",
+          "lat": 53.378,
+          "lng": -3.091
+        }
+      ],
+      "centroid": [
+        53.319,
+        -2.61
+      ],
+      "spread_miles": 40.5
+    },
+    {
+      "id": 156,
+      "preference": "North West - Cheshire and Merseyside - CT1 - Aug - 9",
+      "hospitals": [
+        {
+          "name": "Royal Liverpool University Hospital",
+          "lat": 53.41,
+          "lng": -2.967
+        },
+        {
+          "name": "Leighton Hospital, Crewe",
+          "lat": 53.099,
+          "lng": -2.462
+        }
+      ],
+      "centroid": [
+        53.2545,
+        -2.7145
+      ],
+      "spread_miles": 30.0
+    },
+    {
+      "id": 157,
+      "preference": "North West - Cheshire and Merseyside - CT1 ACCS - Aug - 20",
+      "hospitals": [
+        {
+          "name": "Aintree University Hospital",
+          "lat": 53.469,
+          "lng": -2.939
+        }
+      ],
+      "centroid": [
+        53.469,
+        -2.939
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 158,
+      "preference": "North West - Cheshire and Merseyside - CT1 ACCS - Aug - 21",
+      "hospitals": [
+        {
+          "name": "Royal Liverpool University Hospital",
+          "lat": 53.41,
+          "lng": -2.967
+        }
+      ],
+      "centroid": [
+        53.41,
+        -2.967
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 159,
+      "preference": "North West - Cheshire and Merseyside - CT1 ACCS - Aug - 22",
+      "hospitals": [
+        {
+          "name": "Whiston Hospital",
+          "lat": 53.431,
+          "lng": -2.798
+        }
+      ],
+      "centroid": [
+        53.431,
+        -2.798
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 160,
+      "preference": "North West - Cheshire and Merseyside - CT1 ACCS - Aug - 23",
+      "hospitals": [
+        {
+          "name": "Whiston Hospital",
+          "lat": 53.431,
+          "lng": -2.798
+        }
+      ],
+      "centroid": [
+        53.431,
+        -2.798
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 161,
+      "preference": "North West - Greater Manchester, Lancashire and South Cumbria - CT1 - Aug - 1",
+      "hospitals": [
+        {
+          "name": "Manchester Royal Infirmary",
+          "lat": 53.462,
+          "lng": -2.226
+        }
+      ],
+      "centroid": [
+        53.462,
+        -2.226
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 162,
+      "preference": "North West - Greater Manchester, Lancashire and South Cumbria - CT1 ACCS - Aug - 1",
+      "hospitals": [
+        {
+          "name": "Royal Bolton Hospital",
+          "lat": 53.565,
+          "lng": -2.451
+        }
+      ],
+      "centroid": [
+        53.565,
+        -2.451
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 163,
+      "preference": "North West - Greater Manchester, Lancashire and South Cumbria - CT1 ACCS - Aug - 10",
+      "hospitals": [
+        {
+          "name": "Royal Preston Hospital",
+          "lat": 53.767,
+          "lng": -2.721
+        }
+      ],
+      "centroid": [
+        53.767,
+        -2.721
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 164,
+      "preference": "North West - Greater Manchester, Lancashire and South Cumbria - CT1 ACCS - Aug - 11",
+      "hospitals": [
+        {
+          "name": "Royal Lancaster Infirmary",
+          "lat": 54.056,
+          "lng": -2.801
+        }
+      ],
+      "centroid": [
+        54.056,
+        -2.801
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 165,
+      "preference": "North West - Greater Manchester, Lancashire and South Cumbria - CT1 ACCS - Aug - 12",
+      "hospitals": [
+        {
+          "name": "Manchester Royal Infirmary",
+          "lat": 53.462,
+          "lng": -2.226
+        }
+      ],
+      "centroid": [
+        53.462,
+        -2.226
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 166,
+      "preference": "North West - Greater Manchester, Lancashire and South Cumbria - CT1 ACCS - Aug - 13",
+      "hospitals": [
+        {
+          "name": "Manchester Royal Infirmary",
+          "lat": 53.462,
+          "lng": -2.226
+        }
+      ],
+      "centroid": [
+        53.462,
+        -2.226
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 167,
+      "preference": "North West - Greater Manchester, Lancashire and South Cumbria - CT1 ACCS - Aug - 14",
+      "hospitals": [
+        {
+          "name": "Manchester Royal Infirmary",
+          "lat": 53.462,
+          "lng": -2.226
+        }
+      ],
+      "centroid": [
+        53.462,
+        -2.226
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 168,
+      "preference": "North West - Greater Manchester, Lancashire and South Cumbria - CT1 ACCS - Aug - 15",
+      "hospitals": [
+        {
+          "name": "Royal Preston Hospital",
+          "lat": 53.767,
+          "lng": -2.721
+        }
+      ],
+      "centroid": [
+        53.767,
+        -2.721
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 169,
+      "preference": "North West - Greater Manchester, Lancashire and South Cumbria - CT1 ACCS - Aug - 16",
+      "hospitals": [
+        {
+          "name": "Salford Royal Hospital",
+          "lat": 53.487,
+          "lng": -2.325
+        }
+      ],
+      "centroid": [
+        53.487,
+        -2.325
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 170,
+      "preference": "North West - Greater Manchester, Lancashire and South Cumbria - CT1 ACCS - Aug - 17",
+      "hospitals": [
+        {
+          "name": "Stepping Hill Hospital, Stockport",
+          "lat": 53.377,
+          "lng": -2.138
+        }
+      ],
+      "centroid": [
+        53.377,
+        -2.138
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 171,
+      "preference": "North West - Greater Manchester, Lancashire and South Cumbria - CT1 ACCS - Aug - 18",
+      "hospitals": [
+        {
+          "name": "Wigan Infirmary",
+          "lat": 53.541,
+          "lng": -2.637
+        }
+      ],
+      "centroid": [
+        53.541,
+        -2.637
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 172,
+      "preference": "North West - Greater Manchester, Lancashire and South Cumbria - CT1 ACCS - Aug - 19",
+      "hospitals": [
+        {
+          "name": "Wythenshawe Hospital",
+          "lat": 53.387,
+          "lng": -2.288
+        }
+      ],
+      "centroid": [
+        53.387,
+        -2.288
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 173,
+      "preference": "North West - Greater Manchester, Lancashire and South Cumbria - CT1 ACCS - Aug - 2",
+      "hospitals": [
+        {
+          "name": "Manchester Royal Infirmary",
+          "lat": 53.462,
+          "lng": -2.226
+        }
+      ],
+      "centroid": [
+        53.462,
+        -2.226
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 174,
+      "preference": "North West - Greater Manchester, Lancashire and South Cumbria - CT1 ACCS - Aug - 3",
+      "hospitals": [
+        {
+          "name": "Royal Preston Hospital",
+          "lat": 53.767,
+          "lng": -2.721
+        }
+      ],
+      "centroid": [
+        53.767,
+        -2.721
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 175,
+      "preference": "North West - Greater Manchester, Lancashire and South Cumbria - CT1 ACCS - Aug - 4",
+      "hospitals": [
+        {
+          "name": "Wythenshawe Hospital",
+          "lat": 53.387,
+          "lng": -2.288
+        }
+      ],
+      "centroid": [
+        53.387,
+        -2.288
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 176,
+      "preference": "North West - Greater Manchester, Lancashire and South Cumbria - CT1 ACCS - Aug - 5",
+      "hospitals": [
+        {
+          "name": "North Manchester General Hospital",
+          "lat": 53.518,
+          "lng": -2.206
+        }
+      ],
+      "centroid": [
+        53.518,
+        -2.206
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 177,
+      "preference": "North West - Greater Manchester, Lancashire and South Cumbria - CT1 ACCS - Aug - 6",
+      "hospitals": [
+        {
+          "name": "Royal Oldham Hospital",
+          "lat": 53.548,
+          "lng": -2.12
+        }
+      ],
+      "centroid": [
+        53.548,
+        -2.12
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 178,
+      "preference": "North West - Greater Manchester, Lancashire and South Cumbria - CT1 ACCS - Aug - 7",
+      "hospitals": [
+        {
+          "name": "Royal Blackburn Hospital",
+          "lat": 53.736,
+          "lng": -2.477
+        }
+      ],
+      "centroid": [
+        53.736,
+        -2.477
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 179,
+      "preference": "North West - Greater Manchester, Lancashire and South Cumbria - CT1 ACCS - Aug - 8",
+      "hospitals": [
+        {
+          "name": "Royal Preston Hospital",
+          "lat": 53.767,
+          "lng": -2.721
+        },
+        {
+          "name": "Blackpool Victoria Hospital",
+          "lat": 53.818,
+          "lng": -3.029
+        }
+      ],
+      "centroid": [
+        53.7925,
+        -2.875
+      ],
+      "spread_miles": 13.1
+    },
+    {
+      "id": 180,
+      "preference": "North West - Greater Manchester, Lancashire and South Cumbria - CT1 ACCS - Aug - 9",
+      "hospitals": [
+        {
+          "name": "Royal Bolton Hospital",
+          "lat": 53.565,
+          "lng": -2.451
+        }
+      ],
+      "centroid": [
+        53.565,
+        -2.451
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 181,
+      "preference": "Oxford University Hospitals NHS Trust - CT1 - Aug - 2",
+      "hospitals": [
+        {
+          "name": "Horton General Hospital",
+          "lat": 51.997,
+          "lng": -1.343
+        },
+        {
+          "name": "John Radcliffe Hospital, Oxford",
+          "lat": 51.7636,
+          "lng": -1.2196
+        }
+      ],
+      "centroid": [
+        51.8803,
+        -1.2813
+      ],
+      "spread_miles": 17.0
+    },
+    {
+      "id": 182,
+      "preference": "Royal Berkshire NHS Foundation Trust - CT1 - Aug - 3",
+      "hospitals": [
+        {
+          "name": "Royal Berkshire Hospital, Reading",
+          "lat": 51.4551,
+          "lng": -0.9675
+        }
+      ],
+      "centroid": [
+        51.4551,
+        -0.9675
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 183,
+      "preference": "South London - South East London - CT1 - Aug - 60",
+      "hospitals": [
+        {
+          "name": "Guy's Hospital",
+          "lat": 51.504,
+          "lng": -0.087
+        },
+        {
+          "name": "St Thomas' Hospital",
+          "lat": 51.4985,
+          "lng": -0.1175
+        },
+        {
+          "name": "Princess Royal University Hospital",
+          "lat": 51.378,
+          "lng": 0.044
+        },
+        {
+          "name": "Queen Elizabeth Hospital, Woolwich",
+          "lat": 51.483,
+          "lng": 0.062
+        }
+      ],
+      "centroid": [
+        51.4659,
+        -0.0246
+      ],
+      "spread_miles": 10.8
+    },
+    {
+      "id": 184,
+      "preference": "South London - South East London - CT1 - Aug - 61",
+      "hospitals": [
+        {
+          "name": "Guy's Hospital",
+          "lat": 51.504,
+          "lng": -0.087
+        },
+        {
+          "name": "St Thomas' Hospital",
+          "lat": 51.4985,
+          "lng": -0.1175
+        },
+        {
+          "name": "Princess Royal University Hospital",
+          "lat": 51.378,
+          "lng": 0.044
+        },
+        {
+          "name": "Queen Elizabeth Hospital, Woolwich",
+          "lat": 51.483,
+          "lng": 0.062
+        }
+      ],
+      "centroid": [
+        51.4659,
+        -0.0246
+      ],
+      "spread_miles": 10.8
+    },
+    {
+      "id": 185,
+      "preference": "South London - South East London - CT1 - Aug - 62",
+      "hospitals": [
+        {
+          "name": "Guy's Hospital",
+          "lat": 51.504,
+          "lng": -0.087
+        },
+        {
+          "name": "St Thomas' Hospital",
+          "lat": 51.4985,
+          "lng": -0.1175
+        },
+        {
+          "name": "Princess Royal University Hospital",
+          "lat": 51.378,
+          "lng": 0.044
+        },
+        {
+          "name": "University Hospital Lewisham",
+          "lat": 51.45,
+          "lng": -0.014
+        }
+      ],
+      "centroid": [
+        51.4576,
+        -0.0436
+      ],
+      "spread_miles": 10.8
+    },
+    {
+      "id": 186,
+      "preference": "South London - South East London - CT1 - Aug - 63",
+      "hospitals": [
+        {
+          "name": "Guy's Hospital",
+          "lat": 51.504,
+          "lng": -0.087
+        },
+        {
+          "name": "St Thomas' Hospital",
+          "lat": 51.4985,
+          "lng": -0.1175
+        },
+        {
+          "name": "Princess Royal University Hospital",
+          "lat": 51.378,
+          "lng": 0.044
+        },
+        {
+          "name": "University Hospital Lewisham",
+          "lat": 51.45,
+          "lng": -0.014
+        }
+      ],
+      "centroid": [
+        51.4576,
+        -0.0436
+      ],
+      "spread_miles": 10.8
+    },
+    {
+      "id": 187,
+      "preference": "South London - South East London - CT1 - Aug - 64",
+      "hospitals": [
+        {
+          "name": "King's College Hospital",
+          "lat": 51.468,
+          "lng": -0.094
+        },
+        {
+          "name": "Princess Royal University Hospital",
+          "lat": 51.378,
+          "lng": 0.044
+        },
+        {
+          "name": "University Hospital Lewisham",
+          "lat": 51.45,
+          "lng": -0.014
+        }
+      ],
+      "centroid": [
+        51.432,
+        -0.0213
+      ],
+      "spread_miles": 8.6
+    },
+    {
+      "id": 188,
+      "preference": "South London - South East London - CT1 - Aug - 65",
+      "hospitals": [
+        {
+          "name": "King's College Hospital",
+          "lat": 51.468,
+          "lng": -0.094
+        },
+        {
+          "name": "Princess Royal University Hospital",
+          "lat": 51.378,
+          "lng": 0.044
+        },
+        {
+          "name": "Queen Elizabeth Hospital, Woolwich",
+          "lat": 51.483,
+          "lng": 0.062
+        }
+      ],
+      "centroid": [
+        51.443,
+        0.004
+      ],
+      "spread_miles": 8.6
+    },
+    {
+      "id": 189,
+      "preference": "South London - South East London - CT1 - Aug - 66",
+      "hospitals": [
+        {
+          "name": "King's College Hospital",
+          "lat": 51.468,
+          "lng": -0.094
+        },
+        {
+          "name": "University Hospital Lewisham",
+          "lat": 51.45,
+          "lng": -0.014
+        },
+        {
+          "name": "Queen Elizabeth Hospital, Woolwich",
+          "lat": 51.483,
+          "lng": 0.062
+        }
+      ],
+      "centroid": [
+        51.467,
+        -0.0153
+      ],
+      "spread_miles": 6.8
+    },
+    {
+      "id": 190,
+      "preference": "South London - South East London - CT1 - Aug - 67",
+      "hospitals": [
+        {
+          "name": "King's College Hospital",
+          "lat": 51.468,
+          "lng": -0.094
+        },
+        {
+          "name": "University Hospital Lewisham",
+          "lat": 51.45,
+          "lng": -0.014
+        },
+        {
+          "name": "Queen Elizabeth Hospital, Woolwich",
+          "lat": 51.483,
+          "lng": 0.062
+        }
+      ],
+      "centroid": [
+        51.467,
+        -0.0153
+      ],
+      "spread_miles": 6.8
+    },
+    {
+      "id": 191,
+      "preference": "South London - South East London - CT1 - Aug - 74",
+      "hospitals": [
+        {
+          "name": "King's College Hospital",
+          "lat": 51.468,
+          "lng": -0.094
+        },
+        {
+          "name": "Princess Royal University Hospital",
+          "lat": 51.378,
+          "lng": 0.044
+        },
+        {
+          "name": "University Hospital Lewisham",
+          "lat": 51.45,
+          "lng": -0.014
+        }
+      ],
+      "centroid": [
+        51.432,
+        -0.0213
+      ],
+      "spread_miles": 8.6
+    },
+    {
+      "id": 192,
+      "preference": "South London - South East London - CT1 - Aug - 75",
+      "hospitals": [
+        {
+          "name": "Guy's Hospital",
+          "lat": 51.504,
+          "lng": -0.087
+        },
+        {
+          "name": "St Thomas' Hospital",
+          "lat": 51.4985,
+          "lng": -0.1175
+        },
+        {
+          "name": "King's College Hospital",
+          "lat": 51.468,
+          "lng": -0.094
+        },
+        {
+          "name": "University Hospital Lewisham",
+          "lat": 51.45,
+          "lng": -0.014
+        }
+      ],
+      "centroid": [
+        51.4801,
+        -0.0781
+      ],
+      "spread_miles": 5.6
+    },
+    {
+      "id": 193,
+      "preference": "South London - South East London - CT1 - Aug - 76",
+      "hospitals": [
+        {
+          "name": "Guy's Hospital",
+          "lat": 51.504,
+          "lng": -0.087
+        },
+        {
+          "name": "St Thomas' Hospital",
+          "lat": 51.4985,
+          "lng": -0.1175
+        },
+        {
+          "name": "University Hospital Lewisham",
+          "lat": 51.45,
+          "lng": -0.014
+        },
+        {
+          "name": "Queen Elizabeth Hospital, Woolwich",
+          "lat": 51.483,
+          "lng": 0.062
+        }
+      ],
+      "centroid": [
+        51.4839,
+        -0.0391
+      ],
+      "spread_miles": 7.8
+    },
+    {
+      "id": 194,
+      "preference": "South London - South East London - CT1 - Aug - 77",
+      "hospitals": [
+        {
+          "name": "Guy's Hospital",
+          "lat": 51.504,
+          "lng": -0.087
+        },
+        {
+          "name": "St Thomas' Hospital",
+          "lat": 51.4985,
+          "lng": -0.1175
+        },
+        {
+          "name": "King's College Hospital",
+          "lat": 51.468,
+          "lng": -0.094
+        },
+        {
+          "name": "Queen Elizabeth Hospital, Woolwich",
+          "lat": 51.483,
+          "lng": 0.062
+        }
+      ],
+      "centroid": [
+        51.4884,
+        -0.0591
+      ],
+      "spread_miles": 7.8
+    },
+    {
+      "id": 195,
+      "preference": "South London - South East London - CT1 - Aug - 78",
+      "hospitals": [
+        {
+          "name": "Guy's Hospital",
+          "lat": 51.504,
+          "lng": -0.087
+        },
+        {
+          "name": "St Thomas' Hospital",
+          "lat": 51.4985,
+          "lng": -0.1175
+        },
+        {
+          "name": "Princess Royal University Hospital",
+          "lat": 51.378,
+          "lng": 0.044
+        },
+        {
+          "name": "University Hospital Lewisham",
+          "lat": 51.45,
+          "lng": -0.014
+        }
+      ],
+      "centroid": [
+        51.4576,
+        -0.0436
+      ],
+      "spread_miles": 10.8
+    },
+    {
+      "id": 196,
+      "preference": "South London - South East London - CT1 - Aug - 79",
+      "hospitals": [
+        {
+          "name": "Guy's Hospital",
+          "lat": 51.504,
+          "lng": -0.087
+        },
+        {
+          "name": "St Thomas' Hospital",
+          "lat": 51.4985,
+          "lng": -0.1175
+        },
+        {
+          "name": "Princess Royal University Hospital",
+          "lat": 51.378,
+          "lng": 0.044
+        },
+        {
+          "name": "Queen Elizabeth Hospital, Woolwich",
+          "lat": 51.483,
+          "lng": 0.062
+        }
+      ],
+      "centroid": [
+        51.4659,
+        -0.0246
+      ],
+      "spread_miles": 10.8
+    },
+    {
+      "id": 197,
+      "preference": "South London - South East London - CT1 - Aug - 80",
+      "hospitals": [
+        {
+          "name": "King's College Hospital",
+          "lat": 51.468,
+          "lng": -0.094
+        },
+        {
+          "name": "Princess Royal University Hospital",
+          "lat": 51.378,
+          "lng": 0.044
+        },
+        {
+          "name": "University Hospital Lewisham",
+          "lat": 51.45,
+          "lng": -0.014
+        }
+      ],
+      "centroid": [
+        51.432,
+        -0.0213
+      ],
+      "spread_miles": 8.6
+    },
+    {
+      "id": 198,
+      "preference": "South London - South East London - CT1 - Aug - 81",
+      "hospitals": [
+        {
+          "name": "Guy's Hospital",
+          "lat": 51.504,
+          "lng": -0.087
+        },
+        {
+          "name": "St Thomas' Hospital",
+          "lat": 51.4985,
+          "lng": -0.1175
+        },
+        {
+          "name": "King's College Hospital",
+          "lat": 51.468,
+          "lng": -0.094
+        },
+        {
+          "name": "University Hospital Lewisham",
+          "lat": 51.45,
+          "lng": -0.014
+        }
+      ],
+      "centroid": [
+        51.4801,
+        -0.0781
+      ],
+      "spread_miles": 5.6
+    },
+    {
+      "id": 199,
+      "preference": "South London - South West London - CT1 - Aug - 68",
+      "hospitals": [
+        {
+          "name": "St George's Hospital, Tooting",
+          "lat": 51.427,
+          "lng": -0.175
+        },
+        {
+          "name": "Kingston Hospital",
+          "lat": 51.413,
+          "lng": -0.282
+        },
+        {
+          "name": "Croydon University Hospital",
+          "lat": 51.373,
+          "lng": -0.1
+        }
+      ],
+      "centroid": [
+        51.4043,
+        -0.1857
+      ],
+      "spread_miles": 8.3
+    },
+    {
+      "id": 200,
+      "preference": "South London - South West London - CT1 - Aug - 69",
+      "hospitals": [
+        {
+          "name": "St George's Hospital, Tooting",
+          "lat": 51.427,
+          "lng": -0.175
+        },
+        {
+          "name": "Epsom Hospital",
+          "lat": 51.334,
+          "lng": -0.268
+        },
+        {
+          "name": "St Helier Hospital",
+          "lat": 51.377,
+          "lng": -0.196
+        },
+        {
+          "name": "Kingston Hospital",
+          "lat": 51.413,
+          "lng": -0.282
+        }
+      ],
+      "centroid": [
+        51.3877,
+        -0.2303
+      ],
+      "spread_miles": 7.6
+    },
+    {
+      "id": 201,
+      "preference": "South London - South West London - CT1 - Aug - 70",
+      "hospitals": [
+        {
+          "name": "St George's Hospital, Tooting",
+          "lat": 51.427,
+          "lng": -0.175
+        },
+        {
+          "name": "Epsom Hospital",
+          "lat": 51.334,
+          "lng": -0.268
+        },
+        {
+          "name": "St Helier Hospital",
+          "lat": 51.377,
+          "lng": -0.196
+        },
+        {
+          "name": "Croydon University Hospital",
+          "lat": 51.373,
+          "lng": -0.1
+        }
+      ],
+      "centroid": [
+        51.3777,
+        -0.1847
+      ],
+      "spread_miles": 7.7
+    },
+    {
+      "id": 202,
+      "preference": "South London - South West London - CT1 - Aug - 71",
+      "hospitals": [
+        {
+          "name": "St George's Hospital, Tooting",
+          "lat": 51.427,
+          "lng": -0.175
+        },
+        {
+          "name": "Kingston Hospital",
+          "lat": 51.413,
+          "lng": -0.282
+        },
+        {
+          "name": "Croydon University Hospital",
+          "lat": 51.373,
+          "lng": -0.1
+        }
+      ],
+      "centroid": [
+        51.4043,
+        -0.1857
+      ],
+      "spread_miles": 8.3
+    },
+    {
+      "id": 203,
+      "preference": "South London - South West London - CT1 - Aug - 72",
+      "hospitals": [
+        {
+          "name": "St George's Hospital, Tooting",
+          "lat": 51.427,
+          "lng": -0.175
+        },
+        {
+          "name": "Epsom Hospital",
+          "lat": 51.334,
+          "lng": -0.268
+        },
+        {
+          "name": "St Helier Hospital",
+          "lat": 51.377,
+          "lng": -0.196
+        },
+        {
+          "name": "Kingston Hospital",
+          "lat": 51.413,
+          "lng": -0.282
+        }
+      ],
+      "centroid": [
+        51.3877,
+        -0.2303
+      ],
+      "spread_miles": 7.6
+    },
+    {
+      "id": 204,
+      "preference": "South London - South West London - CT1 - Aug - 73",
+      "hospitals": [
+        {
+          "name": "St George's Hospital, Tooting",
+          "lat": 51.427,
+          "lng": -0.175
+        },
+        {
+          "name": "Epsom Hospital",
+          "lat": 51.334,
+          "lng": -0.268
+        },
+        {
+          "name": "St Helier Hospital",
+          "lat": 51.377,
+          "lng": -0.196
+        },
+        {
+          "name": "Croydon University Hospital",
+          "lat": 51.373,
+          "lng": -0.1
+        }
+      ],
+      "centroid": [
+        51.3777,
+        -0.1847
+      ],
+      "spread_miles": 7.7
+    },
+    {
+      "id": 205,
+      "preference": "South London - South West London - CT1 - Aug - 82",
+      "hospitals": [
+        {
+          "name": "St George's Hospital, Tooting",
+          "lat": 51.427,
+          "lng": -0.175
+        },
+        {
+          "name": "Kingston Hospital",
+          "lat": 51.413,
+          "lng": -0.282
+        },
+        {
+          "name": "Croydon University Hospital",
+          "lat": 51.373,
+          "lng": -0.1
+        }
+      ],
+      "centroid": [
+        51.4043,
+        -0.1857
+      ],
+      "spread_miles": 8.3
+    },
+    {
+      "id": 206,
+      "preference": "South London - South West London - CT1 - Aug - 83",
+      "hospitals": [
+        {
+          "name": "St George's Hospital, Tooting",
+          "lat": 51.427,
+          "lng": -0.175
+        },
+        {
+          "name": "Epsom Hospital",
+          "lat": 51.334,
+          "lng": -0.268
+        },
+        {
+          "name": "St Helier Hospital",
+          "lat": 51.377,
+          "lng": -0.196
+        },
+        {
+          "name": "Kingston Hospital",
+          "lat": 51.413,
+          "lng": -0.282
+        }
+      ],
+      "centroid": [
+        51.3877,
+        -0.2303
+      ],
+      "spread_miles": 7.6
+    },
+    {
+      "id": 207,
+      "preference": "South London - South West London - CT1 - Aug - 84",
+      "hospitals": [
+        {
+          "name": "St George's Hospital, Tooting",
+          "lat": 51.427,
+          "lng": -0.175
+        },
+        {
+          "name": "Epsom Hospital",
+          "lat": 51.334,
+          "lng": -0.268
+        },
+        {
+          "name": "St Helier Hospital",
+          "lat": 51.377,
+          "lng": -0.196
+        },
+        {
+          "name": "Croydon University Hospital",
+          "lat": 51.373,
+          "lng": -0.1
+        }
+      ],
+      "centroid": [
+        51.3777,
+        -0.1847
+      ],
+      "spread_miles": 7.7
+    },
+    {
+      "id": 208,
+      "preference": "South London - South West London - CT1 - Aug - 85",
+      "hospitals": [
+        {
+          "name": "St George's Hospital, Tooting",
+          "lat": 51.427,
+          "lng": -0.175
+        },
+        {
+          "name": "Epsom Hospital",
+          "lat": 51.334,
+          "lng": -0.268
+        },
+        {
+          "name": "St Helier Hospital",
+          "lat": 51.377,
+          "lng": -0.196
+        },
+        {
+          "name": "Kingston Hospital",
+          "lat": 51.413,
+          "lng": -0.282
+        }
+      ],
+      "centroid": [
+        51.3877,
+        -0.2303
+      ],
+      "spread_miles": 7.6
+    },
+    {
+      "id": 209,
+      "preference": "South West - Peninsula - Cornwall - CT1 - Aug - 10",
+      "hospitals": [
+        {
+          "name": "Royal Cornwall Hospital, Truro",
+          "lat": 50.266,
+          "lng": -5.053
+        }
+      ],
+      "centroid": [
+        50.266,
+        -5.053
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 210,
+      "preference": "South West - Peninsula - Cornwall - CT1 - Aug - 4",
+      "hospitals": [
+        {
+          "name": "Royal Cornwall Hospital, Truro",
+          "lat": 50.266,
+          "lng": -5.053
+        }
+      ],
+      "centroid": [
+        50.266,
+        -5.053
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 211,
+      "preference": "South West - Peninsula - Exeter - CT1 - Aug - 1",
+      "hospitals": [
+        {
+          "name": "Royal Devon & Exeter Hospital",
+          "lat": 50.718,
+          "lng": -3.51
+        }
+      ],
+      "centroid": [
+        50.718,
+        -3.51
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 212,
+      "preference": "South West - Peninsula - Exeter - CT1 - Aug - 7",
+      "hospitals": [
+        {
+          "name": "Royal Devon & Exeter Hospital",
+          "lat": 50.718,
+          "lng": -3.51
+        }
+      ],
+      "centroid": [
+        50.718,
+        -3.51
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 213,
+      "preference": "South West - Peninsula - North Devon - CT1 - Aug - 2",
+      "hospitals": [
+        {
+          "name": "North Devon District Hospital",
+          "lat": 51.079,
+          "lng": -3.979
+        }
+      ],
+      "centroid": [
+        51.079,
+        -3.979
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 214,
+      "preference": "South West - Peninsula - North Devon - CT1 - Aug - 8",
+      "hospitals": [
+        {
+          "name": "North Devon District Hospital",
+          "lat": 51.079,
+          "lng": -3.979
+        }
+      ],
+      "centroid": [
+        51.079,
+        -3.979
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 215,
+      "preference": "South West - Peninsula - Plymouth - CT1 - Aug - 3",
+      "hospitals": [
+        {
+          "name": "Derriford Hospital, Plymouth",
+          "lat": 50.417,
+          "lng": -4.114
+        }
+      ],
+      "centroid": [
+        50.417,
+        -4.114
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 216,
+      "preference": "South West - Peninsula - Plymouth - CT1 - Aug - 9",
+      "hospitals": [
+        {
+          "name": "Derriford Hospital, Plymouth",
+          "lat": 50.417,
+          "lng": -4.114
+        }
+      ],
+      "centroid": [
+        50.417,
+        -4.114
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 217,
+      "preference": "South West - Peninsula - Taunton - CT1 - Aug - 12",
+      "hospitals": [
+        {
+          "name": "Musgrove Park Hospital, Taunton",
+          "lat": 51.013,
+          "lng": -3.114
+        }
+      ],
+      "centroid": [
+        51.013,
+        -3.114
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 218,
+      "preference": "South West - Peninsula - Taunton - CT1 - Aug - 6",
+      "hospitals": [
+        {
+          "name": "Musgrove Park Hospital, Taunton",
+          "lat": 51.013,
+          "lng": -3.114
+        }
+      ],
+      "centroid": [
+        51.013,
+        -3.114
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 219,
+      "preference": "South West - Peninsula - Torbay - CT1 - Aug - 11",
+      "hospitals": [
+        {
+          "name": "Torbay Hospital",
+          "lat": 50.461,
+          "lng": -3.525
+        }
+      ],
+      "centroid": [
+        50.461,
+        -3.525
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 220,
+      "preference": "South West - Peninsula - Torbay - CT1 - Aug - 5",
+      "hospitals": [
+        {
+          "name": "Torbay Hospital",
+          "lat": 50.461,
+          "lng": -3.525
+        }
+      ],
+      "centroid": [
+        50.461,
+        -3.525
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 221,
+      "preference": "South West - Severn - Bath - CT1 - Aug - 1",
+      "hospitals": [
+        {
+          "name": "Royal United Hospital, Bath",
+          "lat": 51.388,
+          "lng": -2.388
+        }
+      ],
+      "centroid": [
+        51.388,
+        -2.388
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 222,
+      "preference": "South West - Severn - Bath - CT1 - Aug - 2",
+      "hospitals": [
+        {
+          "name": "Royal United Hospital, Bath",
+          "lat": 51.388,
+          "lng": -2.388
+        },
+        {
+          "name": "Bristol Royal Infirmary",
+          "lat": 51.458,
+          "lng": -2.593
+        },
+        {
+          "name": "Southmead Hospital, Bristol",
+          "lat": 51.501,
+          "lng": -2.596
+        }
+      ],
+      "centroid": [
+        51.449,
+        -2.5257
+      ],
+      "spread_miles": 11.9
+    },
+    {
+      "id": 223,
+      "preference": "South West - Severn - Bristol - CT1 - Aug - 2",
+      "hospitals": [
+        {
+          "name": "Bristol Royal Infirmary",
+          "lat": 51.458,
+          "lng": -2.593
+        }
+      ],
+      "centroid": [
+        51.458,
+        -2.593
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 224,
+      "preference": "South West - Severn - Bristol - CT1 - Aug - 7",
+      "hospitals": [
+        {
+          "name": "Bristol Royal Infirmary",
+          "lat": 51.458,
+          "lng": -2.593
+        },
+        {
+          "name": "Great Western Hospital, Swindon",
+          "lat": 51.553,
+          "lng": -1.758
+        }
+      ],
+      "centroid": [
+        51.5055,
+        -2.1755
+      ],
+      "spread_miles": 36.5
+    },
+    {
+      "id": 225,
+      "preference": "South West - Severn - Bristol - CT1 - Aug - 8",
+      "hospitals": [
+        {
+          "name": "Royal United Hospital, Bath",
+          "lat": 51.388,
+          "lng": -2.388
+        },
+        {
+          "name": "Bristol Royal Infirmary",
+          "lat": 51.458,
+          "lng": -2.593
+        }
+      ],
+      "centroid": [
+        51.423,
+        -2.4905
+      ],
+      "spread_miles": 10.1
+    },
+    {
+      "id": 226,
+      "preference": "South West - Severn - Cheltenham/Gloucester - CT1 - Aug - 3",
+      "hospitals": [
+        {
+          "name": "Bristol Royal Infirmary",
+          "lat": 51.458,
+          "lng": -2.593
+        },
+        {
+          "name": "Southmead Hospital, Bristol",
+          "lat": 51.501,
+          "lng": -2.596
+        },
+        {
+          "name": "Gloucestershire Royal Hospital",
+          "lat": 51.864,
+          "lng": -2.238
+        }
+      ],
+      "centroid": [
+        51.6077,
+        -2.4757
+      ],
+      "spread_miles": 31.9
+    },
+    {
+      "id": 227,
+      "preference": "South West - Severn - Gloucestershire - CT1 - Aug - 3",
+      "hospitals": [
+        {
+          "name": "Bristol Royal Infirmary",
+          "lat": 51.458,
+          "lng": -2.593
+        },
+        {
+          "name": "Southmead Hospital, Bristol",
+          "lat": 51.501,
+          "lng": -2.596
+        }
+      ],
+      "centroid": [
+        51.4795,
+        -2.5945
+      ],
+      "spread_miles": 3.0
+    },
+    {
+      "id": 228,
+      "preference": "South West - Severn - North Bristol - CT1 - Aug - 4",
+      "hospitals": [
+        {
+          "name": "Bristol Royal Infirmary",
+          "lat": 51.458,
+          "lng": -2.593
+        }
+      ],
+      "centroid": [
+        51.458,
+        -2.593
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 229,
+      "preference": "South West - Severn - North Bristol - CT1 - Aug - 5",
+      "hospitals": [
+        {
+          "name": "Bristol Royal Infirmary",
+          "lat": 51.458,
+          "lng": -2.593
+        },
+        {
+          "name": "Southmead Hospital, Bristol",
+          "lat": 51.501,
+          "lng": -2.596
+        },
+        {
+          "name": "Great Western Hospital, Swindon",
+          "lat": 51.553,
+          "lng": -1.758
+        }
+      ],
+      "centroid": [
+        51.504,
+        -2.3157
+      ],
+      "spread_miles": 36.5
+    },
+    {
+      "id": 230,
+      "preference": "South West - Severn - North Bristol - CT1 - Aug - 6",
+      "hospitals": [
+        {
+          "name": "Royal United Hospital, Bath",
+          "lat": 51.388,
+          "lng": -2.388
+        },
+        {
+          "name": "Bristol Royal Infirmary",
+          "lat": 51.458,
+          "lng": -2.593
+        },
+        {
+          "name": "Southmead Hospital, Bristol",
+          "lat": 51.501,
+          "lng": -2.596
+        }
+      ],
+      "centroid": [
+        51.449,
+        -2.5257
+      ],
+      "spread_miles": 11.9
+    },
+    {
+      "id": 231,
+      "preference": "South West - Severn - Swindon - CT1 - Aug - 5",
+      "hospitals": [
+        {
+          "name": "Great Western Hospital, Swindon",
+          "lat": 51.553,
+          "lng": -1.758
+        }
+      ],
+      "centroid": [
+        51.553,
+        -1.758
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 232,
+      "preference": "South West - Severn - Swindon - CT1 - Aug - 6",
+      "hospitals": [
+        {
+          "name": "Bristol Royal Infirmary",
+          "lat": 51.458,
+          "lng": -2.593
+        },
+        {
+          "name": "Southmead Hospital, Bristol",
+          "lat": 51.501,
+          "lng": -2.596
+        },
+        {
+          "name": "Great Western Hospital, Swindon",
+          "lat": 51.553,
+          "lng": -1.758
+        }
+      ],
+      "centroid": [
+        51.504,
+        -2.3157
+      ],
+      "spread_miles": 36.5
+    },
+    {
+      "id": 233,
+      "preference": "South West - Severn - Yeovil - CT1 - Aug - 6",
+      "hospitals": [
+        {
+          "name": "Yeovil District Hospital",
+          "lat": 50.94,
+          "lng": -2.634
+        }
+      ],
+      "centroid": [
+        50.94,
+        -2.634
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 234,
+      "preference": "South West - Severn - Yeovil - CT1 - Aug - 7",
+      "hospitals": [
+        {
+          "name": "Musgrove Park Hospital, Taunton",
+          "lat": 51.013,
+          "lng": -3.114
+        },
+        {
+          "name": "Yeovil District Hospital",
+          "lat": 50.94,
+          "lng": -2.634
+        }
+      ],
+      "centroid": [
+        50.9765,
+        -2.874
+      ],
+      "spread_miles": 21.5
+    },
+    {
+      "id": 235,
+      "preference": "Wales - North - CT1 - Aug - 1",
+      "hospitals": [
+        {
+          "name": "Ysbyty Gwynedd, Bangor",
+          "lat": 53.21,
+          "lng": -4.138
+        }
+      ],
+      "centroid": [
+        53.21,
+        -4.138
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 236,
+      "preference": "Wales - North - CT1 - Aug - 2",
+      "hospitals": [
+        {
+          "name": "Wrexham Maelor Hospital",
+          "lat": 53.049,
+          "lng": -2.988
+        }
+      ],
+      "centroid": [
+        53.049,
+        -2.988
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 237,
+      "preference": "Wales - North - CT1 - Aug - 3",
+      "hospitals": [
+        {
+          "name": "Ysbyty Glan Clwyd, Rhyl",
+          "lat": 53.266,
+          "lng": -3.487
+        },
+        {
+          "name": "Wrexham Maelor Hospital",
+          "lat": 53.049,
+          "lng": -2.988
+        }
+      ],
+      "centroid": [
+        53.1575,
+        -3.2375
+      ],
+      "spread_miles": 25.5
+    },
+    {
+      "id": 238,
+      "preference": "Wales - North - CT1 - Aug - 4",
+      "hospitals": [
+        {
+          "name": "Ysbyty Glan Clwyd, Rhyl",
+          "lat": 53.266,
+          "lng": -3.487
+        },
+        {
+          "name": "Wrexham Maelor Hospital",
+          "lat": 53.049,
+          "lng": -2.988
+        }
+      ],
+      "centroid": [
+        53.1575,
+        -3.2375
+      ],
+      "spread_miles": 25.5
+    },
+    {
+      "id": 239,
+      "preference": "Wales - North - CT1 - Aug - 5",
+      "hospitals": [
+        {
+          "name": "Ysbyty Glan Clwyd, Rhyl",
+          "lat": 53.266,
+          "lng": -3.487
+        },
+        {
+          "name": "Wrexham Maelor Hospital",
+          "lat": 53.049,
+          "lng": -2.988
+        }
+      ],
+      "centroid": [
+        53.1575,
+        -3.2375
+      ],
+      "spread_miles": 25.5
+    },
+    {
+      "id": 240,
+      "preference": "Wales - South - CT1 - Aug - 1",
+      "hospitals": [
+        {
+          "name": "Grange University Hospital, Cwmbran",
+          "lat": 51.649,
+          "lng": -3.019
+        }
+      ],
+      "centroid": [
+        51.649,
+        -3.019
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 241,
+      "preference": "Wales - South - CT1 - Aug - 10",
+      "hospitals": [
+        {
+          "name": "University Hospital of Wales, Cardiff",
+          "lat": 51.507,
+          "lng": -3.19
+        }
+      ],
+      "centroid": [
+        51.507,
+        -3.19
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 242,
+      "preference": "Wales - South - CT1 - Aug - 11",
+      "hospitals": [
+        {
+          "name": "Morriston Hospital, Swansea",
+          "lat": 51.683,
+          "lng": -3.927
+        }
+      ],
+      "centroid": [
+        51.683,
+        -3.927
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 243,
+      "preference": "Wales - South - CT1 - Aug - 12",
+      "hospitals": [
+        {
+          "name": "Morriston Hospital, Swansea",
+          "lat": 51.683,
+          "lng": -3.927
+        }
+      ],
+      "centroid": [
+        51.683,
+        -3.927
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 244,
+      "preference": "Wales - South - CT1 - Aug - 13",
+      "hospitals": [
+        {
+          "name": "Morriston Hospital, Swansea",
+          "lat": 51.683,
+          "lng": -3.927
+        }
+      ],
+      "centroid": [
+        51.683,
+        -3.927
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 245,
+      "preference": "Wales - South - CT1 - Aug - 14",
+      "hospitals": [
+        {
+          "name": "Morriston Hospital, Swansea",
+          "lat": 51.683,
+          "lng": -3.927
+        }
+      ],
+      "centroid": [
+        51.683,
+        -3.927
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 246,
+      "preference": "Wales - South - CT1 - Aug - 15",
+      "hospitals": [
+        {
+          "name": "Morriston Hospital, Swansea",
+          "lat": 51.683,
+          "lng": -3.927
+        },
+        {
+          "name": "Glangwili Hospital, Carmarthen",
+          "lat": 51.858,
+          "lng": -4.308
+        }
+      ],
+      "centroid": [
+        51.7705,
+        -4.1175
+      ],
+      "spread_miles": 20.3
+    },
+    {
+      "id": 247,
+      "preference": "Wales - South - CT1 - Aug - 16",
+      "hospitals": [
+        {
+          "name": "Morriston Hospital, Swansea",
+          "lat": 51.683,
+          "lng": -3.927
+        },
+        {
+          "name": "Glangwili Hospital, Carmarthen",
+          "lat": 51.858,
+          "lng": -4.308
+        }
+      ],
+      "centroid": [
+        51.7705,
+        -4.1175
+      ],
+      "spread_miles": 20.3
+    },
+    {
+      "id": 248,
+      "preference": "Wales - South - CT1 - Aug - 2",
+      "hospitals": [
+        {
+          "name": "Grange University Hospital, Cwmbran",
+          "lat": 51.649,
+          "lng": -3.019
+        }
+      ],
+      "centroid": [
+        51.649,
+        -3.019
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 249,
+      "preference": "Wales - South - CT1 - Aug - 3",
+      "hospitals": [
+        {
+          "name": "Grange University Hospital, Cwmbran",
+          "lat": 51.649,
+          "lng": -3.019
+        }
+      ],
+      "centroid": [
+        51.649,
+        -3.019
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 250,
+      "preference": "Wales - South - CT1 - Aug - 4",
+      "hospitals": [
+        {
+          "name": "Grange University Hospital, Cwmbran",
+          "lat": 51.649,
+          "lng": -3.019
+        }
+      ],
+      "centroid": [
+        51.649,
+        -3.019
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 251,
+      "preference": "Wales - South - CT1 - Aug - 5",
+      "hospitals": [
+        {
+          "name": "Grange University Hospital, Cwmbran",
+          "lat": 51.649,
+          "lng": -3.019
+        }
+      ],
+      "centroid": [
+        51.649,
+        -3.019
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 252,
+      "preference": "Wales - South - CT1 - Aug - 6",
+      "hospitals": [
+        {
+          "name": "Grange University Hospital, Cwmbran",
+          "lat": 51.649,
+          "lng": -3.019
+        }
+      ],
+      "centroid": [
+        51.649,
+        -3.019
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 253,
+      "preference": "Wales - South - CT1 - Aug - 7",
+      "hospitals": [
+        {
+          "name": "University Hospital of Wales, Cardiff",
+          "lat": 51.507,
+          "lng": -3.19
+        }
+      ],
+      "centroid": [
+        51.507,
+        -3.19
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 254,
+      "preference": "Wales - South - CT1 - Aug - 8",
+      "hospitals": [
+        {
+          "name": "University Hospital of Wales, Cardiff",
+          "lat": 51.507,
+          "lng": -3.19
+        }
+      ],
+      "centroid": [
+        51.507,
+        -3.19
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 255,
+      "preference": "Wales - South - CT1 - Aug - 9",
+      "hospitals": [
+        {
+          "name": "University Hospital of Wales, Cardiff",
+          "lat": 51.507,
+          "lng": -3.19
+        }
+      ],
+      "centroid": [
+        51.507,
+        -3.19
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 256,
+      "preference": "Wessex - CT1 - Aug",
+      "hospitals": [
+        {
+          "name": "Southampton General Hospital",
+          "lat": 50.934,
+          "lng": -1.434
+        }
+      ],
+      "centroid": [
+        50.934,
+        -1.434
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 257,
+      "preference": "Wessex - East Dorset - Poole - CT1 - Aug",
+      "hospitals": [
+        {
+          "name": "Poole Hospital",
+          "lat": 50.729,
+          "lng": -1.958
+        }
+      ],
+      "centroid": [
+        50.729,
+        -1.958
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 258,
+      "preference": "Wessex - South East Hampshire - Portsmouth - CT1 - Aug",
+      "hospitals": [
+        {
+          "name": "Queen Alexandra Hospital, Portsmouth",
+          "lat": 50.85,
+          "lng": -1.077
+        }
+      ],
+      "centroid": [
+        50.85,
+        -1.077
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 259,
+      "preference": "Wessex - Southampton - CT1 - Aug",
+      "hospitals": [
+        {
+          "name": "Southampton General Hospital",
+          "lat": 50.934,
+          "lng": -1.434
+        }
+      ],
+      "centroid": [
+        50.934,
+        -1.434
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 260,
+      "preference": "West Midlands - CT1 - Aug - 1",
+      "hospitals": [
+        {
+          "name": "Wye Valley Hospital, Hereford",
+          "lat": 52.064,
+          "lng": -2.716
+        }
+      ],
+      "centroid": [
+        52.064,
+        -2.716
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 261,
+      "preference": "West Midlands - CT1 - Aug - 10",
+      "hospitals": [
+        {
+          "name": "Queen Elizabeth Hospital, Birmingham",
+          "lat": 52.453,
+          "lng": -1.938
+        },
+        {
+          "name": "Russells Hall Hospital, Dudley",
+          "lat": 52.506,
+          "lng": -2.118
+        }
+      ],
+      "centroid": [
+        52.4795,
+        -2.028
+      ],
+      "spread_miles": 8.4
+    },
+    {
+      "id": 262,
+      "preference": "West Midlands - CT1 - Aug - 11",
+      "hospitals": [
+        {
+          "name": "Queen Elizabeth Hospital, Birmingham",
+          "lat": 52.453,
+          "lng": -1.938
+        },
+        {
+          "name": "Russells Hall Hospital, Dudley",
+          "lat": 52.506,
+          "lng": -2.118
+        }
+      ],
+      "centroid": [
+        52.4795,
+        -2.028
+      ],
+      "spread_miles": 8.4
+    },
+    {
+      "id": 263,
+      "preference": "West Midlands - CT1 - Aug - 12",
+      "hospitals": [
+        {
+          "name": "Queen Elizabeth Hospital, Birmingham",
+          "lat": 52.453,
+          "lng": -1.938
+        }
+      ],
+      "centroid": [
+        52.453,
+        -1.938
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 264,
+      "preference": "West Midlands - CT1 - Aug - 13",
+      "hospitals": [
+        {
+          "name": "Queen Elizabeth Hospital, Birmingham",
+          "lat": 52.453,
+          "lng": -1.938
+        },
+        {
+          "name": "Worcestershire Royal Hospital",
+          "lat": 52.193,
+          "lng": -2.177
+        },
+        {
+          "name": "Alexandra Hospital, Redditch",
+          "lat": 52.302,
+          "lng": -1.942
+        }
+      ],
+      "centroid": [
+        52.316,
+        -2.019
+      ],
+      "spread_miles": 20.6
+    },
+    {
+      "id": 265,
+      "preference": "West Midlands - CT1 - Aug - 14",
+      "hospitals": [
+        {
+          "name": "Queen Elizabeth Hospital, Birmingham",
+          "lat": 52.453,
+          "lng": -1.938
+        },
+        {
+          "name": "Worcestershire Royal Hospital",
+          "lat": 52.193,
+          "lng": -2.177
+        },
+        {
+          "name": "Alexandra Hospital, Redditch",
+          "lat": 52.302,
+          "lng": -1.942
+        }
+      ],
+      "centroid": [
+        52.316,
+        -2.019
+      ],
+      "spread_miles": 20.6
+    },
+    {
+      "id": 266,
+      "preference": "West Midlands - CT1 - Aug - 15",
+      "hospitals": [
+        {
+          "name": "Worcestershire Royal Hospital",
+          "lat": 52.193,
+          "lng": -2.177
+        },
+        {
+          "name": "Wye Valley Hospital, Hereford",
+          "lat": 52.064,
+          "lng": -2.716
+        }
+      ],
+      "centroid": [
+        52.1285,
+        -2.4465
+      ],
+      "spread_miles": 24.5
+    },
+    {
+      "id": 267,
+      "preference": "West Midlands - CT1 - Aug - 16",
+      "hospitals": [
+        {
+          "name": "Worcestershire Royal Hospital",
+          "lat": 52.193,
+          "lng": -2.177
+        },
+        {
+          "name": "Wye Valley Hospital, Hereford",
+          "lat": 52.064,
+          "lng": -2.716
+        }
+      ],
+      "centroid": [
+        52.1285,
+        -2.4465
+      ],
+      "spread_miles": 24.5
+    },
+    {
+      "id": 268,
+      "preference": "West Midlands - CT1 - Aug - 17",
+      "hospitals": [
+        {
+          "name": "Midland Metropolitan University Hospital",
+          "lat": 52.5,
+          "lng": -1.963
+        }
+      ],
+      "centroid": [
+        52.5,
+        -1.963
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 269,
+      "preference": "West Midlands - CT1 - Aug - 18",
+      "hospitals": [
+        {
+          "name": "Midland Metropolitan University Hospital",
+          "lat": 52.5,
+          "lng": -1.963
+        }
+      ],
+      "centroid": [
+        52.5,
+        -1.963
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 270,
+      "preference": "West Midlands - CT1 - Aug - 19",
+      "hospitals": [
+        {
+          "name": "Midland Metropolitan University Hospital",
+          "lat": 52.5,
+          "lng": -1.963
+        }
+      ],
+      "centroid": [
+        52.5,
+        -1.963
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 271,
+      "preference": "West Midlands - CT1 - Aug - 2",
+      "hospitals": [
+        {
+          "name": "Russells Hall Hospital, Dudley",
+          "lat": 52.506,
+          "lng": -2.118
+        }
+      ],
+      "centroid": [
+        52.506,
+        -2.118
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 272,
+      "preference": "West Midlands - CT1 - Aug - 20",
+      "hospitals": [
+        {
+          "name": "Midland Metropolitan University Hospital",
+          "lat": 52.5,
+          "lng": -1.963
+        },
+        {
+          "name": "Manor Hospital, Walsall",
+          "lat": 52.588,
+          "lng": -1.98
+        }
+      ],
+      "centroid": [
+        52.544,
+        -1.9715
+      ],
+      "spread_miles": 6.1
+    },
+    {
+      "id": 273,
+      "preference": "West Midlands - CT1 - Aug - 21",
+      "hospitals": [
+        {
+          "name": "Midland Metropolitan University Hospital",
+          "lat": 52.5,
+          "lng": -1.963
+        }
+      ],
+      "centroid": [
+        52.5,
+        -1.963
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 274,
+      "preference": "West Midlands - CT1 - Aug - 22",
+      "hospitals": [
+        {
+          "name": "Midland Metropolitan University Hospital",
+          "lat": 52.5,
+          "lng": -1.963
+        }
+      ],
+      "centroid": [
+        52.5,
+        -1.963
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 275,
+      "preference": "West Midlands - CT1 - Aug - 23",
+      "hospitals": [
+        {
+          "name": "New Cross Hospital, Wolverhampton",
+          "lat": 52.591,
+          "lng": -2.126
+        }
+      ],
+      "centroid": [
+        52.591,
+        -2.126
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 276,
+      "preference": "West Midlands - CT1 - Aug - 24",
+      "hospitals": [
+        {
+          "name": "New Cross Hospital, Wolverhampton",
+          "lat": 52.591,
+          "lng": -2.126
+        }
+      ],
+      "centroid": [
+        52.591,
+        -2.126
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 277,
+      "preference": "West Midlands - CT1 - Aug - 25",
+      "hospitals": [
+        {
+          "name": "New Cross Hospital, Wolverhampton",
+          "lat": 52.591,
+          "lng": -2.126
+        }
+      ],
+      "centroid": [
+        52.591,
+        -2.126
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 278,
+      "preference": "West Midlands - CT1 - Aug - 26",
+      "hospitals": [
+        {
+          "name": "New Cross Hospital, Wolverhampton",
+          "lat": 52.591,
+          "lng": -2.126
+        }
+      ],
+      "centroid": [
+        52.591,
+        -2.126
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 279,
+      "preference": "West Midlands - CT1 - Aug - 27",
+      "hospitals": [
+        {
+          "name": "Royal Shrewsbury Hospital",
+          "lat": 52.709,
+          "lng": -2.75
+        }
+      ],
+      "centroid": [
+        52.709,
+        -2.75
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 280,
+      "preference": "West Midlands - CT1 - Aug - 28",
+      "hospitals": [
+        {
+          "name": "Royal Shrewsbury Hospital",
+          "lat": 52.709,
+          "lng": -2.75
+        }
+      ],
+      "centroid": [
+        52.709,
+        -2.75
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 281,
+      "preference": "West Midlands - CT1 - Aug - 29",
+      "hospitals": [
+        {
+          "name": "Royal Shrewsbury Hospital",
+          "lat": 52.709,
+          "lng": -2.75
+        },
+        {
+          "name": "Princess Royal Hospital, Telford",
+          "lat": 52.688,
+          "lng": -2.515
+        }
+      ],
+      "centroid": [
+        52.6985,
+        -2.6325
+      ],
+      "spread_miles": 9.9
+    },
+    {
+      "id": 282,
+      "preference": "West Midlands - CT1 - Aug - 3",
+      "hospitals": [
+        {
+          "name": "Worcestershire Royal Hospital",
+          "lat": 52.193,
+          "lng": -2.177
+        }
+      ],
+      "centroid": [
+        52.193,
+        -2.177
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 283,
+      "preference": "West Midlands - CT1 - Aug - 30",
+      "hospitals": [
+        {
+          "name": "Royal Shrewsbury Hospital",
+          "lat": 52.709,
+          "lng": -2.75
+        },
+        {
+          "name": "Princess Royal Hospital, Telford",
+          "lat": 52.688,
+          "lng": -2.515
+        }
+      ],
+      "centroid": [
+        52.6985,
+        -2.6325
+      ],
+      "spread_miles": 9.9
+    },
+    {
+      "id": 284,
+      "preference": "West Midlands - CT1 - Aug - 31",
+      "hospitals": [
+        {
+          "name": "Royal Stoke University Hospital",
+          "lat": 53.001,
+          "lng": -2.187
+        }
+      ],
+      "centroid": [
+        53.001,
+        -2.187
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 285,
+      "preference": "West Midlands - CT1 - Aug - 32",
+      "hospitals": [
+        {
+          "name": "Royal Stoke University Hospital",
+          "lat": 53.001,
+          "lng": -2.187
+        }
+      ],
+      "centroid": [
+        53.001,
+        -2.187
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 286,
+      "preference": "West Midlands - CT1 - Aug - 33",
+      "hospitals": [
+        {
+          "name": "Heartlands Hospital, Birmingham",
+          "lat": 52.478,
+          "lng": -1.828
+        }
+      ],
+      "centroid": [
+        52.478,
+        -1.828
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 287,
+      "preference": "West Midlands - CT1 - Aug - 34",
+      "hospitals": [
+        {
+          "name": "Heartlands Hospital, Birmingham",
+          "lat": 52.478,
+          "lng": -1.828
+        }
+      ],
+      "centroid": [
+        52.478,
+        -1.828
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 288,
+      "preference": "West Midlands - CT1 - Aug - 35",
+      "hospitals": [
+        {
+          "name": "Heartlands Hospital, Birmingham",
+          "lat": 52.478,
+          "lng": -1.828
+        },
+        {
+          "name": "Good Hope Hospital, Sutton Coldfield",
+          "lat": 52.571,
+          "lng": -1.82
+        }
+      ],
+      "centroid": [
+        52.5245,
+        -1.824
+      ],
+      "spread_miles": 6.4
+    },
+    {
+      "id": 289,
+      "preference": "West Midlands - CT1 - Aug - 36",
+      "hospitals": [
+        {
+          "name": "Heartlands Hospital, Birmingham",
+          "lat": 52.478,
+          "lng": -1.828
+        },
+        {
+          "name": "Good Hope Hospital, Sutton Coldfield",
+          "lat": 52.571,
+          "lng": -1.82
+        }
+      ],
+      "centroid": [
+        52.5245,
+        -1.824
+      ],
+      "spread_miles": 6.4
+    },
+    {
+      "id": 290,
+      "preference": "West Midlands - CT1 - Aug - 37",
+      "hospitals": [
+        {
+          "name": "Heartlands Hospital, Birmingham",
+          "lat": 52.478,
+          "lng": -1.828
+        }
+      ],
+      "centroid": [
+        52.478,
+        -1.828
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 291,
+      "preference": "West Midlands - CT1 - Aug - 38",
+      "hospitals": [
+        {
+          "name": "Worcestershire Royal Hospital",
+          "lat": 52.193,
+          "lng": -2.177
+        },
+        {
+          "name": "Heartlands Hospital, Birmingham",
+          "lat": 52.478,
+          "lng": -1.828
+        }
+      ],
+      "centroid": [
+        52.3355,
+        -2.0025
+      ],
+      "spread_miles": 24.6
+    },
+    {
+      "id": 292,
+      "preference": "West Midlands - CT1 - Aug - 39",
+      "hospitals": [
+        {
+          "name": "Warwick Hospital",
+          "lat": 52.281,
+          "lng": -1.589
+        }
+      ],
+      "centroid": [
+        52.281,
+        -1.589
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 293,
+      "preference": "West Midlands - CT1 - Aug - 4",
+      "hospitals": [
+        {
+          "name": "Princess Royal Hospital, Telford",
+          "lat": 52.688,
+          "lng": -2.515
+        }
+      ],
+      "centroid": [
+        52.688,
+        -2.515
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 294,
+      "preference": "West Midlands - CT1 - Aug - 40",
+      "hospitals": [
+        {
+          "name": "Warwick Hospital",
+          "lat": 52.281,
+          "lng": -1.589
+        }
+      ],
+      "centroid": [
+        52.281,
+        -1.589
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 295,
+      "preference": "West Midlands - CT1 - Aug - 41",
+      "hospitals": [
+        {
+          "name": "University Hospital Coventry",
+          "lat": 52.421,
+          "lng": -1.441
+        }
+      ],
+      "centroid": [
+        52.421,
+        -1.441
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 296,
+      "preference": "West Midlands - CT1 - Aug - 42",
+      "hospitals": [
+        {
+          "name": "University Hospital Coventry",
+          "lat": 52.421,
+          "lng": -1.441
+        }
+      ],
+      "centroid": [
+        52.421,
+        -1.441
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 297,
+      "preference": "West Midlands - CT1 - Aug - 43",
+      "hospitals": [
+        {
+          "name": "University Hospital Coventry",
+          "lat": 52.421,
+          "lng": -1.441
+        }
+      ],
+      "centroid": [
+        52.421,
+        -1.441
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 298,
+      "preference": "West Midlands - CT1 - Aug - 5",
+      "hospitals": [
+        {
+          "name": "New Cross Hospital, Wolverhampton",
+          "lat": 52.591,
+          "lng": -2.126
+        }
+      ],
+      "centroid": [
+        52.591,
+        -2.126
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 299,
+      "preference": "West Midlands - CT1 - Aug - 6",
+      "hospitals": [
+        {
+          "name": "Manor Hospital, Walsall",
+          "lat": 52.588,
+          "lng": -1.98
+        }
+      ],
+      "centroid": [
+        52.588,
+        -1.98
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 300,
+      "preference": "West Midlands - CT1 - Aug - 7",
+      "hospitals": [
+        {
+          "name": "Heartlands Hospital, Birmingham",
+          "lat": 52.478,
+          "lng": -1.828
+        }
+      ],
+      "centroid": [
+        52.478,
+        -1.828
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 301,
+      "preference": "West Midlands - CT1 - Aug - 8",
+      "hospitals": [
+        {
+          "name": "Russells Hall Hospital, Dudley",
+          "lat": 52.506,
+          "lng": -2.118
+        }
+      ],
+      "centroid": [
+        52.506,
+        -2.118
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 302,
+      "preference": "West Midlands - CT1 - Aug - 9",
+      "hospitals": [
+        {
+          "name": "Russells Hall Hospital, Dudley",
+          "lat": 52.506,
+          "lng": -2.118
+        }
+      ],
+      "centroid": [
+        52.506,
+        -2.118
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 303,
+      "preference": "Yorkshire and the Humber - North / East -  Aug - 5",
+      "hospitals": [
+        {
+          "name": "York Hospital",
+          "lat": 53.969,
+          "lng": -1.087
+        },
+        {
+          "name": "Harrogate District Hospital",
+          "lat": 53.991,
+          "lng": -1.516
+        },
+        {
+          "name": "Scarborough Hospital",
+          "lat": 54.264,
+          "lng": -0.396
+        },
+        {
+          "name": "Diana, Princess of Wales Hospital",
+          "lat": 53.564,
+          "lng": -0.077
+        },
+        {
+          "name": "Scunthorpe General Hospital",
+          "lat": 53.585,
+          "lng": -0.653
+        }
+      ],
+      "centroid": [
+        53.8746,
+        -0.7458
+      ],
+      "spread_miles": 65.7
+    },
+    {
+      "id": 304,
+      "preference": "Yorkshire and the Humber - South -  Aug - 2",
+      "hospitals": [
+        {
+          "name": "Sheffield Teaching Hospitals",
+          "lat": 53.374,
+          "lng": -1.49
+        }
+      ],
+      "centroid": [
+        53.374,
+        -1.49
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 305,
+      "preference": "Yorkshire and the Humber - South -  Aug - 4",
+      "hospitals": [
+        {
+          "name": "Sheffield Teaching Hospitals",
+          "lat": 53.374,
+          "lng": -1.49
+        }
+      ],
+      "centroid": [
+        53.374,
+        -1.49
+      ],
+      "spread_miles": 0
+    },
+    {
+      "id": 306,
+      "preference": "Yorkshire and the Humber - West  - Aug - 1",
+      "hospitals": [
+        {
+          "name": "Harrogate District Hospital",
+          "lat": 53.991,
+          "lng": -1.516
+        },
+        {
+          "name": "Leeds Teaching Hospitals",
+          "lat": 53.806,
+          "lng": -1.522
+        },
+        {
+          "name": "Bradford Royal Infirmary",
+          "lat": 53.792,
+          "lng": -1.768
+        },
+        {
+          "name": "Airedale General Hospital",
+          "lat": 53.871,
+          "lng": -1.913
+        },
+        {
+          "name": "Calderdale Royal Hospital",
+          "lat": 53.706,
+          "lng": -1.835
+        },
+        {
+          "name": "Pinderfields Hospital, Wakefield",
+          "lat": 53.683,
+          "lng": -1.475
+        }
+      ],
+      "centroid": [
+        53.8082,
+        -1.6715
+      ],
+      "spread_miles": 23.6
+    },
+    {
+      "id": 307,
+      "preference": "Yorkshire and the Humber - West -  Aug - 3",
+      "hospitals": [
+        {
+          "name": "Harrogate District Hospital",
+          "lat": 53.991,
+          "lng": -1.516
+        },
+        {
+          "name": "Leeds Teaching Hospitals",
+          "lat": 53.806,
+          "lng": -1.522
+        },
+        {
+          "name": "Bradford Royal Infirmary",
+          "lat": 53.792,
+          "lng": -1.768
+        },
+        {
+          "name": "Airedale General Hospital",
+          "lat": 53.871,
+          "lng": -1.913
+        },
+        {
+          "name": "Calderdale Royal Hospital",
+          "lat": 53.706,
+          "lng": -1.835
+        },
+        {
+          "name": "Pinderfields Hospital, Wakefield",
+          "lat": 53.683,
+          "lng": -1.475
+        }
+      ],
+      "centroid": [
+        53.8082,
+        -1.6715
+      ],
+      "spread_miles": 23.6
+    }
+  ]
+}
