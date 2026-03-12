@@ -1459,7 +1459,7 @@ function updateMapMarkers() {
 
     const marker = L.marker(job.coords, { icon });
     marker.on('click', () => showRoute(job));
-    marker.bindPopup(() => createPopupContent(job), { maxWidth: 340, minWidth: 280 });
+    marker.bindPopup(() => createPopupContent(job), { maxWidth: 340, minWidth: 280, autoPan: true, closeOnClick: false, autoClose: false });
     markers[job.id] = marker;
     clusterGroup.addLayer(marker);
   });
@@ -1531,6 +1531,7 @@ function initMapClickHandler() {
     // Only clear if not clicking a marker
     if (!e.originalEvent._markerClicked) {
       clearRoute();
+      map.closePopup();
     }
   });
 }
