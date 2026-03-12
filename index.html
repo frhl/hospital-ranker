@@ -222,6 +222,50 @@ const EMBEDDED_CSV_DATA = [{"Current Assigned Rank": "X", "Preference": "Bucking
     color: var(--text-muted);
   }
 
+  /* Programme filters */
+  .programme-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .programme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+  .programme-toggle:hover { background: var(--bg-tertiary); }
+  .programme-toggle input { accent-color: var(--accent); }
+  .programme-badge {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+  .programme-badge.core { background: #dbeafe; color: #1e40af; }
+  .programme-badge.accs { background: #fef3c7; color: #92400e; }
+  .programme-count { font-weight: 400; opacity: 0.7; }
+  .programme-detail { font-size: 11px; color: var(--text-muted); }
+
+  /* Sort select */
+  .sort-select {
+    width: 100%;
+    padding: 8px 10px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    outline: none;
+    cursor: pointer;
+  }
+  .sort-select:focus { border-color: var(--accent); }
+
   /* Region filters */
   .region-filters {
     display: flex;
@@ -1070,6 +1114,33 @@ const EMBEDDED_CSV_DATA = [{"Current Assigned Rank": "X", "Preference": "Bucking
         <input type="text" class="search-input" id="searchInput" placeholder="Filter jobs by keyword...">
       </div>
 
+      <!-- Programme type filter -->
+      <div class="sidebar-section" id="programmeSection" style="display:none">
+        <div class="section-label">Programme</div>
+        <div class="programme-filters">
+          <label class="programme-toggle">
+            <input type="checkbox" id="filterCore" checked>
+            <span class="programme-badge core">Core <span class="programme-count" id="coreCount">0</span></span>
+            <span class="programme-detail">36 months</span>
+          </label>
+          <label class="programme-toggle">
+            <input type="checkbox" id="filterACCS" checked>
+            <span class="programme-badge accs">ACCS <span class="programme-count" id="accsCount">0</span></span>
+            <span class="programme-detail">48 months</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Sort -->
+      <div class="sidebar-section" id="sortSection" style="display:none">
+        <div class="section-label">Sort visible jobs</div>
+        <select class="sort-select" id="sortSelect">
+          <option value="default">Default order</option>
+          <option value="spread-asc">Spread: smallest first</option>
+          <option value="spread-desc">Spread: largest first</option>
+        </select>
+      </div>
+
       <!-- Regions -->
       <div class="sidebar-section" id="regionSection" style="display:none">
         <div class="section-label">Regions</div>
@@ -1175,6 +1246,9 @@ let rankedIds = []; // ordered array of job IDs (indices)
 let map, markers, clusterGroup;
 let activeFilters = new Set(Object.keys(REGION_COLORS));
 let searchQuery = '';
+let showCore = true;
+let showACCS = true;
+let sortMode = 'default';
 let sortable;
 
 // ─── INIT ───
@@ -1245,6 +1319,18 @@ function initEvents() {
   document.getElementById('saveJsonBtn').addEventListener('click', saveProgressJson);
   document.getElementById('loadJsonInput').addEventListener('change', loadProgressJson);
   document.getElementById('shareUrlBtn').addEventListener('click', copyShareUrl);
+  document.getElementById('filterCore').addEventListener('change', (e) => {
+    showCore = e.target.checked;
+    updateMapMarkers();
+  });
+  document.getElementById('filterACCS').addEventListener('change', (e) => {
+    showACCS = e.target.checked;
+    updateMapMarkers();
+  });
+  document.getElementById('sortSelect').addEventListener('change', (e) => {
+    sortMode = e.target.value;
+    updateMapMarkers();
+  });
 
   // Init sortable
   sortable = new Sortable(document.getElementById('rankList'), {
@@ -1324,7 +1410,15 @@ function processData(data) {
   document.getElementById('uploadText').innerHTML = `<strong>${allJobs.length}</strong> jobs loaded`;
   document.getElementById('statsSection').style.display = '';
   document.getElementById('searchSection').style.display = '';
+  document.getElementById('programmeSection').style.display = '';
+  document.getElementById('sortSection').style.display = '';
   document.getElementById('regionSection').style.display = '';
+
+  // Programme counts
+  const coreCount = allJobs.filter(j => j.duration.trim() === '36').length;
+  const accsCount = allJobs.filter(j => j.duration.trim() === '48').length;
+  document.getElementById('coreCount').textContent = coreCount;
+  document.getElementById('accsCount').textContent = accsCount;
 
   buildRegionFilters();
   updateMapMarkers();
@@ -1349,12 +1443,9 @@ function updateMapMarkers() {
   clearRoute();
   markers = {};
 
+  const visibleJobs = getVisibleJobs();
   let visibleCount = 0;
-  allJobs.forEach(job => {
-    if (!activeFilters.has(job.region)) return;
-    if (searchQuery && !matchesSearch(job, searchQuery)) return;
-    if (!job.coords) return;
-
+  visibleJobs.forEach(job => {
     visibleCount++;
     const color = REGION_COLORS[job.region] || '#888';
     const isRanked = rankedIds.includes(job.id);
@@ -1541,11 +1632,24 @@ function removeFromRanking(jobId) {
   map.closePopup();
 }
 
+function getVisibleJobs() {
+  let jobs = allJobs.filter(job => {
+    if (!activeFilters.has(job.region)) return false;
+    if (searchQuery && !matchesSearch(job, searchQuery)) return false;
+    if (!job.coords) return false;
+    const dur = job.duration.trim();
+    if (dur === '36' && !showCore) return false;
+    if (dur === '48' && !showACCS) return false;
+    return true;
+  });
+  if (sortMode === 'spread-asc') jobs.sort((a, b) => a.spread - b.spread);
+  else if (sortMode === 'spread-desc') jobs.sort((a, b) => b.spread - a.spread);
+  return jobs;
+}
+
 function addAllVisible() {
   let added = 0;
-  allJobs.forEach(job => {
-    if (!activeFilters.has(job.region)) return;
-    if (searchQuery && !matchesSearch(job, searchQuery)) return;
+  getVisibleJobs().forEach(job => {
     if (rankedIds.includes(job.id)) return;
     rankedIds.push(job.id);
     added++;
