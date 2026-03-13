@@ -24,6 +24,7 @@ const EMBEDDED_CSV_DATA = [{"Current Assigned Rank": "X", "Preference": "Bucking
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<script src="tube_data.js"></script>
 
 <style>
   :root {
@@ -483,6 +484,43 @@ const EMBEDDED_CSV_DATA = [{"Current Assigned Rank": "X", "Preference": "Bucking
 
   .toggle-left { left: 12px; }
   .toggle-right { right: 12px; }
+
+  /* ── TUBE MAP TOGGLE ── */
+  .tube-toggle {
+    position: absolute;
+    bottom: 28px;
+    left: 12px;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 11px;
+    font-family: var(--font-mono);
+    transition: all 0.2s;
+    user-select: none;
+  }
+  .tube-toggle:hover {
+    background: var(--bg-elevated);
+    color: var(--text-primary);
+  }
+  .tube-toggle.active {
+    background: #1a1a2e;
+    color: #e0e0e0;
+    border-color: #444;
+  }
+  .tube-toggle-icon {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: conic-gradient(#DC241F 0deg 30deg, #0098D4 30deg 60deg, #FFD300 60deg 90deg, #007D32 90deg 120deg, #9B0056 120deg 150deg, #003688 150deg 180deg, #000 180deg 210deg, #B36305 210deg 240deg, #F3A9BB 240deg 270deg, #A0A5A9 270deg 300deg, #6950A1 300deg 330deg, #EE7C0E 330deg 360deg);
+    flex-shrink: 0;
+  }
 
   /* ── RIGHT SIDEBAR (RANKING) ── */
   .sidebar-right {
@@ -1068,6 +1106,18 @@ const EMBEDDED_CSV_DATA = [{"Current Assigned Rank": "X", "Preference": "Bucking
 
   .welcome-auto:hover { color: var(--text-secondary); }
 
+  /* ── TUBE TOOLTIP ── */
+  .tube-tooltip {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    background: rgba(255,255,255,0.92);
+    color: #333;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+  }
+
   /* ── TOAST ── */
   .toast-container {
     position: fixed;
@@ -1231,6 +1281,9 @@ const EMBEDDED_CSV_DATA = [{"Current Assigned Rank": "X", "Preference": "Bucking
   <main class="map-container">
     <button class="toggle-sidebar toggle-left" id="toggleLeft" title="Toggle filters">◀</button>
     <button class="toggle-sidebar toggle-right" id="toggleRight" title="Toggle ranking">▶</button>
+    <button class="tube-toggle" id="tubeToggle" title="Toggle London Underground map">
+      <span class="tube-toggle-icon"></span>Tube
+    </button>
     <div id="map"></div>
 
     <!-- Job info panel (fixed, survives zoom) -->
@@ -1342,6 +1395,62 @@ let showCore = true;
 let showACCS = true;
 let sortMode = 'default';
 let sortable;
+let tubeLayer = null;
+let tubeVisible = false;
+
+// ─── TUBE MAP OVERLAY ───
+function buildTubeLayer() {
+  if (typeof TUBE_LINES === 'undefined') return null;
+  const group = L.layerGroup();
+  const stationsSeen = new Set();
+
+  TUBE_LINES.forEach(line => {
+    line.segments.forEach(segment => {
+      // Draw polyline for this segment
+      const coords = segment.map(s => [s[1], s[2]]);
+      L.polyline(coords, {
+        color: line.color,
+        weight: 2.5,
+        opacity: 0.55,
+        interactive: false,
+      }).addTo(group);
+
+      // Draw station markers
+      segment.forEach(s => {
+        const key = s[1].toFixed(4) + ',' + s[2].toFixed(4);
+        if (stationsSeen.has(key)) return;
+        stationsSeen.add(key);
+        L.circleMarker([s[1], s[2]], {
+          radius: 3,
+          color: '#333',
+          weight: 0.8,
+          fillColor: '#fff',
+          fillOpacity: 0.9,
+          opacity: 0.6,
+        }).bindTooltip(s[0], {
+          direction: 'top',
+          offset: [0, -4],
+          className: 'tube-tooltip',
+        }).addTo(group);
+      });
+    });
+  });
+
+  return group;
+}
+
+function toggleTube() {
+  const btn = document.getElementById('tubeToggle');
+  tubeVisible = !tubeVisible;
+  if (tubeVisible) {
+    if (!tubeLayer) tubeLayer = buildTubeLayer();
+    if (tubeLayer) tubeLayer.addTo(map);
+    btn.classList.add('active');
+  } else {
+    if (tubeLayer) map.removeLayer(tubeLayer);
+    btn.classList.remove('active');
+  }
+}
 
 // ─── INIT ───
 document.addEventListener('DOMContentLoaded', () => {
@@ -1396,6 +1505,7 @@ function initEvents() {
     searchQuery = e.target.value.toLowerCase();
     updateMapMarkers();
   });
+  document.getElementById('tubeToggle').addEventListener('click', toggleTube);
   document.getElementById('toggleLeft').addEventListener('click', () => {
     document.getElementById('sidebarLeft').classList.toggle('collapsed');
     setTimeout(() => map.invalidateSize(), 350);
